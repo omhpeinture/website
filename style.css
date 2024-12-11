@@ -1,26 +1,77 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+/* Reset CSS */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #f9f9f9;
+    color: #333;
+}
+
 header {
-    background-color: #4CAF50;
+    background: #4CAF50;
+    color: #fff;
+    padding: 20px;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+header .nav-links li {
+    margin: 0 10px;
+}
+
+header .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to right, #4CAF50, #81C784);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    text-decoration: none;
+    color: #4CAF50;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.hero .btn:hover {
+    background: #f1f1f1;
+}
+
+footer {
+    background: #333;
     color: white;
     text-align: center;
-    padding: 20px;
-}
-main {
-    padding: 20px;
-    text-align: center;
-}
-h1, h2 {
-    color: #4CAF50;
-}
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-li {
-    margin: 5px 0;
+    padding: 10px 0;
 }
