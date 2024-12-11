@@ -12,15 +12,17 @@ body {
     color: #333333; /* Gris foncé pour le texte */
 }
 
+
+
 /* Header */
 header {
-    background: #274C77; /* Bleu profond désaturé */
+    background: #34ade3; /* Bleu vif */
     color: #ffffff; /* Texte blanc */
     padding: 20px;
 }
 
 header .logo img {
-    max-width: 140px;
+    max-width: 150px;
     height: auto;
     cursor: pointer;
 }
@@ -37,32 +39,33 @@ header .nav-links {
 }
 
 header .nav-links li {
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 header .nav-links a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 1em;
+    font-size: 1.2em;
+    font-weight: bold;
     transition: color 0.3s ease;
 }
 
 header .nav-links a:hover,
 header .nav-links a.active {
     font-weight: bold;
-    color: #BFD7EA; /* Bleu clair doux */
+    color:#8c52ff; /* Violet vibrant au survol */
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
     padding: 80px 20px;
-    background: #BFD7EA; /* Bleu clair doux */
-    color: #274C77; /* Bleu profond pour le contraste */
+    background: linear-gradient(to right, #34ade3, #5ce1e6);
+    color: #ffffff;
 }
 
 .hero h1 {
-    font-size: 2.2em;
+    font-size: 2.5em;
     margin-bottom: 20px;
 }
 
@@ -74,7 +77,7 @@ header .nav-links a.active {
 .hero .btn {
     text-decoration: none;
     color: #ffffff;
-    background: #274C77; /* Bleu profond */
+    background: #8c52ff; /* Violet vibrant */
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: bold;
@@ -82,12 +85,12 @@ header .nav-links a.active {
 }
 
 .hero .btn:hover {
-    background: #1E3B5A; /* Bleu encore plus profond pour l'interaction */
+    background: #5ce1e6; /* Bleu ciel doux */
 }
 
 /* Footer */
 footer {
-    background: #274C77;
+    background: #8c52ff; /* Violet vibrant */
     color: #ffffff;
     text-align: center;
     padding: 15px 0;
@@ -107,7 +110,7 @@ footer {
 .contact-section h1 {
     text-align: center;
     margin-bottom: 20px;
-    color: #274C77; /* Bleu profond */
+    color: #34ade3; /* Bleu vif */
 }
 
 .contact-form input,
@@ -121,7 +124,7 @@ footer {
 
 .contact-form button {
     align-self: center;
-    background: #274C77;
+   background: #8c52ff; /* Violet vibrant */
     color: #ffffff;
     padding: 10px 20px;
     border: none;
@@ -131,7 +134,7 @@ footer {
 }
 
 .contact-form button:hover {
-    background: #1E3B5A;
+    background: #5ce1e6; /* Bleu ciel doux */
 }
 
 /* Services Section */
@@ -145,14 +148,17 @@ footer {
 }
 
 .services-section h1 {
-    color: #274C77;
+    color: #34ade3; /* Bleu vif */
     margin-bottom: 20px;
+}
+.service-item h2 {
+    color: #5ce1e6; /* Bleu ciel doux */
 }
 
 .service-item {
     background: #ffffff;
     padding: 20px;
-    border: 1px solid #cccccc;
+    border: 1px solid #ddd;
     border-radius: 8px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -160,6 +166,7 @@ footer {
 .service-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-color: #34ade3; /* Bleu vif */
 }
 
 /* Responsive Menu */
