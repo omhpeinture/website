@@ -8,20 +8,21 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     
-    <!-- Meta pour le SEO -->
+    <!-- SEO Meta Tags -->
     <meta name="description" content="Contactez OMH Peinture pour vos projets de peinture et rénovation.">
     <meta name="keywords" content="contact, peinture, rénovation, OMH Peinture">
     <meta name="robots" content="index, follow">
 </head>
+
 <body>
     <!-- Header -->
     <header>
-        <nav>
-                    <div class="logo">
-            <a href="index.html">
-                <img src="Painting Logo Design (2).png" alt="OMH Peinture Logo">
-            </a>
-        </div>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="Painting Logo Design (2).png" alt="OMH Peinture Logo" class="logo-img">
+                </a>
+            </div>
             <ul class="nav-links">
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="services.html">Services</a></li>
@@ -50,11 +51,12 @@
                     <label for="message">Message :</label>
                     <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
                 </div>
-                <button type="submit" class="btn">Envoyer</button>
+                <button type="submit" class="btn btn-primary">Envoyer</button>
             </form>
 
             <!-- Informations de Contact -->
             <div class="contact-info">
+                <h2>Informations de Contact</h2>
                 <p><strong>Email :</strong> contact@omhpeinture.com</p>
                 <p><strong>Téléphone :</strong> +33 1 23 45 67 89</p>
                 <p><strong>Adresse :</strong> 123 Rue de l'Artisan, Paris, France</p>
@@ -64,7 +66,9 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 OMH Peinture. Tous droits réservés.</p>
+        <div class="footer-container">
+            <p>&copy; 2024 OMH Peinture. Tous droits réservés.</p>
+        </div>
     </footer>
 </body>
 
