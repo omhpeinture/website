@@ -8,16 +8,16 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background: #ffffff; /* Fond blanc pour un design épuré */
+    background: #f9f9f9; /* Fond gris clair */
     color: #333333;
 }
 
 /* Header */
 header {
-    background: #37474F; /* Couleur sombre pour l'élégance */
-    color: #ffffff;
+    background: #ffffff; /* Fond blanc pour le header */
+    color: #37474F;
     padding: 20px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Légère ombre */
 }
 
 header .logo {
@@ -44,24 +44,24 @@ header .nav-links {
 }
 
 header .nav-links a {
-    color: #ffffff;
+    color: #37474F;
     text-decoration: none;
     font-size: 1.2em;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
 header .nav-links a:hover {
-    color: #FFCA28; /* Jaune doré pour le survol */
+    color: #34ade3; /* Bleu pour le survol */
 }
 
 header .nav-links .active {
-    border-bottom: 2px solid #FFCA28;
+    border-bottom: 2px solid #34ade3; /* Ligne bleue pour l'élément actif */
 }
 
 /* Hero Section */
 .hero {
-    background: url('hero-background.jpg') center/cover no-repeat; /* Image de fond */
+    background: linear-gradient(135deg, #34ade3, #5ce1e6); /* Dégradé bleu en accent */
     color: #ffffff;
     text-align: center;
     padding: 150px 20px;
@@ -80,8 +80,8 @@ header .nav-links .active {
 
 .hero .btn {
     text-decoration: none;
-    color: #37474F;
-    background: #FFCA28;
+    color: #ffffff;
+    background: #37474F; /* Bouton bleu foncé */
     padding: 15px 40px;
     border-radius: 5px;
     font-size: 1.2em;
@@ -90,22 +90,23 @@ header .nav-links .active {
 }
 
 .hero .btn:hover {
-    background: #FFD54F;
+    background: #5ce1e6;
     transform: translateY(-3px);
 }
 
 /* Footer */
 footer {
-    background: #37474F;
-    color: #ffffff;
+    background: #ffffff; /* Footer blanc */
+    color: #37474F;
     text-align: center;
     padding: 20px 0;
     font-size: 0.9em;
     margin-top: 50px;
+    border-top: 1px solid #ddd; /* Séparation discrète */
 }
 
 footer a {
-    color: #FFCA28;
+    color: #34ade3;
     text-decoration: none;
     font-weight: bold;
 }
@@ -119,6 +120,9 @@ footer a:hover {
     max-width: 1200px;
     margin: 50px auto;
     padding: 30px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
     text-align: center;
 }
 
@@ -143,11 +147,10 @@ footer a:hover {
 
 .service-item {
     flex: 1 1 calc(33.333% - 40px);
-    background: #ffffff;
+    background: #f9f9f9; /* Fond gris clair */
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -158,7 +161,7 @@ footer a:hover {
 
 .service-item h2 {
     font-size: 1.5em;
-    color: #37474F;
+    color: #34ade3; /* Titre en bleu */
     margin-bottom: 10px;
 }
 
@@ -172,7 +175,7 @@ footer a:hover {
     max-width: 800px;
     margin: 50px auto;
     padding: 30px;
-    background: #ffffff;
+    background: #ffffff; /* Fond blanc */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -202,12 +205,13 @@ footer a:hover {
     font-size: 1em;
     border: 1px solid #ddd;
     border-radius: 5px;
+    background: #f9f9f9;
 }
 
 .contact-section button {
     align-self: center;
-    background: #FFCA28;
-    color: #37474F;
+    background: #34ade3;
+    color: #ffffff;
     padding: 15px 40px;
     border: none;
     border-radius: 5px;
@@ -218,7 +222,7 @@ footer a:hover {
 }
 
 .contact-section button:hover {
-    background: #FFD54F;
+    background: #5ce1e6;
     transform: translateY(-3px);
 }
 
