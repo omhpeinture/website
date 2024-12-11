@@ -44,6 +44,13 @@ header .nav-links a {
     font-size: 1em;
 }
 
+/* Style pour le lien actif */
+header .nav-links a.active {
+    font-weight: bold;
+    color: #FFEB3B; /* Couleur pour l'élément actif */
+    text-decoration: underline; /* Facultatif : soulignement */
+}
+
 .hero {
     text-align: center;
     padding: 100px 20px;
