@@ -50,6 +50,15 @@ header .nav-links a.active {
     color: #FFEB3B; /* Couleur pour l'élément actif */
     text-decoration: underline; /* Facultatif : soulignement */
 }
+.logo img {
+    max-width: 150px; /* Ajustez la taille maximale du logo */
+    height: auto; /* Conserve les proportions de l'image */
+}
+
+.logo a {
+    display: inline-block; /* Permet de cliquer sur tout le logo */
+}
+
 
 .hero {
     text-align: center;
