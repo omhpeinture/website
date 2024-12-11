@@ -8,23 +8,26 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background: #F0F0F0; /* Gris clair pour une base apaisante */
-    color: #333333; /* Gris foncé pour le texte */
+    background: #f9f9f9;
+    color: #333;
 }
-
-
 
 /* Header */
 header {
-    background: linear-gradient(90deg, #34ade3, #5ce1e6); /* Dégradé subtil bleu vif et doux */
-    color: #ffffff; /* Texte blanc */
+    background: linear-gradient(90deg, #34ade3, #5ce1e6);
+    color: #ffffff;
     padding: 20px;
 }
 
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
 header .logo img {
-    max-width: 150px;
+    max-width: 180px; /* Augmentation de la taille du logo */
     height: auto;
-    cursor: pointer;
+    margin-right: 10px; /* Espace avec les éléments voisins */
 }
 
 header nav {
@@ -45,64 +48,62 @@ header .nav-links li {
 header .nav-links a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.5em; /* Augmentation de la taille du texte */
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
-header .nav-links a:hover,
-header .nav-links a.active {
-    font-weight: bold;
-    color:#8c52ff; /* Violet vibrant au survol */
+header .nav-links a:hover {
+    color: #fffb96; /* Jaune doux au survol */
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 80px 20px;
-   background: linear-gradient(135deg, #34ade3, #8c52ff);
+    padding: 120px 20px;
+    background: linear-gradient(135deg, #34ade3, #5ce1e6);
     color: #ffffff;
 }
 
 .hero h1 {
-    font-size: 2.5em;
+    font-size: 3em; /* Titres plus grands */
     margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 1.1em;
+    font-size: 1.5em; /* Sous-titre lisible */
     margin-bottom: 30px;
 }
 
 .hero .btn {
     text-decoration: none;
     color: #ffffff;
-    background: #5ce1e6; /* Bleu ciel doux */
-    padding: 10px 20px;
+    background: #5ce1e6;
+    padding: 15px 30px;
     border-radius: 5px;
     font-weight: bold;
+    font-size: 1.2em;
     transition: background 0.3s ease;
 }
 
 .hero .btn:hover {
-   background: #8c52ff; /* Violet vibrant */
+    background: #34ade3;
 }
 
 /* Footer */
 footer {
-    background: linear-gradient(90deg, #8c52ff, #5ce1e6); /* Dégradé subtil violet et bleu */
+    background: #34ade3;
     color: #ffffff;
     text-align: center;
     padding: 15px 0;
-    font-size: 0.9em;
 }
 
 /* Contact Section */
 .contact-section {
     max-width: 800px;
     margin: 50px auto;
-    padding: 20px;
-    background: #FAFAFA; /* Blanc cassé */
+    padding: 30px;
+    background: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
@@ -110,49 +111,46 @@ footer {
 .contact-section h1 {
     text-align: center;
     margin-bottom: 20px;
-    color: #34ade3; /* Bleu vif */
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    width: 100%;
+    color: #34ade3;
+    font-size: 2.5em; /* Augmentation taille du titre */
 }
 
 .contact-form button {
     align-self: center;
-   background: #8c52ff; /* Violet vibrant */
+    background: #5ce1e6;
     color: #ffffff;
-    padding: 10px 20px;
+    padding: 15px 30px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    font-size: 1.2em;
 }
 
 .contact-form button:hover {
-    background: #5ce1e6; /* Bleu ciel doux */
+    background: #34ade3;
 }
 
 /* Services Section */
 .services-section {
     max-width: 1200px;
     margin: 50px auto;
-    padding: 20px;
-    background: #FAFAFA; /* Blanc cassé */
+    padding: 30px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     text-align: center;
 }
 
 .services-section h1 {
-    color: #34ade3; /* Bleu vif */
+    color: #34ade3;
+    font-size: 2.5em; /* Titres plus grands */
     margin-bottom: 20px;
 }
-.service-item h2 {
-    color: #5ce1e6; /* Bleu ciel doux */
+
+.services-section p {
+    font-size: 1.5em;
+    color: #555;
+    margin-bottom: 30px;
 }
 
 .service-item {
@@ -163,47 +161,13 @@ footer {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.service-item h2 {
+    color: #5ce1e6;
+    font-size: 1.8em; /* Sous-titres plus visibles */
+}
+
 .service-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-color: #8c52ff; /* Violet */
-}
-
-/* Responsive Menu */
-.nav-links {
-    display: none;
-    flex-direction: column;
-    background: #274C77;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    text-align: center;
-}
-
-.nav-links.active {
-    display: flex;
-}
-
-.nav-links a {
-    padding: 15px 0;
-    border-bottom: 1px solid #BFD7EA;
-}
-
-.nav-links a:last-child {
-    border-bottom: none;
-}
-
-@media (min-width: 768px) {
-    .nav-links {
-        display: flex;
-        position: static;
-        flex-direction: row;
-        background: none;
-    }
-
-    .nav-links a {
-        border: none;
-        padding: 0 10px;
-    }
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-color: #34ade3;
 }
