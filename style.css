@@ -199,4 +199,48 @@ footer {
     transform: translateY(-5px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+/* Style pour les petits écrans */
+.nav-links {
+    display: none; /* Caché par défaut */
+    flex-direction: column;
+    background: #4CAF50;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+}
 
+.nav-links.active {
+    display: flex; /* Afficher le menu lorsqu'il est actif */
+}
+
+.nav-links a {
+    padding: 15px 0;
+    border-bottom: 1px solid white;
+}
+
+.nav-links a:last-child {
+    border-bottom: none;
+}
+
+/* Pour le logo comme déclencheur */
+.logo {
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+/* Navigation normale pour les écrans larges */
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        background: none;
+    }
+
+    .nav-links a {
+        border: none;
+        padding: 0 10px;
+    }
+}
