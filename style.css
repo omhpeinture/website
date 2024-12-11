@@ -8,20 +8,21 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background: #f0f8ff; /* Bleu très clair */
-    color: #333;
+    background: #F5F5F5; /* Blanc cassé pour une ambiance douce */
+    color: #333333; /* Gris foncé pour le texte */
 }
 
 /* Header */
 header {
-    background: #007BFF; /* Bleu principal */
-    color: #fff;
+    background: #003366; /* Bleu profond */
+    color: #ffffff; /* Texte blanc */
     padding: 20px;
 }
 
 header .logo img {
-    max-width: 150px; /* Taille du logo */
-    height: auto; /* Conserve les proportions */
+    max-width: 150px;
+    height: auto;
+    cursor: pointer;
 }
 
 header nav {
@@ -40,7 +41,7 @@ header .nav-links li {
 }
 
 header .nav-links a {
-    color: white;
+    color: #ffffff; /* Blanc */
     text-decoration: none;
     font-size: 1em;
     transition: color 0.3s ease;
@@ -49,7 +50,7 @@ header .nav-links a {
 header .nav-links a:hover,
 header .nav-links a.active {
     font-weight: bold;
-    color: #FFD700; /* Jaune doré pour l'accent */
+    color: #007BFF; /* Bleu vif pour les liens actifs */
     text-decoration: underline;
 }
 
@@ -57,8 +58,8 @@ header .nav-links a.active {
 .hero {
     text-align: center;
     padding: 100px 20px;
-    background: linear-gradient(to right, #007BFF, #5A9BFF); /* Dégradé de bleu */
-    color: white;
+    background: linear-gradient(to right, #007BFF, #1E90FF); /* Dégradé bleu vif */
+    color: #ffffff; /* Texte blanc */
 }
 
 .hero h1 {
@@ -68,23 +69,22 @@ header .nav-links a.active {
 
 .hero .btn {
     text-decoration: none;
-    color: #007BFF; /* Bouton texte bleu */
-    background: white;
+    color: #ffffff; /* Texte blanc */
+    background: #007BFF; /* Bleu vif */
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: bold;
-    transition: background 0.3s ease, color 0.3s ease;
+    transition: background 0.3s ease;
 }
 
 .hero .btn:hover {
-    background: #f1f1f1;
-    color: #0056b3; /* Bleu foncé */
+    background: #0056b3; /* Bleu plus foncé */
 }
 
 /* Footer */
 footer {
-    background: #0056b3; /* Bleu foncé */
-    color: white;
+    background: #003366; /* Bleu profond */
+    color: #ffffff; /* Texte blanc */
     text-align: center;
     padding: 10px 0;
 }
@@ -94,7 +94,7 @@ footer {
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
-    background: white;
+    background: #E6F7FF; /* Bleu clair */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
@@ -102,7 +102,7 @@ footer {
 .contact-section h1 {
     text-align: center;
     margin-bottom: 20px;
-    color: #007BFF;
+    color: #007BFF; /* Bleu vif */
 }
 
 .contact-section p {
@@ -114,11 +114,6 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 15px;
-}
-
-.contact-form .form-group {
-    display: flex;
-    flex-direction: column;
 }
 
 .contact-form label {
@@ -137,7 +132,7 @@ footer {
 
 .contact-form button {
     align-self: center;
-    background: #007BFF;
+    background: #007BFF; /* Bleu vif */
     color: white;
     padding: 10px 20px;
     border: none;
@@ -147,7 +142,7 @@ footer {
 }
 
 .contact-form button:hover {
-    background: #0056b3;
+    background: #0056b3; /* Bleu foncé */
 }
 
 /* Services Section */
@@ -155,21 +150,21 @@ footer {
     max-width: 1200px;
     margin: 50px auto;
     padding: 20px;
-    background: #fff;
+    background: #ffffff; /* Blanc */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     text-align: center;
 }
 
 .services-section h1 {
-    color: #007BFF;
+    color: #007BFF; /* Bleu vif */
     margin-bottom: 20px;
 }
 
 .services-section p {
     font-size: 1.2em;
     margin-bottom: 30px;
-    color: #555;
+    color: #555555; /* Gris moyen */
 }
 
 .service-list {
@@ -179,20 +174,16 @@ footer {
 }
 
 .service-item {
-    background: #f9f9f9;
+    background: #E6F7FF; /* Bleu clair */
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .service-item h2 {
-    color: #007BFF;
+    color: #007BFF; /* Bleu vif */
     margin-bottom: 10px;
-}
-
-.service-item p {
-    color: #666;
 }
 
 .service-item:hover {
@@ -200,21 +191,20 @@ footer {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive Navigation */
+/* Responsive Menu for Small Screens */
 .nav-links {
-    display: none; /* Caché par défaut */
+    display: none;
     flex-direction: column;
-    background: #007BFF;
+    background: #003366; /* Bleu profond */
     position: absolute;
     top: 60px;
     right: 0;
     width: 100%;
     text-align: center;
-    z-index: 1000;
 }
 
 .nav-links.active {
-    display: flex; /* Afficher le menu lorsqu'il est actif */
+    display: flex;
 }
 
 .nav-links a {
@@ -226,16 +216,8 @@ footer {
     border-bottom: none;
 }
 
-/* Logo Click Trigger */
 .logo {
     cursor: pointer;
-}
-
-.menu-icon {
-    display: block;
-    cursor: pointer;
-    font-size: 2em;
-    color: white;
 }
 
 @media (min-width: 768px) {
@@ -249,9 +231,5 @@ footer {
     .nav-links a {
         border: none;
         padding: 0 10px;
-    }
-
-    .menu-icon {
-        display: none;
     }
 }
