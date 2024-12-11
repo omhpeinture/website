@@ -16,7 +16,7 @@ body {
 
 /* Header */
 header {
-    background: #34ade3; /* Bleu vif */
+    background: linear-gradient(90deg, #34ade3, #5ce1e6); /* Dégradé subtil bleu vif et doux */
     color: #ffffff; /* Texte blanc */
     padding: 20px;
 }
@@ -60,7 +60,7 @@ header .nav-links a.active {
 .hero {
     text-align: center;
     padding: 80px 20px;
-    background: linear-gradient(to right, #34ade3, #5ce1e6);
+   background: linear-gradient(135deg, #34ade3, #8c52ff);
     color: #ffffff;
 }
 
@@ -77,7 +77,7 @@ header .nav-links a.active {
 .hero .btn {
     text-decoration: none;
     color: #ffffff;
-    background: #8c52ff; /* Violet vibrant */
+    background: #5ce1e6; /* Bleu ciel doux */
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: bold;
@@ -85,12 +85,12 @@ header .nav-links a.active {
 }
 
 .hero .btn:hover {
-    background: #5ce1e6; /* Bleu ciel doux */
+   background: #8c52ff; /* Violet vibrant */
 }
 
 /* Footer */
 footer {
-    background: #8c52ff; /* Violet vibrant */
+    background: linear-gradient(90deg, #8c52ff, #5ce1e6); /* Dégradé subtil violet et bleu */
     color: #ffffff;
     text-align: center;
     padding: 15px 0;
@@ -166,7 +166,7 @@ footer {
 .service-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-color: #34ade3; /* Bleu vif */
+    border-color: #8c52ff; /* Violet */
 }
 
 /* Responsive Menu */
