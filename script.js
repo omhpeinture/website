@@ -2,43 +2,58 @@ document.addEventListener("DOMContentLoaded", () => {
     const navLinks = document.querySelector(".nav-links");
     const logo = document.querySelector(".logo a");
     const links = document.querySelectorAll(".nav-links a");
+    const hamburger = document.createElement("button"); // Création d'un bouton hamburger
 
-    // Toggle menu for responsive navigation
-    logo.addEventListener("click", (e) => {
-        if (window.innerWidth < 768) {
-            e.preventDefault(); // Empêche la redirection pour petits écrans
-            navLinks.classList.toggle("active");
+    // Création du bouton hamburger
+    hamburger.innerHTML = "☰";
+    hamburger.classList.add("hamburger-menu");
+    hamburger.setAttribute("aria-label", "Menu");
+    document.querySelector("header").appendChild(hamburger);
 
-            // Gestion de l'animation pour le menu
-            if (navLinks.classList.contains("active")) {
-                navLinks.style.maxHeight = navLinks.scrollHeight + "px";
-            } else {
-                navLinks.style.maxHeight = "0";
-            }
+    // Fonction pour basculer le menu
+    const toggleMenu = () => {
+        navLinks.classList.toggle("active");
+        const isExpanded = navLinks.classList.contains("active");
+        hamburger.setAttribute("aria-expanded", isExpanded.toString());
+        
+        if (isExpanded) {
+            navLinks.style.maxHeight = navLinks.scrollHeight + "px";
+        } else {
+            navLinks.style.maxHeight = "0";
         }
-    });
+    };
 
-    // Close menu on link click (small screens only)
+    // Gestion du clic sur le bouton hamburger
+    hamburger.addEventListener("click", toggleMenu);
+
+    // Fermeture du menu lors du clic sur un lien (petits écrans uniquement)
     links.forEach(link => {
-        link.addEventListener("click", () => {
-            // Update active class
+        link.addEventListener("click", (e) => {
             links.forEach(l => l.classList.remove("active"));
             link.classList.add("active");
 
-            // Close menu after click
             if (window.innerWidth < 768) {
-                navLinks.classList.remove("active");
-                navLinks.style.maxHeight = "0";
+                toggleMenu();
             }
         });
     });
 
-    // Add accessibility feature for aria-expanded
-    const updateAriaExpanded = () => {
-        const isExpanded = navLinks.classList.contains("active");
-        logo.setAttribute("aria-expanded", isExpanded.toString());
-    };
+    // Gestion du redimensionnement de la fenêtre
+    window.addEventListener("resize", () => {
+        if (window.innerWidth >= 768) {
+            navLinks.style.maxHeight = "";
+            navLinks.classList.remove("active");
+            hamburger.setAttribute("aria-expanded", "false");
+        }
+    });
 
-    navLinks.addEventListener("transitionend", updateAriaExpanded);
-    logo.addEventListener("click", updateAriaExpanded);
+    // Ajout de la fonctionnalité de défilement fluide
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 });
