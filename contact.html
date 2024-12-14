@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OMH Peinture - Contact</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Contactez OMH Peinture pour vos projets de peinture et rénovation.">
-    <meta name="keywords" content="contact, peinture, rénovation, OMH Peinture">
-    <meta name="robots" content="index, follow">
 </head>
-
 <body>
-    <!-- Header -->
     <header>
-        <nav class="navbar" role="navigation" aria-label="Menu principal">
+        <nav class="navbar">
             <div class="logo">
                 <a href="index.html">
-                    <img src="imageedit_2_6483687073.png" alt="OMH Peinture Logo" class="logo-img">
+                    <img src="Painting Logo Design (2).png" alt="OMH Peinture Logo" class="logo-img">
                 </a>
             </div>
+            <button class="hamburger" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
             <ul class="nav-links">
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="services.html">Services</a></li>
@@ -31,66 +27,27 @@
         </nav>
     </header>
 
-    <!-- Section Contact -->
     <main>
-        <section class="contact-section">
-            <h1>Contactez-nous</h1>
-            <p>Pour toute demande d'information ou de devis, remplissez le formulaire ci-dessous ou contactez-nous directement.</p>
+        <h1>Contactez-nous</h1>
+        <p>Pour toute demande de devis ou d'information, n'hésitez pas à nous contacter :</p>
+        <form action="submit_form.php" method="POST">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
 
-            <!-- Formulaire de Contact -->
-            <form action="mailto:contact@omhpeinture.com" method="post" enctype="text/plain" class="contact-form">
-                <div class="form-group">
-                    <label for="name">Nom :</label>
-                    <input type="text" id="name" name="name" placeholder="Votre nom" required autocomplete="name">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email :</label>
-                    <input type="email" id="email" name="email" placeholder="Votre email" required autocomplete="email">
-                </div>
-                <div class="form-group">
-                    <label for="message">Message :</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
-                </div>
-
-                <!-- Politique de confidentialité -->
-                <div class="form-group">
-                    <input type="checkbox" id="privacy" name="privacy" required>
-                    <label for="privacy">J'accepte la 
-                        <a href="privacy-policy.html">politique de confidentialité</a> et les 
-                        <a href="terms-of-service.html">conditions d'utilisation</a>.
-                    </label>
-                </div>
-
-                <!-- Bouton Envoyer -->
-                <button type="submit" class="btn btn-primary">Envoyer</button>
-            </form>
-
-            <!-- Informations de Contact -->
-            <address class="contact-info">
-                <h2>Informations de Contact</h2>
-                <p><strong>Email :</strong> 
-                    <a href="mailto:contact@omhpeinture.com">contact@omhpeinture.com</a></p>
-                <p><strong>Téléphone :</strong> 
-                    <a href="tel:+33123456789">+33 1 23 45 67 89</a></p>
-                <p><strong>Adresse :</strong> 
-                    123 Rue de l'Artisan, Paris, France</p>
-            </address>
-        </section>
+            <button type="submit">Envoyer</button>
+        </form>
     </main>
 
-    <!-- Footer -->
     <footer>
-        <div class="footer-container">
-            <p>&copy; 2024 OMH Peinture. Tous droits réservés.</p>
-
-            <!-- Liens vers les réseaux sociaux -->
-            <ul class="social-links">
-                <li><a href="#" aria-label="Facebook">Facebook</a></li>
-                <li><a href="#" aria-label="Twitter">Twitter</a></li>
-                <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
-            </ul>
-        </div>
+        <p>&copy; 2024 OMH Peinture</p>
     </footer>
-</body>
 
+    <script src="script.js"></script>
+</body>
 </html>
