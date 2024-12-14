@@ -58,6 +58,7 @@ header {
     border-bottom: 2px solid #34ade3;
 }
 
+
 /* Main content */
 main {
     max-width: 1200px;
@@ -277,6 +278,36 @@ footer {
 
 .social-links a:hover {
     color: #5ce1e6;
+}
+
+#hamburger-menu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#hamburger-menu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  background: #333;
+  transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+  #hamburger-menu {
+    display: block;
+  }
+  
+  #nav-menu {
+    display: none;
+  }
+  
+  #nav-menu.active {
+    display: block;
+  }
 }
 
 /* Responsive Design */
