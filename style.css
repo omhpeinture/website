@@ -1,95 +1,275 @@
-/* Style général pour le menu de navigation */
-body {
-    font-family: Arial, sans-serif;
+/* Reset CSS */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #f9f9f9;
+    color: #333333;
+}
+
+/* Header */
+header {
+    background: #ffffff;
+    color: #37474F;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #37474F;
-    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.logo-img {
-    height: 50px;
+.logo {
+    max-width: 200px;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
 }
 
 .nav-links {
+    list-style: none;
     display: flex;
     gap: 30px;
 }
 
 .nav-links a {
-    color: #ffffff;
+    color: #37474F;
     text-decoration: none;
     font-size: 1.2em;
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
-.nav-links a.active {
-    font-weight: bold;
+.nav-links a:hover,
+.nav-links .active {
+    color: #34ade3;
+    border-bottom: 2px solid #34ade3;
 }
 
-/* Style pour le menu hamburger */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-.hamburger .bar {
-    width: 25px;
-    height: 3px;
-    background: #ffffff;
-    border-radius: 5px;
-}
-
-/* Menu mobile - lorsque la taille de l'écran est petite */
-@media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        background: #37474F;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        width: 200px;
-        padding: 10px;
-        border-radius: 8px;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links a {
-        color: #ffffff;
-        font-size: 1.2em;
-    }
-}
-
-/* Styles supplémentaires pour les pages */
+/* Main content */
 main {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
 }
 
-footer {
-    background-color: #37474F;
-    color: #fff;
+/* Background Image Section */
+.background-image {
+    background-image: url('pexels-ivan-samkov-5799014.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
     text-align: center;
-    padding: 10px 0;
+}
+
+.background-image h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.background-image p {
+    font-size: 1.5em;
+}
+
+/* Hero Section */
+.hero, .hero-small {
+    background: linear-gradient(135deg, #34ade3, #5ce1e6);
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 50px;
+}
+
+.hero-small {
+    padding: 50px 20px;
+}
+
+.hero h2, .hero-small h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero p, .hero-small p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    background: #37474F;
+    padding: 15px 40px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background: #5ce1e6;
+    transform: translateY(-3px);
+}
+
+/* Services Section */
+.services-section {
+    background: #ffffff;
+    padding: 50px 20px;
+    margin-bottom: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.services-section h2 {
+    font-size: 2.5em;
+    color: #37474F;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.service-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-item {
+    flex: 1 1 calc(50% - 20px);
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-item h2 {
+    font-size: 1.5em;
+    color: #34ade3;
+    margin-bottom: 10px;
+}
+
+/* Contact Form */
+.contact-section {
+    background: #ffffff;
+    padding: 50px 20px;
+    margin-bottom: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Footer */
+footer {
+    background: #ffffff;
+    color: #37474F;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+    border-top: 1px solid #ddd;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    color: #34ade3;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #5ce1e6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        margin-top: 20px;
+    }
+
+    .service-list {
+        flex-direction: column;
+    }
+
+    .service-item {
+        flex: 1 1 100%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+    }
 }
