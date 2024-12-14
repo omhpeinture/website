@@ -21,14 +21,16 @@ header {
 }
 
 header .logo {
-    max-width: 150px;
+    max-width: 150 px;
     margin: 0 auto;
     text-align: center;
 }
 
 header .logo img {
-    max-width: 100%;
+    max-width: 200px;
     height: auto;
+    display: block;
+    margin: 0 auto; /* Centre le logo horizontalement */
 }
 
 header nav {
