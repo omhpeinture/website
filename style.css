@@ -21,13 +21,13 @@ header {
 }
 
 header .logo {
-    max-width: 150 px;
+    max-width: 150px;
     margin: 0 auto;
     text-align: center;
 }
 
 header .logo img {
-    max-width: 200px;
+    max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto; /* Centre le logo horizontalement */
