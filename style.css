@@ -21,7 +21,7 @@ header {
 }
 
 header .logo {
-    width: 150px;
+    max-width: 200px;
     margin: 0 auto;
     text-align: center;
 }
