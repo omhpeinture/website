@@ -336,7 +336,7 @@ footer {
      #hamburger-menu {
         display: block;
         order: 1;
-         padding: 10px;
+        padding: 10px;
     }
     #hamburger-menu span {
     /* ... autres styles ... */
