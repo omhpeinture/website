@@ -118,10 +118,11 @@ header h1 {
 
 /* Main content */
 main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+width: 100%; /* Assurez-vous que le main prend toute la largeur */
+    margin: 0; /* Supprimez le centrage pour ce conteneur */
+    padding: 0; /* Supprimez les paddings pour éviter des marges internes */
 }
+
 
 /* Background Image Section */
 .background-image {
