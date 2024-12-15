@@ -312,22 +312,27 @@ main {
 blockquote {
     background: #f9f9f9; /* Couleur de fond pour les témoignages */
     border-left: 5px solid #34ade3; /* Bordure à gauche */
-    padding: 20px; /* Espacement interne */
-    margin: 0; /* Supprime la marge externe */
-    max-width: 400px; /* Largeur maximale des témoignages */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre pour le bloc */
-    border-radius: 0 8px 8px 0; /* Arrondir les coins du bloc */
+    padding: 20px 30px; /* Espacement interne */
+    margin: 20px auto; /* Supprime la marge externe */
+    max-width: 600px; /* Largeur maximale des témoignages */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre pour le bloc */
+    border-radius: 10px; /* Arrondir les coins du bloc */
+    line-height: 1.6; /* Améliorer la lisibilité avec un espacement plus grand entre les lignes */
 }
 
 blockquote p {
     font-style: italic; /* Italique pour le texte du témoignage */
     margin-bottom: 10px; /* Marge inférieure pour l'espacement */
+    font-size: 1.1rem; /* Légèrement plus grand pour la lisibilité */
 }
 
 blockquote cite {
     font-style: normal; /* Style normal pour le nom du client */
     font-weight: bold; /* Mettre en gras le nom du client */
     color: #34ade3; /* Couleur du nom du client */
+    font-size: 1.1rem; /* Taille du texte pour le nom, pour plus d'impact */
+    margin-top: 10px; /* Marge supérieure pour espacer le nom du texte du témoignage */
+    display: block; /* Met le nom sur une nouvelle ligne */
 }
 
 @media (max-width: 768px) {
