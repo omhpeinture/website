@@ -61,7 +61,7 @@ header {
     color: #37474F;
     padding: 5px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 80%; /* Utilise toute la largeur disponible */
+    width: 100%; /* Utilise toute la largeur disponible */
 }
 header h1 {
   color: white; /* Assurez-vous que le texte est visible */
