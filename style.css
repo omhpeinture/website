@@ -497,3 +497,52 @@ footer {
         flex-basis: 100%; /* Chaque élément prend toute la largeur sur mobile */
     }
 }
+
+/* Styles pour la section de contact */
+.contact-info {
+    background: #f9f9f9; /* Fond léger pour la section */
+    padding: 20px; /* Espacement interne */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    margin-top: 20px; /* Espacement au-dessus de la section */
+}
+
+.contact-info h2 {
+    font-size: 1.8em; /* Taille du titre */
+    color: #37474F; /* Couleur du texte */
+    margin-bottom: 15px; /* Espacement sous le titre */
+}
+
+.contact-info p {
+    margin-bottom: 10px; /* Espacement entre les paragraphes */
+    font-size: 1em; /* Taille de police standard */
+    color: #333333; /* Couleur du texte des paragraphes */
+}
+
+.contact-info strong {
+    color: #34ade3; /* Couleur des éléments en gras */
+}
+
+.contact-info a {
+    color: #34ade3; /* Couleur des liens */
+    text-decoration: none; /* Supprime le soulignement par défaut */
+}
+
+.contact-info a:hover {
+    text-decoration: underline; /* Ajoute un soulignement au survol des liens */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-info {
+        padding: 15px; /* Réduit le padding sur mobile */
+    }
+
+    .contact-info h2 {
+        font-size: 1.5em; /* Ajuste la taille du titre sur mobile */
+    }
+
+    .contact-info p {
+        font-size: 0.9em; /* Ajuste la taille de police des paragraphes sur mobile */
+    }
+}
