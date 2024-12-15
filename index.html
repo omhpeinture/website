@@ -1,71 +1,118 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bienvenue sur notre site. Découvrez nos services de qualité pour améliorer votre expérience en ligne.">
-    <meta name="keywords" content="services, entreprise, développement web, design">
-    <meta name="author" content="Ton Nom">
-    <title>Accueil - Mon Entreprise</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>OMH Peinture - Accueil</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="OMH Peinture - Experts en peinture intérieure et extérieure à Caen pour entreprises, appartements et institutions publiques.">
+    <meta name="keywords" content="peinture, rénovation, entreprises, appartements, écoles, OMH Peinture, Caen">
+    <meta name="author" content="OMH Peinture">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="OMH Peinture - Accueil">
+    <meta property="og:description" content="Experts en peinture intérieure et extérieure à Caen pour entreprises, appartements et institutions publiques.">
+    <meta property="og:url" content="https://omhpeinture.github.io">
+    <meta property="og:type" content="website">
 </head>
+
 <body>
+    <!-- Header Section -->
     <header>
-        <div class="logo">
-            <a href="#" alt="Logo de l'entreprise">Mon Entreprise</a>
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#home" class="active" aria-label="Page d'accueil">Accueil</a></li>
-                <li><a href="#services" aria-label="Nos services">Services</a></li>
-                <li><a href="#contact" aria-label="Page de contact">Contact</a></li>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="Painting Logo Design (2).png" alt="OMH Peinture Logo" class="logo-img">
+            </a>
+            <button id="hamburger-menu" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul id="nav-menu" class="nav-links">
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Bienvenue chez Mon Entreprise</h1>
-            <p>Nous offrons les meilleurs services pour vos besoins.</p>
-        </div>
-    </section>
 
     <main>
-        <section id="services">
-            <h2>Nos Services</h2>
-            <div class="service">
-                <img src="service1.jpg" alt="Service 1 - Description du service 1">
-                <h3>Service 1</h3>
-                <p>Description du service 1.</p>
-            </div>
-            <div class="service">
-                <img src="service2.jpg" alt="Service 2 - Description du service 2">
-                <h3>Service 2</h3>
-                <p>Description du service 2.</p>
+        <div class="background-image">
+            <h1>Bienvenue chez OMH Peinture</h1>
+            <p>Votre expert en peinture à Caen</p>
+        </div>
+        
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>OMH Peinture : Votre partenaire en rénovation</h2>
+                <p>Experts en travaux de peinture intérieure et extérieure à Caen depuis 2023.</p>
+                <a href="services.html" class="btn btn-primary">Découvrez nos services</a>
             </div>
         </section>
 
-        <section id="contact">
-            <h2>Contactez-nous</h2>
-            <form action="#" method="POST" aria-live="polite">
-                <label for="name">Nom:</label>
-                <input type="text" id="name" name="name" required aria-describedby="nameHelp">
+        <!-- Services Section -->
+        <section class="services">
+            <h2>Nos Services</h2>
+            <div class="service-list">
+                <article class="service-item">
+                    <h3>Peinture intérieure</h3>
+                    <p>Rénovez vos espaces intérieurs avec nos finitions professionnelles.</p>
+                </article>
+                <article class="service-item">
+                    <h3>Peinture extérieure</h3>
+                    <p>Protégez et embellissez vos façades avec des peintures durables.</p>
+                </article>
+                <article class="service-item">
+                    <h3>Travaux de plâtrerie</h3>
+                    <p>Bénéficiez de notre expertise en travaux de peinture et plâtrerie.</p>
+                </article>
+            </div>
+        </section>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <h2>Ce que disent nos clients</h2>
+            <div class="testimonial-list">
+                <blockquote>
+                    <p>OMH Peinture a transformé notre bureau en un espace moderne et accueillant. Excellent travail !</p>
+                    <cite>- Jean Dupont, Entreprise ABC</cite>
+                </blockquote>
+                <!-- Ajoutez d'autres témoignages ici -->
+            </div>
+        </section>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-
-                <button type="submit">Envoyer</button>
-            </form>
+        <!-- Why Choose Us Section -->
+        <section class="why-choose-us">
+            <h2>Pourquoi choisir OMH Peinture ?</h2>
+            <ul>
+                <li>Expertise professionnelle</li>
+                <li>Matériaux de haute qualité</li>
+                <li>Respect des délais</li>
+                <li>Service client exceptionnel</li>
+            </ul>
         </section>
     </main>
 
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Mon Entreprise. Tous droits réservés.</p>
+        <div class="footer-container">
+            <p>&copy; 2024 OMH Peinture. SASU au capital de 300 EUR. SIREN 977 811 694. Tous droits réservés.</p>
+            <address>
+                <p>Siège social : 10 AV de la Concorde, 14000 Caen, France</p>
+            </address>
+            <ul class="social-links">
+                <li><a href="#" aria-label="Facebook">Facebook</a></li>
+                <li><a href="#" aria-label="Twitter">Twitter</a></li>
+                <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+            </ul>
+        </div>
     </footer>
-
-    <script src="scripts.js"></script>
 </body>
+
 </html>
