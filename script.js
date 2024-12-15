@@ -57,3 +57,28 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+document.querySelector(".contact-form").addEventListener("submit", function (e) {
+    e.preventDefault(); // Empêche le formulaire de se soumettre normalement
+    document.getElementById("confirmationMessage").style.display = "block"; // Affiche le message
+    setTimeout(function () {
+        document.getElementById("confirmationMessage").style.display = "none"; // Cache le message après 5 secondes
+    }, 5000);
+});
+// Affiche/masque le bouton "Back to Top" lors du défilement
+window.addEventListener("scroll", function () {
+    const backToTop = document.getElementById("backToTop");
+    if (window.scrollY > 200) {
+        backToTop.style.display = "block"; // Affiche le bouton si défilement > 200px
+    } else {
+        backToTop.style.display = "none"; // Masque le bouton si défilement < 200px
+    }
+});
+
+// Défilement en douceur vers le haut lorsque le bouton est cliqué
+document.getElementById("backToTop").addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
