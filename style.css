@@ -58,11 +58,21 @@ body {
 /* Header */
 header {
     background: #ffffff;
+    background-image: url('pexels-ivan-samkov-5799014.jpg');
+     background-size: cover; /* L'image couvre toute la zone */
+  background-position: center; /* Centrer l'image */
+  background-attachment: fixed; /* L'image reste fixe lors du défilement */
+  height: 400px; /* Ajustez la hauteur du header */
     color: #37474F;
     padding: 10px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 100%; /* Utilise toute la largeur disponible */
 }
+header h1 {
+  color: white; /* Assurez-vous que le texte est visible */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ajouter un ombrage au texte pour qu'il soit plus visible sur l'image */
+}
+
 
 .navbar {
     display: flex;
