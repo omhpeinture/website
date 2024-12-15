@@ -42,28 +42,22 @@ header {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 15px;
 }
 
 .logo {
-    max-width: 200px;
+    max-width: 150px;
 }
-
-.logo img {
-    max-width: 100%;
-    height: auto;
-}
-
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 20px;
 }
 
 .nav-links a {
     color: #37474F;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: 500;
     transition: color 0.3s ease, border-bottom 0.3s ease;
 }
@@ -330,7 +324,9 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
-        flex-wrap: wrap;}
+        flex-wrap: wrap;
+    padding: 0 10px;
+    }
     .hero, .hero-small {
         padding: 50px 10px;
     }
@@ -348,6 +344,7 @@ footer {
 }
     .logo {
         order: 2;
+        max-width: 120px;
     }
     
     #nav-menu {
