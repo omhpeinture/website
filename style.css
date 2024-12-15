@@ -498,24 +498,3 @@ footer {
         flex-basis: 100%; /* Chaque élément prend toute la largeur sur mobile */
     }
 }
-
-
-/* Styles pour la section de confiance */
-.trust-badges {
-    background-color: #ffffff;
-    padding: 50px 0;
-    text-align: center;
-}
-
-.badge-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 20px;
-}
-
-.badge-container img {
-    max-width: 100px;
-    height: auto;
-}
-
