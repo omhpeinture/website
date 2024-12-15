@@ -47,6 +47,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+// Ajoute cette fonction dans ton fichier JavaScript
+document.getElementById('hamburger-menu').addEventListener('click', function() {
+    const navMenu = document.getElementById('nav-menu');
+    navMenu.classList.toggle('active');
+});
+
     // Ajout de la fonctionnalité de défilement fluide
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
