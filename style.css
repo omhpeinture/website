@@ -102,9 +102,11 @@ main {
 }
 
 .background-image h2, 
+    margin-top: 30px; /* Ajuste la valeur pour déplacer le texte */
+}
 .background-image p, 
 .background-image .btn {
-    margin-top: 30px; /* Ajuste la valeur pour déplacer le texte */
+    margin-top: 50px; /* Ajuste la valeur pour déplacer le texte */
 }
 .background-image p {
     font-size: 1.5em;
