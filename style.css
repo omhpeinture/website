@@ -4,6 +4,21 @@
     padding: 0;
     box-sizing: border-box;
 }
+#hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background: #37474F;
+    transition: 0.4s;
+}
 
 body {
     font-family: 'Arial', sans-serif;
@@ -253,12 +268,56 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
+        flex-wrap: wrap;}
+    .hero, .hero-small {
+        padding: 50px 10px;
+    }
+    .services-section, .contact-section {
+        padding: 30px 10px;
+    }
+     #hamburger-menu {
+        display: block;
+        order: 1;
+         padding: 10px;
+    }
+    #hamburger-menu span {
+    /* ... autres styles ... */
+    background: #34ade3;
+}
+    .logo {
+        order: 2;
+    }
+    
+    #nav-menu {
+        flex-basis: 100%;
+        order: 3;
+        display: none;
     }
 
-    .nav-links {
-        margin-top: 20px;
+    #nav-menu.active {
+        display: block;
     }
+    
+    .nav-links.active {
+        display: flex; /* Ajoutez cette ligne */
+    }
+   .nav-links {
+       display: none; 
+       flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+       transition: all 0.3s ease-in-out;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+    .nav-links a:focus,
+.btn:focus,
+#hamburger-menu:focus {
+    outline: 2px solid #34ade3;
+    outline-offset: 2px;
+}
 
     .service-list {
         flex-direction: column;
@@ -271,5 +330,18 @@ footer {
     .footer-container {
         flex-direction: column;
         gap: 20px;
+    }
+
+    .hero h2, .hero-small h1 {
+        font-size: 2em;
+    }
+
+    .hero p, .hero-small p {
+        font-size: 1.2em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 1em;
     }
 }
