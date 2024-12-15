@@ -377,13 +377,12 @@ footer {
     .services-section, .contact-section {
         padding: 30px 10px;
     }
-     #hamburger-menu {
+     .hamburger-menu {
         display: block;
         order: 1;
         padding: 10px;
     }
-    #hamburger-menu span {
-    /* ... autres styles ... */
+    .hamburger-menu span {
     background: #34ade3;
 }
     .logo {
@@ -391,13 +390,13 @@ footer {
         max-width: 120px;
     }
     
-    #nav-menu {
+    .nav-menu {
         flex-basis: 100%;
         order: 3;
         display: none;
     }
 
-    #nav-menu.active {
+    .nav-menu.active {
         display: block;
     }
     
@@ -417,7 +416,7 @@ footer {
     }
     .nav-links a:focus,
 .btn:focus,
-#hamburger-menu:focus {
+.hamburger-menu:focus {
     outline: 2px solid #34ade3;
     outline-offset: 2px;
 }
