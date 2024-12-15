@@ -85,7 +85,7 @@ header h1 {
     height: auto; /* Assurez-vous que le ratio est maintenu */
 }
 .logo img {
-    max-height: 80px; /* Ajoutez cette ligne pour limiter la hauteur du logo */
+    max-height: 100px; /* Ajoutez cette ligne pour limiter la hauteur du logo */
     width: auto; /* Maintient le ratio d'aspect */
 }
 
