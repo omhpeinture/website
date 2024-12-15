@@ -45,11 +45,11 @@ header {
 }
 
 .logo {
-    max-width: 250px;
+    max-width: 230px;
     height: auto; /* Assurez-vous que le ratio est maintenu */
 }
 .logo img {
-    max-height: 250px; /* Ajoutez cette ligne pour limiter la hauteur du logo */
+    max-height: 220px; /* Ajoutez cette ligne pour limiter la hauteur du logo */
     width: auto; /* Maintient le ratio d'aspect */
 }
 
