@@ -9,6 +9,13 @@ html, body {
     padding: 0;
     height: 100%;
 }
+
+.services-section,
+.testimonials,
+.contact-section {
+    background-color: #f4f4f4; /* Légère différence pour améliorer la lisibilité */
+}
+
 .hamburger-menu {
     display: none;
     background: none;
