@@ -57,12 +57,13 @@ body {
 }
 /* Header */
 header {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.8); /* Couleur blanche avec transparence */
     color: #37474F;
-    padding: 0;
+    padding: 10px 0; /* Ajustez selon vos besoins */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 100%; /* Utilise toute la largeur disponible */
-    position: relative; /* Permet au contenu suivant d'être positionné par rapport à lui */
+    position: relative; /* Position relative pour permettre un positionnement absolu des éléments internes si nécessaire */
+    z-index: 1000; /* Assurez-vous que le header est au-dessus des autres éléments */
 }
 header h1 {
   color: white; /* Assurez-vous que le texte est visible */
