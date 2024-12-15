@@ -144,30 +144,6 @@ main {
     font-size: 1.5em;
 }
 
-/* Hero Section */
-.hero, .hero-small {
-    background: linear-gradient(135deg, #34ade3, #5ce1e6);
-    color: #ffffff;
-    text-align: center;
-    padding: 100px 20px;
-    margin-bottom: 50px;
-}
-
-.hero-small {
-    padding: 50px 20px;
-}
-
-.hero h2, .hero-small h1 {
-    font-size: 3em;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.hero p, .hero-small p {
-    font-size: 1.5em;
-    margin-bottom: 30px;
-}
-
 .btn-primary {
     display: inline-block;
     text-decoration: none;
@@ -328,6 +304,10 @@ main {
     justify-content: center;
     gap: 30px; /* Espacement entre les témoignages */
 }
+.testimonial-list blockquote:hover {
+    transform: scale(1.05); /* Zoom sur le témoignage au survol */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Augmenter l'ombre pour un effet 3D */
+}
 
 blockquote {
     background: #f9f9f9; /* Couleur de fond pour les témoignages */
@@ -409,6 +389,7 @@ footer {
     }
     .services-section, .contact-section {
         padding: 30px 10px;
+        font-size: 2.2em;
     }
      .hamburger-menu {
         display: block;
