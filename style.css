@@ -134,7 +134,7 @@ width: 100%; /* Assurez-vous que le main prend toute la largeur */
     background-attachment: fixed; /* Fixe l'image de fond lors du défilement */
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: calc(100vh + 60px); /* Hauteur à 100% de la fenêtre plus la hauteur du header (ajustez si nécessaire) */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -145,6 +145,7 @@ width: 100%; /* Assurez-vous que le main prend toute la largeur */
     padding: 0;
     margin: 0;
     border: none;
+    position: absolute
 }
 
 .background-image h1 {
