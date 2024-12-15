@@ -45,7 +45,12 @@ header {
 }
 
 .logo {
-    max-width: 150px;
+    max-width: 80px;
+    height: auto; /* Assurez-vous que le ratio est maintenu */
+}
+.logo img {
+    max-height: 40px; /* Ajoutez cette ligne pour limiter la hauteur du logo */
+    width: auto; /* Maintient le ratio d'aspect */
 }
 
 .nav-links {
@@ -55,6 +60,7 @@ header {
     display: flex;
     justify-content: flex-end;
     gap: 15px;
+    align-items: center; /* Aligne verticalement les éléments de navigation */
 }
 
 .nav-links a {
@@ -64,6 +70,7 @@ header {
     font-weight: 500;
     transition: color 0.3s ease, border-bottom 0.3s ease;
     padding-bottom: 2px; /* Espace pour la bordure au survol */
+    line-height: 40px; /* Ajustez cette valeur pour correspondre à la hauteur du logo */
 }
 
 .nav-links a:hover,
