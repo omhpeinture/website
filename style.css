@@ -29,9 +29,20 @@ html, body {
     height: 3px;
     margin: 5px 0;
     background: #37474F;
-    transition: 0.4s;
+    transition: transform 0.4s ease, background 0.4s ease;
 }
 
+.hamburger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -182,6 +193,13 @@ main {
 }
 .btn-secondary:hover {
     background-color: #34ade3;
+}
+.btn-primary, .btn-secondary {
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.btn-primary:hover, .btn-secondary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Effet d'ombre */
 }
 
 /* Services Section */
@@ -384,6 +402,7 @@ footer {
     .navbar {
         flex-wrap: wrap;
     padding: 0 10px;
+        justify-content: space-between;
     }
     .hero, .hero-small {
         padding: 50px 10px;
@@ -394,7 +413,7 @@ footer {
      .hamburger-menu {
         display: block;
         order: 1;
-        padding: 10px;
+        padding: 12px;
     }
     .hamburger-menu span {
     background: #34ade3;
