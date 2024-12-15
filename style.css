@@ -123,7 +123,8 @@ main {
     background-color: #000; /* Couleur de fond si l'image ne se charge pas */
     background-image: url('pexels-ivan-samkov-5799014.jpg');
     background-size: cover;
-    background-position: center;
+    background-attachment: fixed; /* Fixe l'image de fond lors du défilement */
+    background-position: center top;
     background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
