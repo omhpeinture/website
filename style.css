@@ -75,7 +75,7 @@ header h1 {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 5 15px; /* Ajusté pour correspondre au padding du header */
+    padding: 5 10px; /* Ajusté pour correspondre au padding du header */
     gap: 20px; /* Réduire l'espace entre le logo et les éléments de navigation */
     
 }
