@@ -58,11 +58,6 @@ body {
 /* Header */
 header {
     background: #ffffff;
-    background-image: url('pexels-ivan-samkov-5799014.jpg');
-     background-size: cover; /* L'image couvre toute la zone */
-  background-position: center; /* Centrer l'image */
-  background-attachment: fixed; /* L'image reste fixe lors du défilement */
-  height: 400px; /* Ajustez la hauteur du header */
     color: #37474F;
     padding: 10px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -80,17 +75,17 @@ header h1 {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px; /* Ajusté pour correspondre au padding du header */
+    padding: 5 15px; /* Ajusté pour correspondre au padding du header */
     gap: 20px; /* Réduire l'espace entre le logo et les éléments de navigation */
     
 }
 
 .logo {
-    max-width: 200px;
+    max-width: 180px;
     height: auto; /* Assurez-vous que le ratio est maintenu */
 }
 .logo img {
-    max-height: 220px; /* Ajoutez cette ligne pour limiter la hauteur du logo */
+    max-height: 160px; /* Ajoutez cette ligne pour limiter la hauteur du logo */
     width: auto; /* Maintient le ratio d'aspect */
 }
 
@@ -107,11 +102,11 @@ header h1 {
 .nav-links a {
     color: #37474F;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 500;
     transition: color 0.3s ease, border-bottom 0.3s ease;
     padding-bottom: 2px; /* Espace pour la bordure au survol */
-    line-height: 30px; /* Ajustez cette valeur pour correspondre à la hauteur du logo */
+    line-height: 25px; /* Ajustez cette valeur pour correspondre à la hauteur du logo */
 }
 
 .nav-links a:hover,
