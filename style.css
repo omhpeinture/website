@@ -59,9 +59,10 @@ body {
 header {
     background: #ffffff;
     color: #37474F;
-    padding: 5px 0;
+    padding: 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 100%; /* Utilise toute la largeur disponible */
+    position: relative; /* Permet au contenu suivant d'être positionné par rapport à lui */
 }
 header h1 {
   color: white; /* Assurez-vous que le texte est visible */
