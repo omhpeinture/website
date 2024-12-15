@@ -53,7 +53,7 @@ body {
 header {
     background: #ffffff;
     color: #37474F;
-    padding: 5px 0;
+    padding: 10px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 100%; /* Utilise toute la largeur disponible */
 }
@@ -65,10 +65,12 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px; /* Ajusté pour correspondre au padding du header */
+    gap: 20px; /* Réduire l'espace entre le logo et les éléments de navigation */
+    
 }
 
 .logo {
-    max-width: 230px;
+    max-width: 200px;
     height: auto; /* Assurez-vous que le ratio est maintenu */
 }
 .logo img {
@@ -82,18 +84,18 @@ header {
     padding: 0;
     display: flex;
     justify-content: flex-end;
-    gap: 15px;
+    gap: 20px;
     align-items: center; /* Aligne verticalement les éléments de navigation */
 }
 
 .nav-links a {
     color: #37474F;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     transition: color 0.3s ease, border-bottom 0.3s ease;
     padding-bottom: 2px; /* Espace pour la bordure au survol */
-    line-height: 40px; /* Ajustez cette valeur pour correspondre à la hauteur du logo */
+    line-height: 30px; /* Ajustez cette valeur pour correspondre à la hauteur du logo */
 }
 
 .nav-links a:hover,
