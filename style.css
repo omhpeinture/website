@@ -16,6 +16,12 @@ html, body {
     background-color: #f4f4f4; /* Légère différence pour améliorer la lisibilité */
 }
 
+/* Définir la durée de l'animation */
+[data-aos] {
+    transition: all 0.5s ease-in-out;
+}
+
+
 .hamburger-menu {
     display: none;
     background: none;
@@ -248,8 +254,11 @@ main {
 .realisation-item img {
     max-width: 100%;
     border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
 }
-
+.realisation-item img:hover {
+    transform: scale(1.1); /* Zoom avant sur l'image */
+}
 /* Contact Form */
 .contact-section {
     background: #ffffff;
@@ -280,8 +289,14 @@ main {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
+     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    border-color: #34ade3;
+    box-shadow: 0 0 5px rgba(52, 173, 227, 0.5); /* Ombre bleue */
+}
 .form-group input[type="checkbox"] {
     margin-right: 10px;
 }
