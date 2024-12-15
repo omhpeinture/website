@@ -4,6 +4,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
 .hamburger-menu {
     display: none;
     background: none;
@@ -89,6 +94,7 @@ main {
 
 /* Background Image Section */
 .background-image {
+    background-color: #000; /* Couleur de fond si l'image ne se charge pas */
     background-image: url('pexels-ivan-samkov-5799014.jpg');
     background-size: cover;
     background-position: center;
@@ -109,7 +115,7 @@ main {
     margin-bottom: 20px;
 }
 
-.background-image h2, 
+.background-image h2 {
     margin-top: 30px; /* Ajuste la valeur pour déplacer le texte */
 }
 .background-image p, 
