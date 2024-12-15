@@ -131,7 +131,7 @@ main {
     background-attachment: fixed; /* Fixe l'image de fond lors du défilement */
     background-position: center;
     background-repeat: no-repeat;
-    height: 80vh;
+    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -140,7 +140,6 @@ main {
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 20px; /* Ajustez cette valeur selon vos besoins */
 }
 
 .background-image h1 {
