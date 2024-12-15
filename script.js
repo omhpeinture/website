@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.createElement("button"); // Création d'un bouton hamburger
 
     // Création du bouton hamburger
-    hamburger.innerHTML = "☰";
+    hamburger.innerHTML = "<span></span><span></span><span></span>"; // Structure des lignes du menu hamburger
     hamburger.classList.add("hamburger-menu");
     hamburger.setAttribute("aria-label", "Menu");
     document.querySelector("header").appendChild(hamburger);
