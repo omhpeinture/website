@@ -11,6 +11,7 @@ html, body {
     height: 100%;
 }
 /* Header général */
+/* Header général */
 header {
     background: rgba(0, 0, 0, 0.8); /* Fond semi-transparent */
     color: #fff;
@@ -36,7 +37,7 @@ header {
     gap: 20px; /* Espacement entre les liens */
 }
 
-/* Section droite (Contactez-Nous) */
+/* Section droite (vide pour l'instant) */
 .nav-right {
     display: flex;
 }
@@ -45,9 +46,11 @@ header {
 .nav-center .brand {
     font-family: 'Georgia', serif; /* Police avec style italique */
     font-style: italic;
-    font-size: 1.8rem; /* Taille du texte */
-    color: #FFFFFF; /* Couleur bleue */
+    font-size: 1.4rem; /* Taille de texte réduite */
+    color: #34ade3; /* Couleur bleue */
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Ombre pour meilleure visibilité */
+    text-align: center; /* Centrer le texte */
+    flex-grow: 1; /* Prend toute la largeur disponible pour centrer le texte */
 }
 
 /* Liens de navigation */
@@ -64,12 +67,6 @@ header {
 .nav-link:hover {
     color: #34ade3;
     border-bottom: 2px solid #34ade3;
-}
-
-/* Résolution des problèmes de lisibilité */
-.nav-link:focus {
-    outline: none;
-    border-bottom: 2px solid #fff;
 }
 
 .services-section,
