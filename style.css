@@ -40,16 +40,6 @@ nav ul li a {
 nav ul li a:hover {
     color: #007BFF; /* Change la couleur des liens au survol */
 }
-
-h1 {
-    flex: 2;
-    margin: 0;
-    text-align: center;
-    font-style: italic;
-    font-size: 1.75rem; /* Taille de police relative */
-    color: #444; /* Une couleur légèrement plus douce */
-}
-
 @media (max-width: 768px) {
     header {
         flex-direction: column; /* Réorganise les éléments sur petits écrans */
