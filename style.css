@@ -1,1 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Améliore la lisibilité du texte */
+    background-color: #fdfdfd; /* Couleur de fond légère */
+}
+
+header {
+    background-color: #f8f8f8;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd; /* Ajoute une séparation visuelle */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem; /* Espacement uniforme entre les éléments */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem; /* Taille de police relative pour plus de flexibilité */
+    transition: color 0.3s ease; /* Ajoute une transition fluide */
+}
+
+nav ul li a:hover {
+    color: #007BFF; /* Change la couleur des liens au survol */
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.75rem; /* Taille de police relative */
+    color: #444; /* Une couleur légèrement plus douce */
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Réorganise les éléments sur petits écrans */
+        text-align: center;
+    }
+
+    nav ul {
+        justify-content: center; /* Centre les éléments du menu */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Réduit la taille du titre sur petits écrans */
+    }
+}
