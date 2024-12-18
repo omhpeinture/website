@@ -7,9 +7,7 @@ body {
     line-height: 1.6; /* Améliore la lisibilité du texte */
     background-color: #fdfdfd; /* Couleur de fond légère */
 }
-nav {
-    flex-grow: 1;
-}
+
 header {
     background-color: #f8f8f8;
     padding: 20px;
@@ -20,11 +18,15 @@ header {
     position: sticky; /* Collé en haut */
     top: 0;
     z-index: 1000;
+    width: 100%; /* S'assure que l'en-tête couvre toute la largeur */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajoute une ombre discrète pour plus de lisibilité */
 }
+
 header img {
     max-height: 80px; /* Ajustez la taille du logo */
     margin-right: 20px;
 }
+
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -43,6 +45,7 @@ nav ul li a {
 nav ul li a:hover {
     color: #007BFF; /* Change la couleur des liens au survol */
 }
+
 .hero-section {
     position: relative;
     background-image: url('pexels-heyho-6969824.jpg');
@@ -70,6 +73,7 @@ nav ul li a:hover {
     background: rgba(0, 0, 0, 0.5); /* Ajoute un overlay sombre */
     z-index: 1;
 }
+
 .hero-section h1, .hero-section h2 {
     position: relative;
     z-index: 2; /* Place le texte au-dessus de l'overlay */
@@ -81,6 +85,7 @@ h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
+
 p {
     font-size: 1.1rem;
     line-height: 1.8;
@@ -90,6 +95,7 @@ p {
     margin: 0 auto;
     padding: 0 20px;
 }
+
 .content-section {
     padding: 60px 20px;
     background-color: #fdfdfd;
@@ -111,4 +117,3 @@ p {
         font-size: 1.5rem; /* Réduit la taille du titre sur petits écrans */
     }
 }
-
