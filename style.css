@@ -19,7 +19,10 @@ header {
     border-bottom: 1px solid #ddd; /* Ajoute une séparation visuelle */
     position: sticky;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 100;
+    position: absolute;
     
 }
 nav ul {
@@ -59,13 +62,19 @@ nav ul li a:hover {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 50vh; /* Hauteur de 50% de la fenêtre */
+    height: 100vh; /* Hauteur de 50% de la fenêtre */
     display: flex;
+    flex-direction: column;
+    text-align: center;
     align-items: center;
     justify-content: center;
     color: white; /* Assurez-vous que le texte est lisible sur l'image */
 }
 
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
 .content-section {
     padding: 50px 20px;
     max-width: 1200px;
