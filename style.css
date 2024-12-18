@@ -19,9 +19,12 @@ header {
     border-bottom: 1px solid #ddd;
     position: sticky; /* Collé en haut */
     top: 0;
-    z-index: 100;
+    z-index: 1000;
 }
-
+header img {
+    max-height: 80px; /* Ajustez la taille du logo */
+    margin-right: 20px;
+}
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -55,6 +58,7 @@ nav ul li a:hover {
     }
 }
 .hero-section {
+    position: relative;
     background-image: url('pexels-heyho-6969824.jpg');
     background-repeat: no-repeat;
     background-position: center;
@@ -66,7 +70,24 @@ nav ul li a:hover {
     text-align: center;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: #fff;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Ajoute un overlay sombre */
+    z-index: 1;
+}
+.hero-section h1, .hero-section h2 {
+    position: relative;
+    z-index: 2; /* Place le texte au-dessus de l'overlay */
+    margin: 0;
+    padding: 20px;
 }
 
 h1 {
@@ -82,15 +103,16 @@ h2 {
 
 p {
     font-size: 1.1rem;
+    line-height: 1.8;
     color: #555;
     text-align: center;
-    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 .content-section {
-    padding: 50px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 60px 20px;
+    background-color: #fdfdfd;
 }
 
-/* Vous pouvez ajouter des styles spécifiques pour chaque section si nécessaire */
 
