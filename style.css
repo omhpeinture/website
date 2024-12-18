@@ -46,7 +46,7 @@ header {
     font-family: 'Georgia', serif; /* Police avec style italique */
     font-style: italic;
     font-size: 1.8rem; /* Taille du texte */
-    color: #34ade3; /* Couleur bleue */
+    color: #FFFFFF; /* Couleur bleue */
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Ombre pour meilleure visibilité */
 }
 
