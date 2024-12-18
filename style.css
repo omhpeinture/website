@@ -11,7 +11,6 @@ html, body {
     height: 100%;
 }
 /* Header général */
-/* Header général */
 header {
     background: rgba(0, 0, 0, 0.8); /* Fond semi-transparent */
     color: #fff;
@@ -22,13 +21,9 @@ header {
     z-index: 10;
     padding: 10px 20px; /* Espacement interne */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Ombre pour donner du relief */
-}
-
-/* Aligner les sections du header */
-.navbar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /* Espace entre les sections */
+    align-items: center; /* Aligne verticalement les éléments */
 }
 
 /* Section gauche (Nos Services, Demander un Devis) */
@@ -37,20 +32,18 @@ header {
     gap: 20px; /* Espacement entre les liens */
 }
 
-/* Section droite (vide pour l'instant) */
-.nav-right {
-    display: flex;
+/* Texte centré (OMH PEINTURE) */
+.nav-center {
+    flex-grow: 1; /* Permet à cette section de prendre toute la place restante */
+    text-align: center;
 }
 
-/* Texte centré (OMH PEINTURE) */
 .nav-center .brand {
     font-family: 'Georgia', serif; /* Police avec style italique */
     font-style: italic;
-    font-size: 1.4rem; /* Taille de texte réduite */
+    font-size: 2rem; /* Taille du texte plus grande pour le logo */
     color: #34ade3; /* Couleur bleue */
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Ombre pour meilleure visibilité */
-    text-align: center; /* Centrer le texte */
-    flex-grow: 1; /* Prend toute la largeur disponible pour centrer le texte */
 }
 
 /* Liens de navigation */
@@ -58,7 +51,7 @@ header {
     font-family: 'Montserrat', sans-serif; /* Police Montserrat */
     color: white;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 14px; /* Taille réduite des liens */
     font-weight: 500;
     transition: color 0.3s ease, border-bottom 0.3s ease;
     padding-bottom: 2px;
@@ -68,6 +61,7 @@ header {
     color: #34ade3;
     border-bottom: 2px solid #34ade3;
 }
+
 
 .services-section,
 .testimonials,
