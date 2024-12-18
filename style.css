@@ -14,53 +14,51 @@ html, body {
 header {
     background: rgba(0, 0, 0, 0.8); /* Fond semi-transparent */
     color: #fff;
-    position: fixed; /* Fixe le header en haut de la page même lors du défilement */
+    position: fixed; /* Fixe le header même lors du défilement */
     top: 0;
     left: 0;
     width: 100%;
     z-index: 10;
-    padding: 10px 20px; /* Espacement interne */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Ombre pour donner du relief */
+    height: 60px; /* Hauteur uniforme */
     display: flex;
-    justify-content: space-between; /* Espace entre les sections */
-    align-items: center; /* Aligne verticalement les éléments */
+    align-items: center; /* Centrage vertical des éléments */
+    justify-content: space-between; /* Gère la disposition globale */
+    padding: 0 20px; /* Marges latérales */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Ombre */
 }
 
 /* Section gauche (Nos Services, Demander un Devis) */
 .nav-left {
     display: flex;
-    gap: 20px; /* Espacement entre les liens */
+    gap: 15px; /* Espacement entre les liens */
+}
+
+.nav-link {
+    font-family: 'Montserrat', sans-serif; /* Police Montserrat */
+    font-size: 14px; /* Taille plus petite que le titre */
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #34ade3; /* Couleur au survol */
 }
 
 /* Texte centré (OMH PEINTURE) */
 .nav-center {
-    flex-grow: 1; /* Permet à cette section de prendre toute la place restante */
-    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Centre exactement horizontalement */
 }
 
-.nav-center .brand {
-    font-family: 'Georgia', serif; /* Police avec style italique */
+.brand {
+    font-family: 'Georgia', serif; /* Police élégante */
     font-style: italic;
-    font-size: 2rem; /* Taille du texte plus grande pour le logo */
-    color: #34ade3; /* Couleur bleue */
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Ombre pour meilleure visibilité */
-}
-
-/* Liens de navigation */
-.nav-link {
-    font-family: 'Montserrat', sans-serif; /* Police Montserrat */
-    color: white;
-    text-decoration: none;
-    font-size: 14px; /* Taille réduite des liens */
-    font-weight: 500;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-    padding-bottom: 2px;
-}
-
-.nav-link:hover {
+    font-size: 1.8rem; /* Plus grand que les liens */
     color: #34ade3;
-    border-bottom: 2px solid #34ade3;
-}
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Ombre pour lisibilité */
 
 
 .services-section,
