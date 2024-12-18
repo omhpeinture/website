@@ -4,8 +4,9 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6; /* Améliore la lisibilité du texte */
-    background-color: #fdfdfd; /* Couleur de fond légère */
+    line-height: 1.6;
+    background-color: #fdfdfd;
+    overflow-x: hidden; /* Empêche le débordement horizontal */
 }
 
 header {
@@ -18,12 +19,13 @@ header {
     position: sticky; /* Collé en haut */
     top: 0;
     z-index: 1000;
-    width: 100%; /* S'assure que l'en-tête couvre toute la largeur */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajoute une ombre discrète pour plus de lisibilité */
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre discrète */
+    margin: 0; /* Assure qu'il n'y a pas de marge au-dessus */
 }
 
 header img {
-    max-height: 80px; /* Ajustez la taille du logo */
+    max-height: 80px;
     margin-right: 20px;
 }
 
@@ -38,12 +40,12 @@ nav ul {
 nav ul li a {
     text-decoration: none;
     color: #333;
-    font-size: 0.9rem; /* Taille de police relative pour plus de flexibilité */
-    transition: color 0.3s ease; /* Ajoute une transition fluide */
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #007BFF; /* Change la couleur des liens au survol */
+    color: #007BFF;
 }
 
 .hero-section {
@@ -52,7 +54,6 @@ nav ul li a:hover {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-color: #444; /* Couleur de secours si l'image ne charge pas */
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -70,13 +71,13 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Ajoute un overlay sombre */
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
 .hero-section h1, .hero-section h2 {
     position: relative;
-    z-index: 2; /* Place le texte au-dessus de l'overlay */
+    z-index: 2; /* Le texte doit être au-dessus de l'overlay */
     margin: 0;
     padding: 20px;
 }
@@ -103,17 +104,17 @@ p {
 
 @media (max-width: 768px) {
     header {
-        flex-direction: column; /* Réorganise les éléments sur petits écrans */
+        flex-direction: column;
         text-align: center;
     }
 
     nav ul {
-        justify-content: center; /* Centre les éléments du menu */
-        flex-direction: column; /* Empile les liens en colonne */
-        gap: 0.5rem; /* Réduit l'espacement */
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.5rem;
     }
 
     h1 {
-        font-size: 1.5rem; /* Réduit la taille du titre sur petits écrans */
+        font-size: 1.5rem;
     }
 }
