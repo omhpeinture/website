@@ -9,6 +9,67 @@ html, body {
     padding: 0;
     height: 100%;
 }
+/* Header général */
+header {
+    background: rgba(0, 0, 0, 0.8); /* Fond semi-transparent */
+    color: #fff;
+    position: fixed; /* Fixe le header en haut de la page même lors du défilement */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 10px 20px; /* Espacement interne */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Ombre pour donner du relief */
+}
+
+/* Aligner les sections du header */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Section gauche (Nos Services, Demander un Devis) */
+.nav-left {
+    display: flex;
+    gap: 20px; /* Espacement entre les liens */
+}
+
+/* Section droite (Contactez-Nous) */
+.nav-right {
+    display: flex;
+}
+
+/* Texte centré (OMH PEINTURE) */
+.nav-center .brand {
+    font-family: 'Georgia', serif; /* Police avec style italique */
+    font-style: italic;
+    font-size: 1.8rem; /* Taille du texte */
+    color: #34ade3; /* Couleur bleue */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Ombre pour meilleure visibilité */
+}
+
+/* Liens de navigation */
+.nav-link {
+    font-family: 'Montserrat', sans-serif; /* Police Montserrat */
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 2px;
+}
+
+.nav-link:hover {
+    color: #34ade3;
+    border-bottom: 2px solid #34ade3;
+}
+
+/* Résolution des problèmes de lisibilité */
+.nav-link:focus {
+    outline: none;
+    border-bottom: 2px solid #fff;
+}
 
 .services-section,
 .testimonials,
@@ -55,28 +116,6 @@ body {
     background: #f9f9f9;
     color: #333333;
 }
-/* Supprimer le fond opaque du header */
-header {
-    background: transparent; /* Fond transparent */
-    color: #fff; /* Texte en blanc */
-    position: absolute; /* Position absolue pour se superposer à l'image */
-    top: 0; /* Aligné en haut */
-    left: 0;
-    width: 100%;
-    z-index: 10; /* Place le header au-dessus de l'image */
-}
-
-/* Ajuster la couleur du texte du logo et des liens */
-header h1, 
-.nav-links a {
-    color: white; /* Blanc pour la visibilité */
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Ombre portée pour améliorer la lisibilité */
-}
-
-.logo img {
-    max-height: 80px; /* Ajustez selon vos besoins */
-}
-
 /* Conserver l'image d'arrière-plan */
 .background-image {
     background-color: #000;
@@ -100,35 +139,7 @@ header h1,
     margin-bottom: 20px;
 }
 
-
-
-.nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: flex-end;
-    gap: 20px;
-    align-items: center; /* Aligne verticalement les éléments de navigation */
-}
-
-.nav-links a {
-    color: #37474F;
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: 500;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-    padding-bottom: 2px; /* Espace pour la bordure au survol */
-    line-height: 25px; /* Ajustez cette valeur pour correspondre à la hauteur du logo */
-}
-
-.nav-links a:hover,
-.nav-links .active {
-    color: #34ade3;
-    border-bottom: 2px solid #34ade3;
-}
-
-
+500;
 /* Main content */
 main {
 width: 100%; /* Assurez-vous que le main prend toute la largeur */
