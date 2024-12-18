@@ -64,3 +64,23 @@ h1 {
         font-size: 1.5rem; /* Réduit la taille du titre sur petits écrans */
     }
 }
+.hero-section {
+    background-image: url('pexels-heyho-6969824.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 50vh; /* Hauteur de 50% de la fenêtre */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Assurez-vous que le texte est lisible sur l'image */
+}
+
+.content-section {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Vous pouvez ajouter des styles spécifiques pour chaque section si nécessaire */
+
