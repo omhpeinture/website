@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-body {
+.body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
@@ -9,7 +9,7 @@ body {
     overflow-x: hidden; /* Empêche le débordement horizontal */
 }
 
-header {
+.header {
     background-color: #f8f8f8;
     padding: 20px;
     display: flex;
@@ -24,12 +24,12 @@ header {
     margin: 0; /* Assure qu'il n'y a pas de marge au-dessus */
 }
 
-header img {
+.header img {
     max-height: 80px;
     margin-right: 20px;
 }
 
-nav ul {
+.nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -37,14 +37,14 @@ nav ul {
     gap: 1rem; /* Espacement uniforme entre les éléments */
 }
 
-nav ul li a {
+.nav ul li a {
     text-decoration: none;
     color: #333;
     font-size: 0.9rem;
     transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
+.nav ul li a:hover {
     color: #007BFF;
 }
 
@@ -75,26 +75,16 @@ nav ul li a:hover {
     z-index: 1;
 }
 
-.hero-section h1, .hero-section h2 {
+.hero-section h1, {
     position: relative;
     z-index: 2; /* Le texte doit être au-dessus de l'overlay */
     margin: 0;
     padding: 20px;
 }
 
-h1 {
+.h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-}
-
-p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #555;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
 }
 
 @media (max-width: 768px) {
