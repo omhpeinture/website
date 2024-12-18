@@ -15,6 +15,10 @@ header {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #ddd; /* Ajoute une séparation visuelle */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    
 }
 
 nav ul {
