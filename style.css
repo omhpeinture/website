@@ -97,11 +97,6 @@ p {
     padding: 0 20px;
 }
 
-.content-section {
-    padding: 60px 20px;
-    background-color: #fdfdfd;
-}
-
 @media (max-width: 768px) {
     header {
         flex-direction: column;
