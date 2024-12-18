@@ -8,7 +8,7 @@ body {
     background-color: #fdfdfd; /* Couleur de fond légère */
 }
 nav {
-    flex: 1;
+    flex-grow: 1;
 }
 header {
     background-color: #f8f8f8;
@@ -22,7 +22,6 @@ header {
     z-index: 100;
     
 }
-
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -43,7 +42,7 @@ nav ul li a:hover {
 }
 
 h1 {
-    flex: 1;
+    flex: 2;
     margin: 0;
     text-align: center;
     font-style: italic;
