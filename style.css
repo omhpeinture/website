@@ -6,10 +6,11 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    padding-top: 80px; /* Espace ajouté pour le header fixe */
 }
 
 .header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -19,6 +20,7 @@ body {
     padding: 20px;
     z-index: 10;
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fond sombre semi-transparent */
 }
 
 .logo-container img {
@@ -52,6 +54,7 @@ nav ul li a:hover {
     align-items: center;
     color: white;
     position: relative;
+     z-index: 1; /* Permet à l'image de se situer derrière le header */
 }
 
 .hero-content {
