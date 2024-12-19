@@ -6,7 +6,6 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    padding-top: 80px; /* Espace ajouté pour le header fixe */
      background-color: #ffffff; /* ou une autre couleur si vous en avez besoin */
     height: 100%; /* Ajoutez cette règle pour éviter tout fond manquant */
 }
