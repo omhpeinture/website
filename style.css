@@ -299,13 +299,3 @@ button {
 button:hover {
     background-color: #45a049;
 }
-
-/* Footer */
-footer {
-    background: #ffffff;
-    color: #37474F;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 0.9em;
-    border-top: 1px solid #ddd;
-}
