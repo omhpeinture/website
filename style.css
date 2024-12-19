@@ -8,7 +8,6 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: #ffffff; /* ou une autre couleur si vous en avez besoin */
     height: 100%; /* Ajoutez cette règle pour éviter tout fond manquant */
-    padding-top: 80px; /* Ajoutez cette ligne pour compenser la hauteur du header fixe */
 }
 
 .header {
