@@ -6,8 +6,9 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-     background-color: #ffffff; /* ou une autre couleur si vous en avez besoin */
+    background-color: #ffffff; /* ou une autre couleur si vous en avez besoin */
     height: 100%; /* Ajoutez cette règle pour éviter tout fond manquant */
+    padding-top: 80px; /* Ajoutez cette ligne pour compenser la hauteur du header fixe */
 }
 
 .header {
@@ -258,6 +259,12 @@ blockquote cite {
 
 
 
+/* Section Formulaire */
+section {
+    padding: 50px 20px;  /* Ajoutez un padding pour l'espacement */
+    background-color: #f9f9f9; /* Couleur de fond légère pour différencier la section */
+}
+
 form {
     width: 50%;
     margin: 0 auto;
@@ -293,4 +300,12 @@ button:hover {
     background-color: #45a049;
 }
 
-
+/* Footer */
+footer {
+    background: #ffffff;
+    color: #37474F;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+    border-top: 1px solid #ddd;
+}
