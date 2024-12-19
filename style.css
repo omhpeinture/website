@@ -51,125 +51,95 @@ nav ul li a:hover {
     color: #007bff;
 }
 
-/* Hero Section */
-.hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background: url('background-image.jpg') no-repeat center center/cover;
-  height: 100vh;
-  padding: 0 20px;
+
+.hero-section {
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    background-image: url('pexels-heyho-6969824.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+     z-index: 0; /* Permet à l'image de se situer derrière le header */
 }
 
-.hero h1 {
-  font-size: 3.5rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-transform: uppercase;
+.hero-content {
+    text-align: center;
+    z-index: 1; /* Le contenu du texte est au-dessus de l'image */
 }
 
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Légère superposition sombre pour améliorer la lisibilité */
+    z-index: 0;
 }
 
-.hero .cta {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
-.hero input[type="email"] {
-  padding: 10px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
-  margin-right: 10px;
-  outline: none;
+.hero-section p {
+    font-size: 1.25rem;
+}
+.twbb-headline {
+    display: inline-block;
+    position: relative;
+    font-weight: 700;
+    text-align: center;
+    line-height: 0.7; /* Ajuste l'espacement entre les lignes */
+    font-size: 3.5rem; /* Taille globale de la police */
+    color: #fff; /* Assurez-vous que la couleur est bien visible sur l'image de fond */
+}
+.twbb-headline-plain-text {
+    display: block;
+     font-size: 2rem; /* Ajuste selon le design */
+}
+.twbb-headline-highlight {
+    display: inline-block;
+    position: relative;
+    font-weight: 700;
+}
+.twbb-headline-highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: url('zigzag.png') repeat-x; /* Image ou motif pour le zigzag */
+    background-size: contain;
+}
+.twbb-headline-dynamic-wrapper {
+    display: block;
+    position: relative;
+    margin-top: 10px; /* Espacement entre les parties statiques et dynamiques */
+}
+.twbb-headline-dynamic-text {
+    display: inline-block;
+    font-size: 2.5rem; /* Ajuste selon le design */
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
-.hero button {
-  background: #8a76ff;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  font-weight: bold;
-  text-transform: uppercase;
+.twbb-headline-dynamic-wrapper svg {
+    position: absolute;
+    bottom: -5px; /* Positionne correctement le zigzag */
+    left: 0;
+    width: 100%;
+    height: 20px;
+    fill: none; /* Assure que la couleur de fond n'affecte pas */
+    stroke: #ffffff; /* Couleur du zigzag */
+    stroke-width: 3; /* Ajuste l'épaisseur du zigzag */
+    z-index: 2;  /* Assurez-vous que le SVG est au-dessus des autres éléments */
 }
-
-.hero button:hover {
-  background: #a894ff;
-}
-/* Zigzag animation */
-.zigzag {
-  position: relative;
-  margin: 10px auto 0;
-  width: 120px;
-  height: 10px;
-  background: transparent;
-  overflow: hidden;
-}
-
-.zigzag::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 200%;
-  height: 100%;
-  background: #8a76ff;
-  clip-path: polygon(
-    0 50%, 10% 0%, 20% 50%, 30% 0%, 
-    40% 50%, 50% 0%, 60% 50%, 70% 0%, 
-    80% 50%, 90% 0%, 100% 50%
-  );
-  animation: zigzag 2s linear infinite;
-}
-
-/* Keyframes for the zigzag movement */
-@keyframes zigzag {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-/* Floating Icons */
-.floating-icons {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.floating-icons a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  background-color: #2d2d2d;
-  border: 2px solid #8a76ff;
-  border-radius: 50%;
-  color: #fff;
-  font-size: 1.5rem;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
-
-.floating-icons a:hover {
-  background-color: #8a76ff;
-}
-
-
 
 /* Styles pour la section Réalisations */
 .realisations {
