@@ -110,15 +110,14 @@ nav ul li a:hover {
 .twbb-headline-dynamic-text {
     display: inline-block;
     font-size: 2.5rem; /* Ajuste selon le design */
-    color: #007bff; /* Couleur principale */
 }
 
 .twbb-headline-dynamic-wrapper svg {
     position: absolute;
-    bottom: -10px; /* Positionne correctement le zigzag */
+    bottom: -5px; /* Positionne correctement le zigzag */
     left: 0;
     width: 100%;
-    height: 10px;
+    height: 15px;
     fill: none; /* Assure que la couleur de fond n'affecte pas */
     stroke: #007bff; /* Couleur du zigzag */
     stroke-width: 2; /* Ajuste l'épaisseur du zigzag */
