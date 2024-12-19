@@ -10,7 +10,7 @@
 }
 
 .header {
-    background-color: #f8f8f8;
+    background-color: rgba(255, 255, 255, 0.7); /* Fond semi-transparent pour que l'image apparaisse derrière */
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -18,9 +18,10 @@
     border-bottom: 1px solid #ddd;
     position: sticky; /* Collé en haut */
     top: 0;
-    z-index: 1000;
+    left: 0;
+    right: 0;
+    z-index: 2;
     width: 100%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre discrète */
 }
 .logo-container {
     position: absolute; /* Permet de placer le logo de manière absolue */
@@ -72,6 +73,7 @@ nav ul {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-attachment: scroll; /* L'image défile avec la page */
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -81,7 +83,10 @@ nav ul {
     color: #fff;
     padding: 0 20px;
 }
-
+.hero-section main {
+    position: relative;
+    z-index: 2;
+}
 .hero-section::before {
     content: '';
     position: absolute;
@@ -93,10 +98,15 @@ nav ul {
     z-index: 1;
 }
 
-.hero-section h1, {
+.hero-section h1 {
     position: relative;
     z-index: 2; /* Le texte doit être au-dessus de l'overlay */
     margin: 0;
+    padding: 20px;
+}
+.hero-section h2 {
+    margin: 0;
+    font-size: 2rem;
     padding: 20px;
 }
 
