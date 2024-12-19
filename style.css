@@ -13,7 +13,7 @@
     background-color: rgba(255, 255, 255, 0.7); /* Fond semi-transparent pour que l'image apparaisse derrière */
     padding: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #ddd;
     position: sticky; /* Collé en haut */
@@ -24,9 +24,8 @@
     width: 100%;
 }
 .logo-container {
-    position: absolute; /* Permet de placer le logo de manière absolue */
-    left: 50%;
-    transform: translateX(-50%); /* Centrer le logo horizontalement */
+   flex-grow: 1; /* Le logo prend l'espace disponible */
+    text-align: center; /* Centre le logo horizontalement */
 }
 .header img {
     max-height: 80px;
