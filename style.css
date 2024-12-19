@@ -24,11 +24,11 @@ body {
     width: 100%;
     color: white;
     transition: background-color 0.3s ease; /* Transition pour le changement de fond */
-    background-color: transparent; /* Initialement transparent */
+    background-color:rgba(0, 0, 0, 0.7) ; /* Initialement transparent */
 }
 /* Lorsque l'utilisateur défile légèrement */
 .header.scrolled {
-    background-color: rgba(0, 0, 0, 0.7); /* Fond noir avec un peu de transparence */
+    background-color: rgba(0, 0, 0, 1); /* Fond noir avec un peu de transparence */
 }
 
 .logo-container img {
