@@ -68,6 +68,10 @@ nav ul li a:hover {
 .hero-content {
     text-align: center;
     z-index: 1; /* Le contenu du texte est au-dessus de l'image */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    
 }
 
 .hero-section::before {
@@ -88,6 +92,8 @@ nav ul li a:hover {
 
 .hero-section p {
     font-size: 1.25rem;
+    line-height: 1.6;
+    margin-top: 20px;
 }
 .twbb-headline {
     display: inline-block;
@@ -131,7 +137,8 @@ nav ul li a:hover {
 }
 .twbb-headline-dynamic-text {
     display: inline-block;
-    font-size: 2.5rem; /* Ajuste selon le design */
+    font-size: 3.5rem; /* Ajuste selon le design */
+  margin-bottom: 20px;
     font-weight: 700;
     text-transform: uppercase;
 }
