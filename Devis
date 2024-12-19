@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demander un devis</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Lien vers votre CSS -->
+</head>
+<body>
+    <header>
+        <h1>Demandez un devis pour vos travaux de peinture</h1>
+    </header>
+
+    <section>
+        <form action="submit_devis.php" method="POST">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telephone">Téléphone :</label>
+            <input type="tel" id="telephone" name="telephone" required>
+
+            <label for="description">Description des travaux :</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <label for="surface">Surface à peindre (en m²) :</label>
+            <input type="number" id="surface" name="surface" required>
+
+            <label for="type-peinture">Type de peinture :</label>
+            <select id="type-peinture" name="type_peinture">
+                <option value="mat">Mat</option>
+                <option value="brillante">Brillante</option>
+                <option value="satinée">Satinée</option>
+            </select>
+
+            <button type="submit">Envoyer ma demande</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Votre entreprise de peinture</p>
+    </footer>
+</body>
+</html>
