@@ -11,7 +11,7 @@ body {
 }
 /* Style spécifique pour le header de la page de contact */
 .demander-devis .header {
-    background-color: #00CED1; /* Turquoise dark */
+    background-color: #047f8f; /* Turquoise dark */
 }
 .header {
     position: fixed;
@@ -30,6 +30,9 @@ body {
 }
 /* Lorsque l'utilisateur défile légèrement */
 .home-page .header.scrolled {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.demander-devis .header.scrolled {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
