@@ -93,7 +93,7 @@ nav ul li a:hover {
     position: relative;
     font-weight: 700;
     text-align: center;
-    line-height: 1.5; /* Ajuste l'espacement entre les lignes */
+    line-height: 0.7; /* Ajuste l'espacement entre les lignes */
     font-size: 2.5rem; /* Taille globale de la police */
     color: #fff; /* Assurez-vous que la couleur est bien visible sur l'image de fond */
 }
