@@ -28,7 +28,7 @@ body {
 }
 /* Lorsque l'utilisateur défile légèrement */
 .header.scrolled {
-    background-color: rgba(0, 0, 0, 0.7); /* Fond noir avec un peu de transparence */
+    background-color: rgba(0, 0, 0, 0,7); /* Fond noir avec un peu de transparence */
 }
 
 .logo-container img {
