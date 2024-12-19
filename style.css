@@ -9,7 +9,10 @@ body {
     background-color: #ffffff; /* ou une autre couleur si vous en avez besoin */
     height: 100%; /* Ajoutez cette règle pour éviter tout fond manquant */
 }
-
+/* Style spécifique pour le header de la page de contact */
+.contact-page .header {
+    background-color: #00CED1; /* Turquoise dark */
+}
 .header {
     position: fixed;
     top: 0;
@@ -26,7 +29,7 @@ body {
     background-color: transparent ; /* Initialement transparent */
 }
 /* Lorsque l'utilisateur défile légèrement */
-.header.scrolled {
+.home-page.header.scrolled {
     background-color: rgba(0, 0, 0, 0.7); /* Fond noir avec un peu de transparence */
 }
 
