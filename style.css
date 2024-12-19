@@ -84,7 +84,6 @@ nav ul li a:hover {
 .twbb-headline-highlight {
     display: inline-block;
     position: relative;
-    color: #007bff; /* Couleur principale pour OMH PEINTURE */
     font-weight: 700;
 }
 .twbb-headline-highlight::after {
