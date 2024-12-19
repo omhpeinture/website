@@ -14,6 +14,7 @@
     padding: 20px;
     display: flex;
     justify-content: center;
+    flex-direction: column; /* Aligne les éléments verticalement */
     align-items: center;
     border-bottom: 1px solid #ddd;
     position: sticky; /* Collé en haut */
