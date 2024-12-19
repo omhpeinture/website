@@ -14,7 +14,6 @@
     padding: 20px;
     display: flex;
     justify-content: center;
-    flex-direction: column; /* Aligne les éléments verticalement */
     align-items: center;
     border-bottom: 1px solid #ddd;
     position: sticky; /* Collé en haut */
@@ -23,7 +22,11 @@
     width: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre discrète */
 }
-
+.logo-container {
+    position: absolute; /* Permet de placer le logo de manière absolue */
+    left: 50%;
+    transform: translateX(-50%); /* Centrer le logo horizontalement */
+}
 .header img {
     max-height: 80px;
     margin-right: 20px;
@@ -38,7 +41,10 @@
 }
 nav {
     display: flex;
+    position: absolute; /* Permet de positionner la navigation indépendamment du logo */
     gap: 1rem;
+    left: 0; /* Aligner la navigation à gauche */
+    margin-left: 20px; /* Ajouter un léger espace entre la navigation et le bord gauche */
     justify-content: center; /* Centre les éléments de la barre de navigation */
 }
 nav ul {
@@ -46,6 +52,7 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
+    gap: 1rem; /* Espacement entre les éléments */
 }
 
 .nav ul li a {
