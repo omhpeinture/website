@@ -126,6 +126,8 @@ nav ul li a:hover {
     max-width: 600px; /* Ajustez selon vos préférences */
     margin: 20px auto;
     text-align: center;
+    font-size: 1rem;
+
 }
 .twbb-headline-dynamic-text {
     display: inline-block;
@@ -136,13 +138,13 @@ nav ul li a:hover {
 
 .twbb-headline-dynamic-wrapper svg {
     position: absolute;
-    bottom: -10px; /* Positionne correctement le zigzag */
+    bottom: -15px; /* Positionne correctement le zigzag */
     left: 0;
     width: 100%;
-    height: 10px;
+    height: 20px;
     fill: none; /* Assure que la couleur de fond n'affecte pas */
     stroke: #ffffff; /* Couleur du zigzag */
-    stroke-width: 2; /* Ajuste l'épaisseur du zigzag */
+    stroke-width: 4; /* Ajuste l'épaisseur du zigzag */
     z-index: 2;  /* Assurez-vous que le SVG est au-dessus des autres éléments */
 }
 
