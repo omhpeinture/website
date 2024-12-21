@@ -491,7 +491,6 @@ footer {
   align-items: center;
     justify-content: flex-start; /* Cette ligne permet d'aligner les éléments à gauche */
 }
-}
 
 .logo {
   width: 150px; /* Ajustez la largeur selon votre logo */
