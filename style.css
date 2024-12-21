@@ -148,17 +148,57 @@ nav ul li a:hover {
     text-transform: uppercase;
 }
 
-.twbb-headline-dynamic-wrapper svg {
-    position: absolute;
-    bottom: -15px; /* Positionne correctement le zigzag */
-    left: 0;
-    width: 100%;
-    height: 20px;
-    fill: none; /* Assure que la couleur de fond n'affecte pas */
-    stroke: #ffffff; /* Couleur du zigzag */
-    stroke-width: 4; /* Ajuste l'épaisseur du zigzag */
-    z-index: 2;  /* Assurez-vous que le SVG est au-dessus des autres éléments */
-} 
+/* Container pour les boutons */
+.button-container {
+  margin-top: 20px; /* Espace au-dessus des boutons */
+  text-align: center; /* Centrer les boutons */
+}
+
+/* Style pour le bouton d'appel / rappel */
+.phone-button {
+  background-color: #28a745; /* Couleur verte pour le bouton */
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-right: 10px; /* Espacement entre les boutons */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease; /* Effet au survol */
+}
+
+.phone-button i {
+  margin-right: 8px; /* Espacement entre l'icône et le texte */
+}
+
+.phone-button:hover {
+  background-color: #218838; /* Couleur du bouton au survol */
+}
+
+/* Style pour le bouton Facebook */
+.facebook-button {
+  background-color: #3b5998; /* Couleur de fond de Facebook */
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease; /* Effet au survol */
+}
+
+.facebook-button i {
+  margin-right: 8px; /* Espacement entre l'icône et le texte */
+}
+
+.facebook-button:hover {
+  background-color: #2d4373; /* Couleur du bouton Facebook au survol */
+}
+
 
 .about-us {
     display: flex;
