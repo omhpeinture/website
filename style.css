@@ -489,6 +489,8 @@ footer {
 .footer-left {
   display: flex;
   align-items: center;
+    justify-content: flex-start; /* Cette ligne permet d'aligner les éléments à gauche */
+}
 }
 
 .logo {
