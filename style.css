@@ -473,26 +473,36 @@ flex-direction: column; /* Aligner les boutons en colonne */
     color: #555;
 }
     
-.footer {
-    background: #ffffff;
-    color: #37474F;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 0.9em;
-    border-top: 1px solid #ddd;
+footer {
+  background-color: #f0f0f0; /* Couleur de fond */
+  padding: 20px;
+  text-align: center; /* Alignement du texte au centre */
 }
 
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
+footer img {
+  max-width: 150px; /* Largeur maximale du logo */
+  margin-bottom: 20px;
 }
 
+footer nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
+footer nav li {
+  display: inline-block;
+  margin: 0 10px; /* Espacement entre les liens */
+}
 
+footer a {
+  color: #333; /* Couleur des liens */
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
 
 
 /* Section Formulaire */
