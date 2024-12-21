@@ -59,3 +59,25 @@ document.addEventListener('DOMContentLoaded', function() {
     // Changer de témoignage toutes les 5 secondes
     setInterval(showNextTestimonial, 5000);
 });
+window.addEventListener('DOMContentLoaded', (event) => {
+    const counters = document.querySelectorAll('.counter'); // Sélectionne tous les éléments avec la classe "counter"
+    
+    counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target'); // Récupère la valeur cible depuis l'attribut 'data-target'
+        let current = 0; // Valeur initiale
+        const increment = target / 100; // Définir l'incrémentation par 100 pour lisser l'animation
+
+        // Fonction d'animation
+        const updateCount = () => {
+            if (current < target) {
+                current = current + increment; // Incrémentation du nombre
+                counter.innerText = Math.ceil(current); // Affiche le nombre arrondi
+                setTimeout(updateCount, 10); // Relancer la fonction toutes les 10ms
+            } else {
+                counter.innerText = target; // Assure que la valeur cible est atteinte
+            }
+        };
+
+        updateCount(); // Lancer l'animation
+    });
+});
