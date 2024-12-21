@@ -253,60 +253,54 @@ nav ul li a:hover {
     font-size: 1rem;
   }
 
-.realisations {
-    padding: 50px 0;
+.testimonials {
+    padding: 50px 20px;
     background-color: #f9f9f9;
 }
 
-.realisation-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 0 20px;
+.testimonials h2 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.realisation-item {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease;
+.testimonials p {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-.realisation-item:hover {
-    transform: translateY(-5px);
-}
-
-.image-container {
-    position: relative;
-}
-
-.realisation-item img {
-    width: 100%;
-    height: auto; /* Assurez-vous que l'image s'adapte correctement */
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
+.testimonial-carousel {
     display: flex;
-    justify-content: center;
+    overflow-x: auto; /* Permet le défilement horizontal */
+    gap: 20px;
+}
+
+.testimonial-item {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px; /* Largeur fixe pour chaque témoignage */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rating {
+    color: gold; /* Couleur des étoiles */
+}
+
+.star {
+    font-size: 20px; /* Taille des étoiles */
+}
+
+.testimonial-footer {
+    display: flex;
     align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    margin-top: 15px;
 }
 
-.image-container:hover .overlay {
-    opacity: 1; /* Affiche l'overlay au survol */
-}
-
-.realisations p {
-    padding: 15px; /* Ajoute un peu d'espacement autour du texte */
+.testimonial-footer img {
+    width: 50px; /* Taille de l'image du client */
+    height: auto;
+    border-radius: 50%; /* Image ronde */
+    margin-right: 10px; /* Espacement entre l'image et le texte */
 }
 
     
