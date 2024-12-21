@@ -269,8 +269,8 @@ nav ul li a:hover {
 }
 
 .testimonial-carousel {
-    display: flex;
-    overflow-x: auto; /* Permet le défilement horizontal */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
@@ -278,12 +278,16 @@ nav ul li a:hover {
     background-color: white;
     border-radius: 8px;
     padding: 20px;
-    width: 300px; /* Largeur fixe pour chaque témoignage */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.testimonial-item:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
 }
 
 .rating {
     color: gold; /* Couleur des étoiles */
+     margin-bottom: 10px;
 }
 
 .star {
@@ -302,11 +306,10 @@ nav ul li a:hover {
     border-radius: 50%; /* Image ronde */
     margin-right: 10px; /* Espacement entre l'image et le texte */
 }
-
-    
-
-    
-    
+.testimonial-footer cite {
+    font-style: normal;
+    font-weight: bold;
+}    
 .footer {
     background: #ffffff;
     color: #37474F;
