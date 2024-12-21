@@ -110,6 +110,8 @@ nav ul li a:hover {
 .twbb-headline-plain-text {
     display: block;
      font-size: 3rem; /* Ajuste selon le design */
+        font-weight: normal; 
+    margin-bottom: 10px; /* Espacement si nécessaire */
 }
 .twbb-headline-highlight {
     display: inline-block;
