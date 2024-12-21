@@ -59,26 +59,37 @@ document.addEventListener('DOMContentLoaded', function() {
     // Changer de témoignage toutes les 5 secondes
     setInterval(showNextTestimonial, 5000);
 });
-// Fonction pour animer les chiffres
+<script>
+// Lorsque le DOM est complètement chargé
 document.addEventListener("DOMContentLoaded", function() {
-    const counters = document.querySelectorAll(".counter");
-
+    // Sélectionne tous les éléments avec la classe "counter"
+    const counters = document.querySelectorAll('.counter');
+    
+    // Pour chaque élément avec la classe "counter"
     counters.forEach(counter => {
+        // Fonction pour animer les nombres
         const updateCount = () => {
-            const target = +counter.getAttribute("data-target");
+            // Obtenir la valeur cible (data-target)
+            const target = +counter.getAttribute('data-target');
+            // Obtenir la valeur actuelle du compteur (le texte dans le span)
             const count = +counter.innerText;
-            const speed = 200; // Vitesse de l'animation
+            // La vitesse de l'animation (plus la valeur est faible, plus c'est rapide)
+            const speed = 200; // Animation plus lente avec une valeur plus élevée
 
+            // Calculer le nombre d'incréments nécessaires à chaque étape
             const increment = target / speed;
 
+            // Si le compteur n'a pas atteint la cible
             if(count < target) {
-                counter.innerText = Math.ceil(count + increment);
-                setTimeout(updateCount, 1);
+                counter.innerText = Math.ceil(count + increment); // Augmenter progressivement
+                setTimeout(updateCount, 1); // Répéter l'animation chaque 1ms
             } else {
-                counter.innerText = target;
+                counter.innerText = target; // Une fois la cible atteinte, afficher la valeur finale
             }
         };
 
+        // Lancer l'animation dès que la page est chargée
         updateCount();
     });
 });
+</script>
