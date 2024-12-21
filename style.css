@@ -154,6 +154,9 @@ nav ul li a:hover {
   display: flex; /* Utilisation de flexbox pour l'alignement horizontal */
   justify-content: center; /* Centrer les boutons horizontalement */
   gap: 20px; /* Espacement entre les boutons */
+flex-direction: column; /* Aligner les boutons en colonne */
+      align-items: center; /* Centrer les boutons verticalement */
+    
 }
 
 /* Style pour le bouton d'appel / rappel */
