@@ -184,7 +184,7 @@ flex-direction: column; /* Aligner les boutons en colonne */
     background-color: #218838; /* Couleur du bouton au survol */
 }
 .call-text {
-    font-size: 0.85rem; /* Réduit la taille du texte */
+    font-size: 0.5rem; /* Réduit la taille du texte */
     color: #666; /* Couleur plus douce pour le texte */
     margin-top: 5px; /* Réduit l'espace entre le bouton et le texte */
     text-align: center; /* Centre le texte sous le bouton */
