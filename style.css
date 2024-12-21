@@ -502,7 +502,8 @@ justify-content: flex-start; /* Cette ligne permet d'aligner les éléments à g
 }
 
 .social-icons {
-  display: flex;
+  color: white;
+    display: flex;
 }
 
 .social-icons a {
