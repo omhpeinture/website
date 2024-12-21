@@ -150,55 +150,55 @@ nav ul li a:hover {
 
 /* Container pour les boutons */
 .button-container {
-  margin-top: 20px; /* Espace au-dessus des boutons */
-  text-align: center; /* Centrer les boutons */
+  margin-top: 30px; /* Espace au-dessus des boutons */
+  display: flex; /* Utilisation de flexbox pour l'alignement horizontal */
+  justify-content: center; /* Centrer les boutons horizontalement */
+  gap: 20px; /* Espacement entre les boutons */
 }
 
 /* Style pour le bouton d'appel / rappel */
 .phone-button {
-  background-color: #28a745; /* Couleur verte pour le bouton */
-  color: white;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 5px;
-  text-decoration: none;
-  margin-right: 10px; /* Espacement entre les boutons */
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease; /* Effet au survol */
+    background-color: #28a745; /* Couleur verte */
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
 }
 
 .phone-button i {
-  margin-right: 8px; /* Espacement entre l'icône et le texte */
+    margin-right: 8px;
 }
 
 .phone-button:hover {
-  background-color: #218838; /* Couleur du bouton au survol */
+    background-color: #218838; /* Couleur du bouton au survol */
 }
 
 /* Style pour le bouton Facebook */
 .facebook-button {
-  background-color: #3b5998; /* Couleur de fond de Facebook */
-  color: white;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 5px;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease; /* Effet au survol */
+    background-color: #3b5998; /* Couleur de fond de Facebook */
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
 }
 
 .facebook-button i {
-  margin-right: 8px; /* Espacement entre l'icône et le texte */
+    margin-right: 8px;
 }
 
 .facebook-button:hover {
-  background-color: #2d4373; /* Couleur du bouton Facebook au survol */
+    background-color: #2d4373; /* Couleur du bouton Facebook au survol */
 }
-
 .about-us {
     display: flex;
     flex-direction: row;
