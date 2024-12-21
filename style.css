@@ -87,7 +87,7 @@ nav ul li a:hover {
 }
 
 .hero-section h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 20px;
     font-weight: bold; /* ou 700 pour un gras plus prononcé */
 }
@@ -96,6 +96,7 @@ nav ul li a:hover {
     font-size: 1.25rem;
     line-height: 1.6;
     margin-top: 20px;
+    font-weight: normal; /* ou 700 pour un gras plus prononcé */
 }
 .twbb-headline {
     display: inline-block;
@@ -172,7 +173,7 @@ nav ul li a:hover {
 }
 
 .about-image img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
 }
 
