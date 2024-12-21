@@ -1,4 +1,3 @@
-
 // Récupère le header
 const header = document.getElementById("header");
 // Écoute l'événement de défilement
@@ -92,4 +91,3 @@ document.addEventListener("DOMContentLoaded", function() {
         updateCount();
     });
 });
-</script>
