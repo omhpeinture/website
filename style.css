@@ -243,11 +243,6 @@ nav ul li a:hover {
 .carousel-item:hover .details {
   display: block;
 }
-@media (max-width: 768px) {
-  .carousel-item h3 {
-    font-size: 1rem;
-  }
-
 .testimonials {
     padding: 50px 20px;
     background-color: #f9f9f9;
