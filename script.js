@@ -61,7 +61,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
    // Animation de compteur
 document.addEventListener('DOMContentLoaded', () => {
+    console.log("DOM chargé");
   const counters = document.querySelectorAll('.counter');
+      console.log("Nombre de compteurs trouvés:", counters.length);
   const speed = 200;
 
   const startCounter = (counter) => {
@@ -83,15 +85,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
+        console.log("Élément observé:", entry.target);
+      console.log("Est intersecté:", entry.isIntersecting);
       if (entry.isIntersecting) {
+          console.log("Démarrage du compteur");
         startCounter(entry.target);
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.5 });
+  }, { threshold: 0.1 });
 
   counters.forEach(counter => {
     observer.observe(counter);
+      console.log("Observation du compteur:", counter);
   });
 });
 
