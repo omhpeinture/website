@@ -60,21 +60,38 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
    // Animation de compteur
-    const counters = document.querySelectorAll('.counter');
+document.addEventListener('DOMContentLoaded', () => {
+  const counters = document.querySelectorAll('.counter');
+  const speed = 200;
 
-    counters.forEach(counter => {
-        const updateCounter = () => {
-            const target = +counter.getAttribute('data-target');
-            const current = +counter.innerText;
-            const increment = target / 200; // Ajuste la vitesse
+  const startCounter = (counter) => {
+    const updateCount = () => {
+      const target = parseInt(counter.getAttribute('data-target'));
+      const count = parseInt(counter.innerText);
+      const increment = target / speed;
 
-            if (current < target) {
-                counter.innerText = Math.ceil(current + increment);
-                setTimeout(updateCounter, 10);
-            } else {
-                counter.innerText = target;
-            }
-        };
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(updateCount, 1);
+      } else {
+        counter.innerText = target;
+      }
+    };
 
-        updateCounter();
+    updateCount();
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        startCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
     });
+  }, { threshold: 0.5 });
+
+  counters.forEach(counter => {
+    observer.observe(counter);
+  });
+});
+
