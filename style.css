@@ -228,8 +228,8 @@ flex-direction: column; /* Aligner les boutons en colonne */
 }
 
 .about-content h2 {
-    font-size: 2.8rem;
-    color:#1a1a1a;
+    font-size: 2.5rem;
+    color:#333;
     font-weight: 700; /* Font plus gras */
     margin-bottom: 20px;
 }
@@ -237,7 +237,7 @@ flex-direction: column; /* Aligner les boutons en colonne */
 .about-content p {
     font-size: 1.2rem;
     color: #666;
-    line-height: 1.6;
+    line-height: 1.5;
     margin-bottom: 30px;
     
 }
@@ -258,18 +258,18 @@ flex-direction: column; /* Aligner les boutons en colonne */
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
      transition: transform 0.3s, box-shadow 0.3s ease; /* Ajout d'une transition */
-    margin-bottom: 20px; /* Espacement entre les éléments */
+    margin-top: 20px; /* Espacement entre les éléments */
 }
 
 .stat-item:hover {
-    transform: translateY(-8px);
+    transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .stat-number {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     color: #333;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 .about-image {
@@ -287,8 +287,8 @@ flex-direction: column; /* Aligner les boutons en colonne */
 .counter {
     display: inline-block;
     font-size: 3rem;
-    font-weight: 700;
-    color: #87CEEB; /* Couleur du compteur */
+    font-weight: bold;
+    color: #007bff; /* Couleur du compteur */
 }
 /* Media Queries pour Responsivité */
 @media (max-width: 768px) {
