@@ -471,71 +471,46 @@ flex-direction: column; /* Aligner les boutons en colonne */
     color: #555;
 }
     
-/* Style pour le footer */
 footer {
   background-color: #f0f0f0;
-  padding: 20px 0; /* Espacement vertical */
+  padding: 20px 0;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centre les éléments horizontalement */
-text-align: right;
+  align-items: center;
 }
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.footer-left {
+  /* Styles pour la partie gauche du footer (logo, menu, etc.) */
+}
+
+.footer-right {
+  text-align: right;
+}
+
 .social-icons {
   display: flex;
 }
 
 .social-icons a {
-  color: #3b5998; /* Couleur bleue de Facebook */
-  margin-left: 10px; /* Espace entre les icônes (si vous en avez d'autres) */
-}
-/* Style pour la section supérieure du footer (logo et menu) */
-.footer-top {
-  display: flex;
-  justify-content: space-between; /* Espacement entre le logo et le menu */
-  width: 100%; /* Largeur maximale */
-  max-width: 960px; /* Largeur maximale pour une meilleure expérience utilisateur */
-  margin: 0 auto; /* Centre le contenu horizontalement */
+  color: #3b5998;
+  margin-left: 10px;
 }
 
-/* Style pour le logo */
-.footer-top .logo {
-  width: 200px; /* Largeur du logo */
-}
-
-.footer-top .logo img {
-  width: 100%; /* Image responsive */
-}
-
-/* Style pour le menu de navigation */
-.footer-top nav {
-  /* Ajouter des styles pour le menu, par exemple: */
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex
-}
-
-.footer-top nav a {
-  /* Ajouter des styles pour les liens du menu, par exemple: */
-  color: #333;
-
-}
-
-/* Style pour la section inférieure du footer (texte et liens) */
-.footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 960px;
-  margin: 20px auto 0; /* Espacement entre le menu et le texte */
-}
-
-/* Style pour le texte de copyright */
-.footer-bottom .copyright {
-  /* Ajouter des styles pour le texte de copyright, par exemple: */
-  font-size: 14px;
-  color: #666;
+/* Media queries pour la réactivité */
+@media (max-width: 768px) {
+  /* Styles pour les petites tailles d'écran */
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /* Section Formulaire */
