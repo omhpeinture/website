@@ -10,3 +10,16 @@ window.addEventListener("scroll", function() {
         header.classList.remove("scrolled"); // Retire la classe 'scrolled'
     }
 });
+
+const carousel = document.querySelector('.carousel');
+let currentIndex = 0;
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % carousel.children.length;
+  carousel.scrollTo({
+    left: currentIndex * carousel.offsetWidth,
+    behavior: 'smooth'
+  });
+}
+
+setInterval(nextSlide, 5000); // Change d'image toutes les 5 secondes
