@@ -11,16 +11,33 @@ window.addEventListener("scroll", function() {
     }
 });
 
-const carousel = document.querySelector('.carousel');
-let currentIndex = 0;
+let currentIndex = 0;  // Index de l'image actuellement affichée
+        const carouselItems = document.querySelector('.carousel-items');  // Conteneur des éléments du carrousel
+        const totalItems = document.querySelectorAll('.carousel-item').length;  // Nombre total d'éléments du carrousel
 
-function nextSlide() {
-  currentIndex = (currentIndex + 1) % carousel.children.length;
-  carousel.scrollTo({
-    left: currentIndex * carousel.offsetWidth,
-    behavior: 'smooth'
-  });
-}
+        // Fonction pour déplacer le carrousel
+        function moveSlide(direction) {
+            // Mettre à jour l'index de l'image
+            currentIndex += direction;
+
+            // Si l'index est inférieur à 0, on revient à la dernière image
+            if (currentIndex < 0) {
+                currentIndex = totalItems - 1;
+            }
+
+            // Si l'index dépasse le nombre d'éléments, on revient à la première image
+            if (currentIndex >= totalItems) {
+                currentIndex = 0;
+            }
+
+            // Appliquer un décalage au carrousel en fonction de l'index
+            carouselItems.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        // Fonction pour faire défiler automatiquement les éléments du carrousel toutes les 5 secondes
+        setInterval(() => {
+            moveSlide(1);
+        }, 5000);  // 5000ms = 5 secondes
 
 setInterval(nextSlide, 5000); // Change d'image toutes les 5 secondes
 document.addEventListener('DOMContentLoaded', function() {
