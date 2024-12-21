@@ -162,6 +162,50 @@ nav ul li a:hover {
     z-index: 2;  /* Assurez-vous que le SVG est au-dessus des autres éléments */
 }
 
+<section class="about-us">
+    <div class="about-content">
+        <h2>À propos d'OMH PEINTURE</h2>
+        <p>Fondée en 2023, OMH PEINTURE se consacre à apporter couleur et vie à vos espaces. Notre mission est d'améliorer la beauté et la valeur des propriétés grâce à des services de peinture de haute qualité, en assurant une satisfaction totale du client.</p>
+        
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number">
+                    <span class="counter" data-target="1">0</span>
+                    <span> an</span>
+                </div>
+                <p>d'expérience dans l'industrie de la peinture.</p>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">
+                    <span class="counter" data-target="100">0</span>
+                    <span>%</span>
+                </div>
+                <p>La satisfaction du client est notre priorité absolue.</p>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">
+                    <span class="counter" data-target="15">0</span>
+                    <span> ans</span>
+                </div>
+                <p>Hocine OMAR MAHMOOD, notre fondateur, dirige avec passion et expertise.</p>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">
+                    <span class="counter" data-target="5">0</span>
+                    <span> projets</span>
+                </div>
+                <p>Notre équipe assure que chaque projet répond à nos normes élevées.</p>
+            </div>
+        </div>
+    </div>
+    <div class="about-image">
+        <img src="chemin/vers/votre/image.jpg" alt="OMH PEINTURE en action">
+    </div>
+</section>
+
+
+
+
 /* Styles pour la section Réalisations */
 .realisations {
     padding: 50px 0;
