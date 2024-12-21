@@ -191,6 +191,7 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s ease;
+    z-index: 1; /* Le contenu du texte est au-dessus de l'image */
 }
 
 .facebook-button i {
@@ -212,17 +213,18 @@ nav ul li a:hover {
     flex: 1;
     padding-right: 50px;
 }
+
 .about-content h2 {
     font-size: 2.5rem;
     color: #333;
-    transition: transform 0.4s ease, opacity 0.4s ease;
-    opacity: 0;
 }
+
 .about-content p {
     font-size: 1.2rem;
     color: #666;
     line-height: 1.5;
 }
+
 .stats-container {
     display: flex;
     gap: 20px;
@@ -236,7 +238,6 @@ nav ul li a:hover {
     width: 200px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
 }
 
 .stat-item:hover {
@@ -248,25 +249,22 @@ nav ul li a:hover {
     font-size: 2rem;
     color: #333;
 }
+
 .about-image {
     flex: 1;
+    height: 100%; /* L'image prendra toute la hauteur du parent */
 }
 
 .about-image img {
-    max-width: 80%;
-    height: auto;
-        border-radius: 10px;
-}
-/* Animation pour le titre */
-.about-us .about-content h2.fadeInUp {
-    opacity: 1;
-    transform: translateY(0);
+    width: 100%; /* L'image s'adapte à la largeur de son conteneur */
+    height: 100%; /* L'image prend la même hauteur que le conteneur */
+    object-fit: cover; /* L'image couvre toute la surface sans être déformée */
+    border-radius: 10px;
 }
 
 .counter {
     display: inline-block;
 }
-
 
 /* Styles pour la section Réalisations */
         .carousel {
