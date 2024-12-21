@@ -488,7 +488,7 @@ footer {
 
 .footer-left {
   display: flex;
-  align-items: center;
+  align-items: left;
 justify-content: flex-start; /* Cette ligne permet d'aligner les éléments à gauche */
     margin-right: auto; /* Ceci force l'alignement à gauche */
 }
@@ -500,7 +500,7 @@ justify-content: flex-start; /* Cette ligne permet d'aligner les éléments à g
 .footer-right {
      display: flex;
   justify-content: flex-end; /* Permet d'aligner les éléments à droite (comme les icônes sociales) */
-  align-items: center;
+  align-items: right ;
 }
 
 .social-icons {
