@@ -58,36 +58,23 @@ document.addEventListener('DOMContentLoaded', function() {
     // Changer de témoignage toutes les 5 secondes
     setInterval(showNextTestimonial, 5000);
 });
-<script>
-// Lorsque le DOM est complètement chargé
-document.addEventListener("DOMContentLoaded", function() {
-    // Sélectionne tous les éléments avec la classe "counter"
+
+   // Animation de compteur
     const counters = document.querySelectorAll('.counter');
-    
-    // Pour chaque élément avec la classe "counter"
+
     counters.forEach(counter => {
-        // Fonction pour animer les nombres
-        const updateCount = () => {
-            // Obtenir la valeur cible (data-target)
+        const updateCounter = () => {
             const target = +counter.getAttribute('data-target');
-            // Obtenir la valeur actuelle du compteur (le texte dans le span)
-            const count = +counter.innerText;
-            // La vitesse de l'animation (plus la valeur est faible, plus c'est rapide)
-            const speed = 200; // Animation plus lente avec une valeur plus élevée
+            const current = +counter.innerText;
+            const increment = target / 200; // Ajuste la vitesse
 
-            // Calculer le nombre d'incréments nécessaires à chaque étape
-            const increment = target / speed;
-
-            // Si le compteur n'a pas atteint la cible
-            if(count < target) {
-                counter.innerText = Math.ceil(count + increment); // Augmenter progressivement
-                setTimeout(updateCount, 1); // Répéter l'animation chaque 1ms
+            if (current < target) {
+                counter.innerText = Math.ceil(current + increment);
+                setTimeout(updateCounter, 10);
             } else {
-                counter.innerText = target; // Une fois la cible atteinte, afficher la valeur finale
+                counter.innerText = target;
             }
         };
 
-        // Lancer l'animation dès que la page est chargée
-        updateCount();
+        updateCounter();
     });
-});
