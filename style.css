@@ -183,15 +183,6 @@ flex-direction: column; /* Aligner les boutons en colonne */
 .phone-button:hover {
     background-color: #218838; /* Couleur du bouton au survol */
 }
-.call-text {
-    font-size: 4px; /* Réduit la taille du texte */
-    color: #666; /* Couleur plus douce pour le texte */
-    margin-top: 0px; /* Réduit l'espace entre le bouton et le texte */
-    padding: 0;
-    text-align: center; /* Centre le texte sous le bouton */
-}
-
-
 /* Style pour le bouton Facebook */
 .facebook-button {
     background-color: #3b5998; /* Couleur de fond de Facebook */
