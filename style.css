@@ -470,25 +470,30 @@ flex-direction: column; /* Aligner les boutons en colonne */
     font-weight: bold;
     color: #555;
 }
-    
 footer {
   background-color: #f0f0f0;
   padding: 20px 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .footer-content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
 }
 
 .footer-left {
-  /* Styles pour la partie gauche du footer (logo, menu, etc.) */
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 150px; /* Ajustez la largeur selon votre logo */
+  margin-right: 20px;
 }
 
 .footer-right {
@@ -504,15 +509,16 @@ footer {
   margin-left: 10px;
 }
 
-/* Media queries pour la réactivité */
-@media (max-width: 768px) {
-  /* Styles pour les petites tailles d'écran */
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-  }
+hr {
+  border: 1px solid #ddd;
+  margin: 20px 0;
 }
 
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 /* Section Formulaire */
 section {
     padding: 50px 20px;  /* Ajoutez un padding pour l'espacement */
