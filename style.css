@@ -199,50 +199,73 @@ nav ul li a:hover {
 
 
 /* Styles pour la section Réalisations */
-.carousel {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
- width: 100%;
-    max-width: 800px; /* Ajustez selon vos besoins */
-  margin: 0 auto;  
-}
+        .carousel {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden; /* Cache les éléments hors de la vue */
+        }
 
-.carousel-item {
-  flex: 0 0 100%;
-  scroll-snap-align: start;
-  position: relative;
-}
+        .carousel-items {
+            display: flex;
+            transition: transform 1s ease; /* Transition fluide pour le défilement */
+        }
 
-.carousel-item img {
-  width: 100%;
-  height: auto;
-}
+        .carousel-item {
+            flex: 0 0 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
 
-.carousel-item h3 {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  color: white;
-  background: rgba(0,0,0,0.7);
-  padding: 10px;
-}
+        .carousel-item img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
 
-.details {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0,0,0,0.8);
-  color: white;
-  padding: 20px;
-}
+        .details {
+            text-align: center;
+            padding: 10px;
+        }
 
-.carousel-item:hover .details {
-  display: block;
-}
+        .carousel-item h3 {
+            margin-top: 10px;
+        }
+
+        /* Flèches de navigation */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 2rem;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+            border-radius: 50%;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        /* Effet au survol des flèches */
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+
+
 .testimonials {
     padding: 50px 20px;
     background-color: #f9f9f9;
