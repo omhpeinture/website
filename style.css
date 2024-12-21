@@ -479,7 +479,7 @@ footer {
 
 .footer-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   max-width: 960px;
@@ -489,7 +489,8 @@ footer {
 .footer-left {
   display: flex;
   align-items: center;
-    justify-content: flex-start; /* Cette ligne permet d'aligner les éléments à gauche */
+justify-content: flex-start; /* Cette ligne permet d'aligner les éléments à gauche */
+    margin-right: auto; /* Ceci force l'alignement à gauche */
 }
 
 .logo-footer {
