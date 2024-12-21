@@ -288,7 +288,7 @@ flex-direction: column; /* Aligner les boutons en colonne */
     display: inline-block;
     font-size: 3rem;
     font-weight: 700;
-    color: #28a745; /* Couleur du compteur */
+    color: #87CEEB; /* Couleur du compteur */
 }
 /* Media Queries pour Responsivité */
 @media (max-width: 768px) {
