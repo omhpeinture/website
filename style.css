@@ -29,13 +29,9 @@ body {
     background-color: transparent ; /* Initialement transparent */
 }
 /* Lorsque l'utilisateur défile légèrement */
-.home-page .header.scrolled {
+.header.scrolled {
     background-color: rgba(0, 0, 0, 0.7);
 }
-.demander-devis .header.scrolled {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
 .logo-container img {
     max-height: 60px;
 }
