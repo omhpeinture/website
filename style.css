@@ -471,7 +471,7 @@ flex-direction: column; /* Aligner les boutons en colonne */
     color: #555;
 }
 footer {
-  background-color: #007bff;
+  background-color: #006666;
     color: white; /* Pour rendre le texte blanc */
   padding: 20px 0;
   display: flex;
@@ -495,7 +495,6 @@ footer {
 
 .logo {
   width: 150px; /* Ajustez la largeur selon votre logo */
-  margin-right: 20px;
 }
 
 .footer-right {
