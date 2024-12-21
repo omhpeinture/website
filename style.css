@@ -205,78 +205,49 @@ nav ul li a:hover {
 
 
 
-
 /* Styles pour la section Réalisations */
-.realisations {
-    padding: 50px 0;
-    background-color: #f9f9f9;
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
 }
 
-.realisation-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    padding: 0 20px;
+.carousel-item {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  position: relative;
 }
 
-.realisation-item {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease;
+.carousel-item img {
+  width: 100%;
+  height: auto;
 }
 
-.realisation-item:hover {
-    transform: translateY(-5px);
+.carousel-item h3 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  background: rgba(0,0,0,0.7);
+  padding: 10px;
 }
 
-.image-container {
-    position: relative;
-    overflow: hidden;
+.details {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 20px;
 }
 
-.realisation-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+.carousel-item:hover .details {
+  display: block;
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.realisation-item:hover .overlay {
-    opacity: 1;
-}
-
-.overlay p {
-    color: #ffffff;
-    margin: 5px 0;
-}
-
-.realisation-item h3 {
-    margin: 15px 0 10px;
-    font-size: 1.2rem;
-}
-
-.realisation-item p {
-    padding: 0 15px 15px;
-    font-size: 0.9rem;
-    color: #666;
-}
 
 .testimonials {
     background: #ffffff;
