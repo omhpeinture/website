@@ -326,6 +326,7 @@ flex-direction: column; /* Aligner les boutons en colonne */
     color:#1a1a1a;
     font-weight: 700; /* Font plus gras */
     margin-bottom: 20px;
+    text-align: center;
     }
     
     
