@@ -210,30 +210,43 @@ flex-direction: column; /* Aligner les boutons en colonne */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center; /* Aligne les éléments verticalement */
     padding: 50px;
     background-color: #f4f4f4;
+    border-radius: 15px; /* Bords arrondis */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    margin: 0 20px; /* Marges automatiques */
+    flex-wrap: wrap; /* Permet de passer les éléments en dessous sur petits écrans */
+
 }
 
 .about-content {
     flex: 1;
     padding-right: 50px;
+    text-align: left; /* Texte aligné à gauche */
 }
 
 .about-content h2 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     color: #333;
+    font-weight: 700; /* Font plus gras */
+    margin-bottom: 20px;
 }
 
 .about-content p {
     font-size: 1.2rem;
     color: #666;
-    line-height: 1.5;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    
 }
 
 .stats-container {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
 .stat-item {
@@ -243,16 +256,19 @@ flex-direction: column; /* Aligner les boutons en colonne */
     width: 200px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+     transition: transform 0.3s, box-shadow 0.3s ease; /* Ajout d'une transition */
+    margin-bottom: 20px; /* Espacement entre les éléments */
 }
 
 .stat-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .stat-number {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #333;
+    font-weight: 700;
 }
 
 .about-image {
@@ -269,6 +285,38 @@ flex-direction: column; /* Aligner les boutons en colonne */
 
 .counter {
     display: inline-block;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #28a745; /* Couleur du compteur */
+}
+/* Media Queries pour Responsivité */
+@media (max-width: 768px) {
+    .about-us {
+        flex-direction: column; /* Sur petit écran, les éléments passent en colonne */
+        padding: 20px;
+    }
+
+    .about-content {
+        padding-right: 0;
+    }
+
+    .stats-container {
+        justify-content: center; /* Centrer les statistiques sur les petits écrans */
+    }
+
+    .stat-item {
+        width: 150px; /* Taille plus petite pour les statistiques sur petit écran */
+    }
+}
+
+@media (max-width: 480px) {
+    .about-content h2 {
+        font-size: 2rem; /* Taille de texte plus petite pour mobile */
+    }
+
+    .about-content p {
+        font-size: 1rem; /* Taille de texte plus petite pour mobile */
+    }
 }
 
 /* Styles pour la section Réalisations */
