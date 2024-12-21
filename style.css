@@ -168,6 +168,7 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s ease;
+    z-index: 1; /* Le contenu du texte est au-dessus de l'image */
 }
 
 .phone-button i {
