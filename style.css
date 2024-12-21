@@ -269,7 +269,7 @@ nav ul li a:hover {
 
 /* Animation lorsque l'on survole la section */
 .about-us:hover {
-    background-color: #e0e0e0;
+    background-color: #f4f4f4;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
