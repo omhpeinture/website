@@ -165,7 +165,7 @@ flex-direction: column; /* Aligner les boutons en colonne */
 .phone-button {
     background-color: #28a745; /* Couleur verte */
     color: white;
-    padding: 12px 20px;
+    padding: 8px 20px;
     font-size: 16px;
     border-radius: 5px;
     text-decoration: none;
@@ -184,7 +184,7 @@ flex-direction: column; /* Aligner les boutons en colonne */
     background-color: #218838; /* Couleur du bouton au survol */
 }
 .call-text {
-    font-size: 0.5rem; /* Réduit la taille du texte */
+    font-size: 6px; /* Réduit la taille du texte */
     color: #666; /* Couleur plus douce pour le texte */
     margin-top: 0px; /* Réduit l'espace entre le bouton et le texte */
     text-align: center; /* Centre le texte sous le bouton */
@@ -195,7 +195,7 @@ flex-direction: column; /* Aligner les boutons en colonne */
 .facebook-button {
     background-color: #3b5998; /* Couleur de fond de Facebook */
     color: white;
-    padding: 12px 20px;
+    padding: 8px 20px;
     font-size: 16px;
     border-radius: 5px;
     text-decoration: none;
