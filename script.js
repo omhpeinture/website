@@ -23,3 +23,22 @@ function nextSlide() {
 }
 
 setInterval(nextSlide, 5000); // Change d'image toutes les 5 secondes
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.querySelector('.testimonial-carousel');
+    const items = carousel.querySelectorAll('.testimonial-item');
+    let currentIndex = 0;
+
+    function showNextTestimonial() {
+        items[currentIndex].style.display = 'none';
+        currentIndex = (currentIndex + 1) % items.length;
+        items[currentIndex].style.display = 'block';
+    }
+
+    // Cacher tous les témoignages sauf le premier
+    items.forEach((item, index) => {
+        if (index !== 0) item.style.display = 'none';
+    });
+
+    // Changer de témoignage toutes les 5 secondes
+    setInterval(showNextTestimonial, 5000);
+});
