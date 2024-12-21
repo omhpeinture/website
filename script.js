@@ -50,6 +50,23 @@ document.addEventListener('DOMContentLoaded', function() {
         currentIndex = (currentIndex + 1) % items.length;
         items[currentIndex].style.display = 'block';
     }
+    // Ajouter une fonction pour détecter quand l'élément devient visible
+document.addEventListener('DOMContentLoaded', function() {
+    const aboutUsSection = document.querySelector('.about-us');
+    
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Ajouter une classe pour animer les éléments visibles
+                aboutUsSection.classList.add('show-elements');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(aboutUsSection);
+});
+
 
     // Cacher tous les témoignages sauf le premier
     items.forEach((item, index) => {
