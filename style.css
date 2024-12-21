@@ -252,58 +252,67 @@ nav ul li a:hover {
   .carousel-item h3 {
     font-size: 1rem;
   }
-.testimonials {
-    background: #ffffff;
-    padding: 50px 20px;
-    margin-bottom: 50px;
+
+.realisations {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.realisation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.realisation-item {
+    background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
-.testimonials h2 {
-    font-size: 2.5em;
-    color: #37474F;
-    text-align: center;
-    margin-bottom: 30px;
+.realisation-item:hover {
+    transform: translateY(-5px);
 }
 
-.testimonial-list {
+.image-container {
+    position: relative;
+}
+
+.realisation-item img {
+    width: 100%;
+    height: auto; /* Assurez-vous que l'image s'adapte correctement */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 30px; /* Espacement entre les témoignages */
-}
-.testimonial-list blockquote:hover {
-    transform: scale(1.05); /* Zoom sur le témoignage au survol */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Augmenter l'ombre pour un effet 3D */
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-blockquote {
-    background: #f9f9f9; /* Couleur de fond pour les témoignages */
-    border-left: 5px solid #34ade3; /* Bordure à gauche */
-    padding: 20px 30px; /* Espacement interne */
-    margin: 20px auto; /* Supprime la marge externe */
-    max-width: 600px; /* Largeur maximale des témoignages */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre pour le bloc */
-    border-radius: 10px; /* Arrondir les coins du bloc */
-    line-height: 1.6; /* Améliorer la lisibilité avec un espacement plus grand entre les lignes */
+.image-container:hover .overlay {
+    opacity: 1; /* Affiche l'overlay au survol */
 }
 
-blockquote p {
-    font-style: italic; /* Italique pour le texte du témoignage */
-    margin-bottom: 10px; /* Marge inférieure pour l'espacement */
-    font-size: 1.1rem; /* Légèrement plus grand pour la lisibilité */
+.realisations p {
+    padding: 15px; /* Ajoute un peu d'espacement autour du texte */
 }
 
-blockquote cite {
-    font-style: normal; /* Style normal pour le nom du client */
-    font-weight: bold; /* Mettre en gras le nom du client */
-    color: #34ade3; /* Couleur du nom du client */
-    font-size: 1.1rem; /* Taille du texte pour le nom, pour plus d'impact */
-    margin-top: 10px; /* Marge supérieure pour espacer le nom du texte du témoignage */
-    display: block; /* Met le nom sur une nouvelle ligne */
-}
+    
 
+    
+    
 .footer {
     background: #ffffff;
     color: #37474F;
