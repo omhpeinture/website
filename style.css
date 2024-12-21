@@ -478,6 +478,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center; /* Centre les éléments horizontalement */
+text-align: right;
 }
 
 /* Style pour la section supérieure du footer (logo et menu) */
@@ -501,18 +502,16 @@ footer {
 /* Style pour le menu de navigation */
 .footer-top nav {
   /* Ajouter des styles pour le menu, par exemple: */
-  /* - list-style: none; */
-  /* - padding: 0; */
-  /* - margin: 0; */
-  /* - display: flex; */
-  /* - Justifier les liens horizontalement */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex
 }
 
 .footer-top nav a {
   /* Ajouter des styles pour les liens du menu, par exemple: */
-  /* - color: #333; */
-  /* - text-decoration: none; */
-  /* - Marge entre les liens */
+  color: #333;
+
 }
 
 /* Style pour la section inférieure du footer (texte et liens) */
