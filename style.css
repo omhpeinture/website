@@ -352,10 +352,16 @@ max-width: 90%; /* S'adapte à la largeur disponible */
             margin: 0 auto;
             overflow: hidden; /* Cache les éléments hors de la vue */
         }
+.carousel-section {
+    background-color: #f4f4f4; /* Fond léger pour la section */
+    padding: 50px 0; /* Espace autour du carrousel */
+}
+
 
         .carousel-items {
             display: flex;
             transition: transform 1s ease; /* Transition fluide pour le défilement */
+            margin: 0 20px; /* Ajoute une marge sur les côtés du carrousel */
         }
 
         .carousel-item {
@@ -367,8 +373,7 @@ max-width: 90%; /* S'adapte à la largeur disponible */
         }
 
         .carousel-item img {
-            width: 100%;
-            max-width: 100%;
+            width: 80%;
             height: auto;
             object-fit: cover;
         }
