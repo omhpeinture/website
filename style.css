@@ -141,9 +141,8 @@ nav ul li a:hover {
     z-index: -1; /* L'image reste derrière tout le contenu */
     transition: transform 0.5s ease; /* Transition fluide */
 }
-/* Applique le zoom pendant le défilement */
-.services .hero-image:hover::before {
-    transform: scale(1.1); /* Zoom à 110% */
+.hero-image.zoom-effect::before {
+    transform: scale(1.1);
 }
 
 
