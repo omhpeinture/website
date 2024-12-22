@@ -163,7 +163,7 @@ nav ul li a:hover {
     font-size: 1.25rem;
     line-height: 1.6;
     margin-top: 20px;
-    font-weight: normal; /* ou 700 pour un gras plus prononcé */
+    font-weight: bold; /* ou 700 pour un gras plus prononcé */
 }
 .twbb-headline {
     display: inline-block;
