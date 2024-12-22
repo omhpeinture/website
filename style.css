@@ -161,9 +161,10 @@ nav ul li a:hover {
 
 .hero-section p {
     font-size: 1.25rem;
+     background: rgba(0, 0, 0, 0.5); /* fond noir semi-transparent */
     line-height: 1.6;
     margin-top: 20px;
-    font-weight: bold; /* ou 700 pour un gras plus prononcé */
+    font-weight: normal; /* ou 700 pour un gras plus prononcé */
 }
 .twbb-headline {
     display: inline-block;
