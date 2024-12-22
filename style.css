@@ -523,7 +523,7 @@ justify-content: flex-start; /* Cette ligne permet d'aligner les éléments à g
 .footer-links a {
   margin-right: 15px;
   text-decoration: none;
-  color: #000;
+  color: white;
   font-weight: bold;
 }
 
@@ -538,7 +538,7 @@ justify-content: flex-start; /* Cette ligne permet d'aligner les éléments à g
 }
 
 .social-icons a {
-  color:#000;
+  color: white;
   margin-left: 10px;
   font-size: 20px; /* Taille du logo Facebook */
 }
