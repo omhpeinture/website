@@ -868,7 +868,19 @@ button:hover {
 
 .service-details {
   padding: 50px 20px;
-  background-color: #ffffff;
+  background-color: linear-gradient(to bottom right, #f9f9f9, #eaeaea); /* Dégradé léger */
+        border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+    opacity: 0; /* Initialement invisible */
+    transform: translateY(20px); /* Déplacement vers le bas */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Transition fluide */
+}
+.service-details.visible {
+    opacity: 1; /* Rendre visible */
+    transform: translateY(0); /* Remettre à sa position d'origine */
 }
 
 .service-details h2 {
