@@ -30,6 +30,43 @@
             </ul>
         </nav>
     </header>
+    <section class="devis-form-container">
+    <h1>Demandez un devis gratuit</h1>
+    <p>Remplissez le formulaire ci-dessous pour recevoir une estimation personnalisée de votre projet de peinture.</p>
+    <form action="submit_devis.php" method="POST" class="devis-form">
+        <div class="form-group">
+            <label for="nom">Nom complet :</label>
+            <input type="text" id="nom" name="nom" placeholder="Entrez votre nom complet" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Adresse email :</label>
+            <input type="email" id="email" name="email" placeholder="Entrez votre email" required>
+        </div>
+        <div class="form-group">
+            <label for="telephone">Numéro de téléphone :</label>
+            <input type="tel" id="telephone" name="telephone" placeholder="Entrez votre numéro de téléphone" required>
+        </div>
+        <div class="form-group">
+            <label for="type-projet">Type de projet :</label>
+            <select id="type-projet" name="type-projet" required>
+                <option value="" disabled selected>Choisissez un type de projet</option>
+                <option value="interieur">Peinture intérieure</option>
+                <option value="exterieur">Peinture extérieure</option>
+                <option value="decorative">Peinture décorative</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="details">Détails du projet :</label>
+            <textarea id="details" name="details" rows="5" placeholder="Décrivez votre projet..." required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="budget">Budget estimé (€) :</label>
+            <input type="number" id="budget" name="budget" placeholder="Entrez votre budget approximatif">
+        </div>
+        <button type="submit" class="submit-btn">Envoyer ma demande</button>
+    </form>
+</section>
+
     <footer>
   <div class="footer-content">
     <div class="footer-left">
