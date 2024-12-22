@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log("DOM chargé");
   const counters = document.querySelectorAll('.counter');
   console.log("Nombre de compteurs trouvés:", counters.length);
-  const speed = 200;
+  const speed = 500;
 
   const startCounter = (counter) => {
     const updateCount = () => {
