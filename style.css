@@ -932,37 +932,36 @@ max-height: 300px; /* Limite la hauteur à 300px */
 }
 /* La ligne zigzag */
 .zigzag-line {
-    width: 100px; /* Largeur initiale */
-    height: 5px;
-    background: transparent;
-    border-top: 3px solid black;
+    width: 100%; /* La ligne prend toute la largeur */
+    height: 5px; /* Épaisseur du trait */
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 10px;
+    left: 0;
+    top: 80%; /* La ligne se place juste en dessous du titre */
+    background: white;
+    z-index: 1;
     animation: zigzag 2s ease-out forwards; /* Animation au chargement */
 }
 
 /* Effet Zigzag : créer l'effet visuel de zigzag */
 @keyframes zigzag {
     0% {
-        width: 0;
-        transform: translateX(-50%) scaleX(0.1);
+        transform: scaleX(0.1);
     }
-    25% {
-        transform: translateX(-50%) scaleX(1.5);
+    20% {
+        transform: scaleX(1.2) skewX(-10deg); /* Applique un décalage de zigzag */
     }
-    50% {
-        transform: translateX(-50%) scaleX(0.5);
+    40% {
+        transform: scaleX(0.8) skewX(10deg);
     }
-    75% {
-        transform: translateX(-50%) scaleX(1.2);
+    60% {
+        transform: scaleX(1.1) skewX(-10deg);
+    }
+    80% {
+        transform: scaleX(0.9) skewX(5deg);
     }
     100% {
-        width: 100%; /* La largeur finale */
-        transform: translateX(-50%) scaleX(1);
+        transform: scaleX(1) skewX(0deg); /* Ligne finale sans déformation */
     }
 }
-
 
 
