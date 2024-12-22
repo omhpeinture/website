@@ -485,6 +485,7 @@ footer {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 20px;
 }
 
 .footer-left {
@@ -516,6 +517,14 @@ justify-content: flex-start; /* Cette ligne permet d'aligner les éléments à g
 
 .logo-footer {
   width: 150px; /* Ajustez la largeur selon votre logo */
+  max-width: 100px;
+  margin-right: 15px;
+}
+.footer-links a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
 }
 
 .footer-right {
@@ -529,9 +538,9 @@ justify-content: flex-start; /* Cette ligne permet d'aligner les éléments à g
 }
 
 .social-icons a {
-  color: white;
+  color:#000;
   margin-left: 10px;
-  font-size: 2rem; /* Taille du logo Facebook */
+  font-size: 20px; /* Taille du logo Facebook */
 }
 
 hr {
