@@ -139,7 +139,6 @@ nav ul li a:hover {
     background-size: cover;
     background-position: center;
     z-index: -1; /* L'image reste derrière tout le contenu */
-    transform: scale(1); /* Valeur initiale du zoom */
     transition: transform 0.5s ease; /* Transition fluide */
 }
 /* Applique le zoom pendant le défilement */
