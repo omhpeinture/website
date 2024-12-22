@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $budget = htmlspecialchars($_POST['budget']);
 
     // Adresse e-mail où les informations seront envoyées
-    $to = "ton-email@exemple.com"; // Remplace avec ton adresse e-mail
+    $to = "omhpeinture01@gmail.com"; // Remplace avec ton adresse e-mail
     $subject = "Nouvelle demande de devis - OMH Peinture";
 
     // Contenu du message
