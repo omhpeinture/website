@@ -42,7 +42,7 @@ body {
     background-color: transparent ; /* Initialement transparent */
 }
 /* Lorsque l'utilisateur défile légèrement */
-.header.scrolled {
+.acceuil-header.scrolled {
     background-color: rgba(0, 0, 0, 0.7);
 }
 .logo-container img {
