@@ -139,7 +139,7 @@ nav ul li a:hover {
     background-size: cover;
     background-position: center;
     z-index: -1; /* L'image reste derrière tout le contenu */
-    transition: transform 0.5s ease; /* Transition fluide */
+    transition: transform 5s ease; /* Transition fluide */
 }
 .hero-image.zoom-effect::before {
     transform: scale(1.1);
