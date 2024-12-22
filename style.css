@@ -24,7 +24,7 @@ body {
     width: 100%;
     color: white;
     transition: background-color 0.3s ease; /* Transition pour le changement de fond */
-    background-color: transparent ; /* Initialement transparent */
+    background-color: #808080 ;
 }
 .header {
     position: fixed;
