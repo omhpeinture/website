@@ -67,6 +67,7 @@ body {
 }
 .logo-container img:hover {
     opacity: 0.8;
+    transform: scale(1.05); /* Léger zoom au survol */
 }
 .logo-container a {
     display: inline-block;
@@ -117,7 +118,6 @@ nav ul li a:hover {
      z-index: 0; /* Permet à l'image de se situer derrière le header */
         flex-direction: column; /* Aligner les éléments de la section en colonne */
     text-align: center; /* Centrer le texte dans la section */
-     position: relative;
 }
 
 /* Conteneur de l'image avec zoom */
@@ -125,8 +125,9 @@ nav ul li a:hover {
     position: relative;
     height: 100vh;
     overflow: hidden; /* Pour éviter que l'image agrandie dépasse */
+    z-index: 0; /* Veillez à ce que l'image soit bien en fond */
 }
-
+/* Effet de zoom lorsque l'on survole l'image */
 .services .hero-image::before {
     content: '';
     position: absolute;
@@ -134,14 +135,13 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('pexels-heyho-6969824.jpg'); /* Remplacez par votre image */
+    background-image: url('pexels-heyho-6969824.jpg'); /* Image à zoomer */
     background-size: cover;
     background-position: center;
-    z-index: -1; /* Met l'image derrière tout le contenu */
-    transform: scale(1); /* État normal */
-    transition: transform 2s ease; /* Transition fluide */
+    z-index: -1; /* L'image reste derrière tout le contenu */
+    transform: scale(1); /* Valeur initiale du zoom */
+    transition: transform 0.5s ease; /* Transition fluide */
 }
-
 /* Applique le zoom pendant le défilement */
 .services .hero-image:hover::before {
     transform: scale(1.1); /* Zoom à 110% */
