@@ -10,6 +10,7 @@ window.addEventListener("scroll", function() {
     }
 });
 
+
 // **Fonction commune pour déplacer les éléments du carrousel**
 function moveSlide(carouselItems, currentIndex, totalItems, direction) {
     currentIndex = (currentIndex + direction + totalItems) % totalItems;
