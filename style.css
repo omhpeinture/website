@@ -90,7 +90,7 @@ nav ul li a:hover {
 }
 
 
-.home-page.hero-section {
+.home-page .hero-section {
     height: 100vh; /* Prend toute la hauteur de la fenêtre */
     background-image: url('pexels-heyho-6969824.jpg');
     background-position: center;
@@ -104,7 +104,7 @@ nav ul li a:hover {
         flex-direction: column; /* Aligner les éléments de la section en colonne */
     text-align: center; /* Centrer le texte dans la section */
 }
-.services.hero-section {
+.services .hero-section {
     height: 100vh; /* Prend toute la hauteur de la fenêtre */
     background-image: url('pexels-heyho-6969824.jpg');
     background-position: center;
