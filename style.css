@@ -414,7 +414,6 @@ max-width: 90%; /* S'adapte à la largeur disponible */
             cursor: pointer;
             z-index: 10;
             border-radius: 50%;
-            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
         .prev {
