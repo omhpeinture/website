@@ -491,7 +491,7 @@ footer {
   color: white; /* Pour rendre le texte blanc */
   display: flex;
   flex-direction: column;
-  padding: 20px 0;
+  padding: 0;
 }
 
 .footer-content {
@@ -501,24 +501,25 @@ footer {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px; 
   
 }
 
 .footer-left {
   display: flex;
   align-items: center;
-justify-content: flex-start; /* Cette ligne permet d'aligner les éléments à gauche */
-    margin: 0; /* Ceci force l'alignement à gauche */
+  justify-content: flex-start; /* Cette ligne permet d'aligner les éléments à gauche */
+   margin: 0; /* Ceci force l'alignement à gauche */
+   padding: 0;
 }
 
 .footer-left img {
     height: 50px; /* Taille du logo */
-    margin-right: 20px;
+    margin: 0;
 }
 .footer-left nav ul {
     display: flex;
     list-style: none;
-    gap: 20px; /* Espace entre les éléments du menu */
     margin: 0;
     padding: 0;
 }
