@@ -932,36 +932,40 @@ max-height: 300px; /* Limite la hauteur à 300px */
 }
 /* La ligne zigzag */
 .zigzag-line {
-    width: 100%; /* La ligne prend toute la largeur */
+    width: 0; /* Initialement, la ligne est invisible */
     height: 5px; /* Épaisseur du trait */
     position: absolute;
     left: 0;
     top: 80%; /* La ligne se place juste en dessous du titre */
     background: white;
     z-index: 1;
-    animation: zigzag 2s ease-out forwards; /* Animation au chargement */
+    animation: zigzag 3s ease-out forwards; /* Animation au chargement */
 }
 
-/* Effet Zigzag : créer l'effet visuel de zigzag */
+/* Effet de zigzag : Déplacer la ligne de gauche à droite, puis droite à gauche, puis gauche à droite */
 @keyframes zigzag {
     0% {
-        transform: scaleX(0.1);
+        width: 0;
+        left: 0;
     }
-    20% {
-        transform: scaleX(1.2) skewX(-10deg); /* Applique un décalage de zigzag */
+    30% {
+        width: 100%;
+        left: 0;
     }
-    40% {
-        transform: scaleX(0.8) skewX(10deg);
+    50% {
+        width: 100%;
+        left: 0;
+        top: 85%; /* Déplacement un peu plus bas */
     }
-    60% {
-        transform: scaleX(1.1) skewX(-10deg);
-    }
-    80% {
-        transform: scaleX(0.9) skewX(5deg);
+    70% {
+        width: 100%;
+        left: 100%;
+        top: 85%;
     }
     100% {
-        transform: scaleX(1) skewX(0deg); /* Ligne finale sans déformation */
+        width: 100%;
+        left: 0;
+        top: 80%; /* Retourne à sa position d'origine */
     }
 }
-
 
