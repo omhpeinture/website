@@ -33,23 +33,63 @@
     <section class="devis-form-container">
     <h1>Demander votre devis gratuit</h1>
     <p>Remplissez le formulaire ci-dessous pour recevoir une estimation personnalisée de votre projet de peinture.</p>
-    <form action="https://formspree.io/f/xjkkbllj" method="POST" class="devis-form">
+ <form action="https://formspree.io/f/xjkkbllj" method="POST" class="devis-form">
     <input type="hidden" name="_redirect" value="https://omhpeinture.github.io/merci.html">
 
-        <div class="form-group">
+    <div class="form-group">
         <label for="nom">Nom complet :</label>
         <input type="text" id="nom" name="Nom" placeholder="Entrez votre nom complet" required>
     </div>
+    
     <div class="form-group">
         <label for="email">Adresse email :</label>
         <input type="email" id="email" name="Email" placeholder="Entrez votre email" required>
     </div>
+    
     <div class="form-group">
-        <label for="details">Détails du projet :</label>
-        <textarea id="details" name="Details" rows="5" placeholder="Décrivez votre projet..." required></textarea>
+        <label for="telephone">Numéro de téléphone :</label>
+        <input type="tel" id="telephone" name="Téléphone" placeholder="Entrez votre numéro de téléphone" required>
     </div>
+    
+    <div class="form-group">
+        <label for="adresse">Adresse du projet :</label>
+        <input type="text" id="adresse" name="Adresse" placeholder="Entrez l'adresse complète du projet" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="type-projet">Type de projet :</label>
+        <select id="type-projet" name="Type de projet" required>
+            <option value="" disabled selected>Choisissez un type de projet</option>
+            <option value="Peinture intérieure">Peinture intérieure</option>
+            <option value="Peinture extérieure">Peinture extérieure</option>
+            <option value="Peinture décorative">Peinture décorative</option>
+            <option value="Rénovation complète">Rénovation complète</option>
+        </select>
+    </div>
+    
+    <div class="form-group">
+        <label for="surface">Surface à peindre (en m²) :</label>
+        <input type="number" id="surface" name="Surface à peindre" placeholder="Entrez la surface approximative (en m²)" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="couleur">Préférences de couleurs :</label>
+        <input type="text" id="couleur" name="Couleurs" placeholder="Précisez vos préférences de couleurs">
+    </div>
+    
+    <div class="form-group">
+        <label for="delais">Délais souhaités :</label>
+        <input type="date" id="delais" name="Délais" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="details">Détails supplémentaires :</label>
+        <textarea id="details" name="Détails supplémentaires" rows="5" placeholder="Ajoutez toute autre information pertinente sur le projet"></textarea>
+    </div>
+    
     <button type="submit" class="submit-btn">Envoyer ma demande</button>
 </form>
+
 
 </section>
 
