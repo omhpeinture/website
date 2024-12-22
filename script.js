@@ -38,26 +38,6 @@ function moveImageSlide() {
 // Défilement automatique du carrousel d'images toutes les 5 secondes
 setInterval(moveImageSlide, 5000);
 
-// Carrousel de témoignages
-let testimonialCarouselIndex = 0;
-const testimonialCarousel = document.querySelector('.testimonial-carousel');
-const testimonialItems = testimonialCarousel.querySelectorAll('.testimonial-item');
-
-// Fonction pour afficher le témoignage suivant
-function showNextTestimonial() {
-  testimonialItems[testimonialCarouselIndex].style.display = 'none';
-  testimonialCarouselIndex = (testimonialCarouselIndex + 1) % testimonialItems.length;
-  testimonialItems[testimonialCarouselIndex].style.display = 'block';
-}
-
-// Cacher tous les témoignages sauf le premier
-testimonialItems.forEach((item, index) => {
-  if (index !== 0) item.style.display = 'none';
-});
-
-// Changer de témoignage toutes les 5 secondes
-setInterval(showNextTestimonial, 5000);
-
 // Animation de compteur
 document.addEventListener('DOMContentLoaded', () => {
   console.log("DOM chargé");
