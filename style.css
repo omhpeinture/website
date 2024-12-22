@@ -237,7 +237,7 @@ flex-direction: column; /* Aligner les boutons en colonne */
 }
 .about-content h2 {
     font-size: 2.5rem;
-    color:#333;
+    color:#1a1a1a;
     font-weight: 700; /* Font plus gras */
     margin-bottom: 20px;
 }
