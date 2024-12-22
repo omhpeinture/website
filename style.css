@@ -928,7 +928,39 @@ button:hover {
 .btn {
   margin-top: 10px;
 }
+/* La ligne zigzag */
+.zigzag-line {
+    width: 100px; /* Largeur initiale */
+    height: 5px;
+    background: transparent;
+    border-top: 3px solid black;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    animation: zigzag 2s ease-out forwards; /* Animation au chargement */
+}
 
+/* Effet Zigzag : créer l'effet visuel de zigzag */
+@keyframes zigzag {
+    0% {
+        width: 0;
+        transform: translateX(-50%) scaleX(0.1);
+    }
+    25% {
+        transform: translateX(-50%) scaleX(1.5);
+    }
+    50% {
+        transform: translateX(-50%) scaleX(0.5);
+    }
+    75% {
+        transform: translateX(-50%) scaleX(1.2);
+    }
+    100% {
+        width: 100%; /* La largeur finale */
+        transform: translateX(-50%) scaleX(1);
+    }
+}
 
 
 
