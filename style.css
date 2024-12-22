@@ -207,12 +207,13 @@ flex-direction: column; /* Aligner les boutons en colonne */
 .facebook-button:hover {
     background-color: #2d4373; /* Couleur du bouton Facebook au survol */
 }
+
 .about-us {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center; /* Aligne les éléments verticalement */
-    padding: 50px;
+    padding: 40px;
     background-color: #f4f4f4;
     border-radius: 15px; /* Bords arrondis */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Ombre subtile */
@@ -225,8 +226,15 @@ flex-direction: column; /* Aligner les boutons en colonne */
     flex: 1;
     padding-right: 50px;
     text-align: left; /* Texte aligné à gauche */
+    display: flex;
+    align-items: center; /* Aligne verticalement */
+    justify-content: space-between; /* Espace entre les colonnes */
+    gap: 20px; /* Espace entre les deux colonnes */
+    padding: 20px;
 }
-
+.text-and-stats {
+    flex: 1; /* Prend tout l'espace disponible à gauche */
+}
 .about-content h2 {
     font-size: 2.5rem;
     color:#333;
@@ -275,13 +283,18 @@ flex-direction: column; /* Aligner les boutons en colonne */
 .about-image {
     flex: 1;
     height: 100%; /* L'image prendra toute la hauteur du parent */
+     text-align: center; /* Centre l'image horizontalement */
 }
 
 .about-image img {
-    width: 100%; /* L'image s'adapte à la largeur de son conteneur */
-    height: 100%; /* L'image prend la même hauteur que le conteneur */
-    object-fit: cover; /* L'image couvre toute la surface sans être déformée */
-    border-radius: 10px;
+max-width: 90%; /* S'adapte à la largeur disponible */
+    height: auto; /* Conserve les proportions de l'image */
+    border-radius: 10px; /* Coins arrondis (optionnel) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère (optionnel) */
+    margin: auto;
+}
+.about-content, .stat-item, .about-image img {
+    transition: all 0.3s ease; /* Transition fluide sur tous les changements */
 }
 
 .counter {
@@ -290,6 +303,9 @@ flex-direction: column; /* Aligner les boutons en colonne */
     font-weight: bold;
     color: #007bff; /* Couleur du compteur */
 }
+
+
+
 /* Media Queries pour Responsivité */
 @media (max-width: 768px) {
     .about-us {
