@@ -427,7 +427,6 @@ max-width: 90%; /* S'adapte à la largeur disponible */
         /* Effet au survol des flèches */
         .prev:hover, .next:hover {
             background-color: rgba(0, 0, 0, 0.8);
-              transform: scale(1.1); /* Agrandissement léger au survol */
         }
 /* Responsive Design */
 @media (max-width: 768px) {
