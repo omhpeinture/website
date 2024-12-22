@@ -122,10 +122,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 document.addEventListener('DOMContentLoaded', function() {
-    const heroImage = document.querySelector('.services .hero-image');
+    const heroImage = document.querySelector('.hero-image');
     
     function startZoomEffect() {
-        heroImage.classList.add('hero-image');
+        heroImage.classList.add('zoom-effect');
     }
     
     // Démarrer l'effet de zoom après un court délai
