@@ -104,6 +104,15 @@ nav ul li a:hover {
         flex-direction: column; /* Aligner les éléments de la section en colonne */
     text-align: center; /* Centrer le texte dans la section */
 }
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* fond semi-transparent */
+    z-index: 1;  /* La couche doit être derrière le contenu mais devant l'image */
+}
 .services .hero-section {
     height: 100vh; /* Prend toute la hauteur de la fenêtre */
     background-image: url('pexels-heyho-6538903.jpg');
@@ -143,14 +152,13 @@ nav ul li a:hover {
 .hero-image.zoom-effect::before {
     transform: scale(1.1);
 }
-
-
 .hero-content {
     text-align: center;
-    z-index: 1; /* Le contenu du texte est au-dessus de l'image */
+    z-index: 2; /* Le contenu du texte est au-dessus de l'image */
     max-width: 800px;
     margin: 0 auto;
     padding: 0 20px;
+    position: relative;
     
 }
 .hero-section h1 {
