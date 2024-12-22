@@ -9,22 +9,41 @@ window.addEventListener("scroll", function() {
         header.classList.remove("scrolled"); // Retire la classe 'scrolled'
     }
 });
+
 // **Fonction commune pour déplacer les éléments du carrousel**
 function moveSlide(carouselItems, currentIndex, totalItems, direction) {
     currentIndex = (currentIndex + direction + totalItems) % totalItems;
     carouselItems.style.transform = `translateX(-${currentIndex * 100}%)`;
     return currentIndex;
 }
+
 // Carrousel d'images
 let imageCarouselIndex = 0;
 const imageCarouselItems = document.querySelector('.carousel-items'); 
 const imageTotalItems = document.querySelectorAll('.carousel-item').length;
 
-function moveImageSlide() {
-    imageCarouselIndex = moveSlide(imageCarouselItems, imageCarouselIndex, imageTotalItems, 1);
-}
+if (imageCarouselItems) {
+    // Fonction pour changer d'image automatiquement
+    function moveImageSlide() {
+        imageCarouselIndex = moveSlide(imageCarouselItems, imageCarouselIndex, imageTotalItems, 1);
+    }
 
-setInterval(moveImageSlide, 5000);
+    // Déclenche l'autoplay du carrousel toutes les 5 secondes
+    let autoplayInterval = setInterval(moveImageSlide, 5000);
+
+    // Fonction pour stopper l'autoplay si l'utilisateur clique sur les flèches
+    document.querySelector('.prev').addEventListener('click', () => {
+        clearInterval(autoplayInterval);
+        moveImageSlide();
+        autoplayInterval = setInterval(moveImageSlide, 5000); // Relance l'autoplay après un clic
+    });
+
+    document.querySelector('.next').addEventListener('click', () => {
+        clearInterval(autoplayInterval);
+        moveImageSlide();
+        autoplayInterval = setInterval(moveImageSlide, 5000); // Relance l'autoplay après un clic
+    });
+}
 
 // Animation de compteur
 document.addEventListener('DOMContentLoaded', () => {
@@ -75,12 +94,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     console.log("Animation du témoignage:", entry.target);
                     animateTestimonial(entry.target);
                 }
-                observer.unobserve(entry.target);
+                observer.unobserve(entry.target); // Arrête l'observation après le premier déclenchement
             } else if (entry.target.classList.contains('counter')) {
-                entry.target.textContent = '0';
+                entry.target.textContent = '0'; // Remise à zéro si l'élément sort de la vue
             }
         });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.5 }); // Ajuste le seuil à 50% pour mieux détecter l'élément
 
     counters.forEach(counter => {
         observer.observe(counter);
