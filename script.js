@@ -9,61 +9,60 @@ window.addEventListener("scroll", function() {
         header.classList.remove("scrolled"); // Retire la classe 'scrolled'
     }
 });
+// **Fonction commune pour déplacer les éléments du carrousel**
+function moveSlide(carouselItems, currentIndex, totalItems, direction) {
+  // Mettre à jour l'index de l'élément
+  currentIndex += direction;
 
-let currentIndex = 0;  // Index de l'image actuellement affichée
-        const carouselItems = document.querySelector('.carousel-items');  // Conteneur des éléments du carrousel
-        const totalItems = document.querySelectorAll('.carousel-item').length;  // Nombre total d'éléments du carrousel
+  // Gérer les débordements d'index
+  if (currentIndex < 0) {
+    currentIndex = totalItems - 1;
+  } else if (currentIndex >= totalItems) {
+    currentIndex = 0;
+  }
 
-        // Fonction pour déplacer le carrousel
-        function moveSlide(direction) {
-            // Mettre à jour l'index de l'image
-            currentIndex += direction;
+  // Appliquer un décalage au carrousel en fonction de l'index
+  carouselItems.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
 
-            // Si l'index est inférieur à 0, on revient à la dernière image
-            if (currentIndex < 0) {
-                currentIndex = totalItems - 1;
-            }
+// Carrousel d'images
+let imageCarouselIndex = 0;
+const imageCarouselItems = document.querySelector('.carousel-items'); 
+const imageTotalItems = document.querySelectorAll('.carousel-item').length;
 
-            // Si l'index dépasse le nombre d'éléments, on revient à la première image
-            if (currentIndex >= totalItems) {
-                currentIndex = 0;
-            }
+// Fonction pour déplacer le carrousel d'images
+function moveImageSlide() {
+  moveSlide(imageCarouselItems, imageCarouselIndex, imageTotalItems, 1);
+}
 
-            // Appliquer un décalage au carrousel en fonction de l'index
-            carouselItems.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }
+// Défilement automatique du carrousel d'images toutes les 5 secondes
+setInterval(moveImageSlide, 5000);
 
-        // Fonction pour faire défiler automatiquement les éléments du carrousel toutes les 5 secondes
-        setInterval(() => {
-            moveSlide(1);
-        }, 5000);  // 5000ms = 5 secondes
+// Carrousel de témoignages
+let testimonialCarouselIndex = 0;
+const testimonialCarousel = document.querySelector('.testimonial-carousel');
+const testimonialItems = testimonialCarousel.querySelectorAll('.testimonial-item');
 
-setInterval(nextSlide, 5000); // Change d'image toutes les 5 secondes
-document.addEventListener('DOMContentLoaded', function() {
-    const carousel = document.querySelector('.testimonial-carousel');
-    const items = carousel.querySelectorAll('.testimonial-item');
-    let currentIndex = 0;
+// Fonction pour afficher le témoignage suivant
+function showNextTestimonial() {
+  testimonialItems[testimonialCarouselIndex].style.display = 'none';
+  testimonialCarouselIndex = (testimonialCarouselIndex + 1) % testimonialItems.length;
+  testimonialItems[testimonialCarouselIndex].style.display = 'block';
+}
 
-    function showNextTestimonial() {
-        items[currentIndex].style.display = 'none';
-        currentIndex = (currentIndex + 1) % items.length;
-        items[currentIndex].style.display = 'block';
-    }
-
-    // Cacher tous les témoignages sauf le premier
-    items.forEach((item, index) => {
-        if (index !== 0) item.style.display = 'none';
-    });
-
-    // Changer de témoignage toutes les 5 secondes
-    setInterval(showNextTestimonial, 5000);
+// Cacher tous les témoignages sauf le premier
+testimonialItems.forEach((item, index) => {
+  if (index !== 0) item.style.display = 'none';
 });
 
-   // Animation de compteur
+// Changer de témoignage toutes les 5 secondes
+setInterval(showNextTestimonial, 5000);
+
+// Animation de compteur
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("DOM chargé");
+  console.log("DOM chargé");
   const counters = document.querySelectorAll('.counter');
-      console.log("Nombre de compteurs trouvés:", counters.length);
+  console.log("Nombre de compteurs trouvés:", counters.length);
   const speed = 200;
 
   const startCounter = (counter) => {
@@ -85,19 +84,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        console.log("Élément observé:", entry.target);
+      console.log("Élément observé:", entry.target);
       console.log("Est intersecté:", entry.isIntersecting);
       if (entry.isIntersecting) {
-          console.log("Démarrage du compteur");
+        console.log("Démarrage du compteur");
         startCounter(entry.target);
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.01 });
 
   counters.forEach(counter => {
     observer.observe(counter);
-      console.log("Observation du compteur:", counter);
+    console.log("Observation du compteur:", counter);
   });
 });
-
