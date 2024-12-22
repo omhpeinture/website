@@ -65,34 +65,39 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log("Nombre de compteurs trouvés:", counters.length);
   const speed = 1000;
 
-  const startCounter = (counter) => {
-    const updateCount = () => {
-      const target = parseInt(counter.getAttribute('data-target'));
-      const count = parseInt(counter.innerText);
-      const increment = target / speed;
-
-      if (count < target) {
-        counter.innerText = Math.ceil(count + increment);
-        setTimeout(updateCount, 3);
+  const animateCounter = (counter) => {
+    const target = parseInt(counter.getAttribute('data-target'));
+    const duration = 2000; // Durée de l'animation en millisecondes
+    const stepTime = 50; // Temps entre chaque étape de l'animation
+    const steps = duration / stepTime;
+    let current = 0;
+    
+    const updateCounter = () => {
+      current += target / steps;
+      if (current < target) {
+        counter.textContent = Math.round(current);
+        setTimeout(updateCounter, stepTime);
       } else {
-        counter.innerText = target;
+        counter.textContent = target;
       }
     };
-
-    updateCount();
+    
+    counter.textContent = '0';
+    updateCounter();
   };
 
-  const observer = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      console.log("Élément observé:", entry.target);
-      console.log("Est intersecté:", entry.isIntersecting);
       if (entry.isIntersecting) {
-        console.log("Démarrage du compteur");
-        startCounter(entry.target);
-        observer.unobserve(entry.target);
+        console.log("Démarrage du compteur:", entry.target);
+        animateCounter(entry.target);
+      } else {
+        // Réinitialiser le compteur quand il n'est plus visible
+        entry.target.textContent = '0';
       }
     });
-  }, { threshold: 0.01 });
+  }, { threshold: 0.1 });
+
 
   counters.forEach(counter => {
     observer.observe(counter);
