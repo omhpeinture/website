@@ -64,12 +64,15 @@ document.addEventListener('DOMContentLoaded', () => {
             current += target / steps;
             if (current < target) {
                 counter.textContent = Math.round(current);
-                setTimeout(updateCounter, stepTime);
+                counter.animationId = requestAnimationFrame(updateCounter);
             } else {
                 counter.textContent = target;
             }
         };
-        
+           // Annuler l'animation précédente si elle existe
+        if (counter.animationId) {
+            cancelAnimationFrame(counter.animationId);
+        }
         counter.textContent = '0';
         updateCounter();
     };
@@ -84,30 +87,37 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 100);
     };
 
-    const observer = new IntersectionObserver((entries) => {
+       const counterObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                if (entry.target.classList.contains('counter')) {
-                    console.log("Démarrage du compteur:", entry.target);
-                    animateCounter(entry.target);
-                } else if (entry.target.classList.contains('testimonial-item')) {
-                    console.log("Animation du témoignage:", entry.target);
-                    animateTestimonial(entry.target);
-                }
-                observer.unobserve(entry.target); // Arrête l'observation après le premier déclenchement
-            } else if (entry.target.classList.contains('counter')) {
+                console.log("Démarrage du compteur:", entry.target);
+                animateCounter(entry.target);
+            } else {
                 entry.target.textContent = '0'; // Remise à zéro si l'élément sort de la vue
+                if (entry.target.animationId) {
+                    cancelAnimationFrame(entry.target.animationId);
+                }
             }
         });
-    }, { threshold: 0.5 }); // Ajuste le seuil à 50% pour mieux détecter l'élément
+    }, { threshold: 0.5 });
+
+    const testimonialObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                console.log("Animation du témoignage:", entry.target);
+                animateTestimonial(entry.target);
+                testimonialObserver.unobserve(entry.target); // Arrête l'observation après le premier déclenchement
+            }
+        });
+    }, { threshold: 0.5 });
 
     counters.forEach(counter => {
-        observer.observe(counter);
+        counterObserver.observe(counter);
         console.log("Observation du compteur:", counter);
     });
 
     testimonials.forEach(testimonial => {
-        observer.observe(testimonial);
+        testimonialObserver.observe(testimonial);
         console.log("Observation du témoignage:", testimonial);
     });
 });
