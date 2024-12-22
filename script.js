@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log("DOM chargé");
   const counters = document.querySelectorAll('.counter');
   console.log("Nombre de compteurs trouvés:", counters.length);
-  const speed = 500;
+  const speed = 1000;
 
   const startCounter = (counter) => {
     const updateCount = () => {
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (count < target) {
         counter.innerText = Math.ceil(count + increment);
-        setTimeout(updateCount, 1);
+        setTimeout(updateCount, 3);
       } else {
         counter.innerText = target;
       }
