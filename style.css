@@ -714,6 +714,7 @@ button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     font-family: 'Montserrat', sans-serif;
+    margin-top: 80px;
 }
 
 .devis-form-container h1 {
