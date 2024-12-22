@@ -121,3 +121,14 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log("Observation du témoignage:", testimonial);
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const heroImage = document.querySelector('.services .hero-image');
+    
+    function startZoomEffect() {
+        heroImage.classList.add('hero-image');
+    }
+    
+    // Démarrer l'effet de zoom après un court délai
+    setTimeout(startZoomEffect, 100);
+});
+
