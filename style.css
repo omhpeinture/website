@@ -945,40 +945,42 @@ max-height: 300px; /* Limite la hauteur à 300px */
 }
 /* La ligne zigzag */
 .zigzag-line {
-    width: 0; /* Initialement, la ligne est invisible */
+    width: 0; /* La ligne commence invisible */
     height: 5px; /* Épaisseur du trait */
     position: absolute;
-    left: 0;
-    top: 80%; /* La ligne se place juste en dessous du titre */
+    left: 50%; /* Centrer la ligne par rapport au titre */
+    top: 80%; /* Position de départ */
     background: white;
     z-index: 1;
-    animation: zigzag 3s ease-out forwards; /* Animation au chargement */
+    transform: translateX(-50%); /* Centrer la ligne parfaitement */
+    animation: zigzag 6s ease-out infinite; /* Animation au chargement, boucle infinie */
 }
 
-/* Effet de zigzag : Déplacer la ligne de gauche à droite, puis droite à gauche, puis gauche à droite */
+/* Animation du mouvement de la ligne */
 @keyframes zigzag {
     0% {
         width: 0;
-        left: 0;
+        left: 50%; /* Commence centré */
+        top: 80%; /* Position initiale */
     }
-    30% {
-        width: 100%;
-        left: 0;
+    25% {
+        width: 50%; /* La ligne se déplace de gauche à droite */
+        left: 25%; /* Déplacement vers la gauche */
+        top: 80%; /* Position horizontale initiale */
     }
     50% {
-        width: 100%;
-        left: 0;
-        top: 85%; /* Déplacement un peu plus bas */
+        width: 50%; /* La ligne se déplace de droite à gauche */
+        left: 75%; /* Déplacement vers la droite */
+        top: 85%; /* Ligne descend un peu */
     }
-    70% {
-        width: 100%;
-        left: 100%;
-        top: 85%;
+    75% {
+        width: 50%; /* Reprend la largeur à moitié */
+        left: 25%; /* Déplacement vers la gauche */
+        top: 90%; /* Descend encore un peu plus */
     }
     100% {
-        width: 100%;
-        left: 0;
-        top: 80%; /* Retourne à sa position d'origine */
+        width: 50%; /* La ligne est de retour à sa largeur initiale */
+        left: 75%; /* Déplacement vers la droite */
+        top: 95%; /* Descend encore plus bas */
     }
 }
-
