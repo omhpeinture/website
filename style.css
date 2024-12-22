@@ -35,8 +35,15 @@ body {
 }
 .logo-container img {
     max-height: 60px;
+     transition: opacity 0.3s ease;
 }
-
+.logo-container img:hover {
+    opacity: 0.8;
+}
+.logo-container a {
+    display: inline-block;
+    cursor: pointer;
+}
 nav ul {
     list-style-type: none;
     display: flex;
