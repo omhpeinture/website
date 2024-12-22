@@ -119,6 +119,45 @@ nav ul li a:hover {
     text-align: center; /* Centrer le texte dans la section */
 }
 
+/* Conteneur de l'image avec zoom */
+.services .hero-image {
+    position: relative;
+    height: 100vh;
+    overflow: hidden; /* Pour éviter que l'image agrandie dépasse */
+}
+
+.services .hero-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('pexels-heyho-6969824.jpg'); /* Remplacez par votre image */
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Met l'image derrière tout le contenu */
+    transform: scale(1); /* État normal */
+    transition: transform 2s ease; /* Transition fluide */
+}
+
+/* Applique le zoom pendant le défilement */
+.services .hero-image:hover::before {
+    transform: scale(1.1); /* Zoom à 110% */
+}
+
+/* Contenu de la section */
+.services .hero-section {
+    position: relative;
+    z-index: 1; /* Place le contenu au-dessus de l'image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
 
 .hero-content {
     text-align: center;
