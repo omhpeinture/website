@@ -920,9 +920,11 @@ button:hover {
 .service-image {
   max-width: 100%;
   height: auto;
+max-height: 300px; /* Limite la hauteur à 300px */
   margin-bottom: 15px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     object-fit: cover; /* Remplit le conteneur sans déformer l'image */
 }
 
 .btn {
