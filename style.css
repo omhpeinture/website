@@ -24,7 +24,7 @@ body {
     width: 100%;
     color: white;
     transition: background-color 0.3s ease; /* Transition pour le changement de fond */
-    background-color: #808080 ;
+    background-color: rgba(0, 0, 0, 0.7) ;
 }
 .home-page header {
     position: fixed;
