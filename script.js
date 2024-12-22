@@ -133,3 +133,21 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(startZoomEffect, 100);
 });
 
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const serviceSections = document.querySelectorAll('.service-details');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible'); // Ajoute la classe pour l'animation
+                observer.unobserve(entry.target); // Arrête l'observation après le premier déclenchement
+            }
+        });
+    }, { threshold: 0.1 });
+
+    serviceSections.forEach(section => observer.observe(section));
+});
+
+
