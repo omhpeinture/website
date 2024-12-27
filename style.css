@@ -435,29 +435,31 @@ max-width: 90%; /* S'adapte à la largeur disponible */
 
     nav ul {
         display: flex;
-        flex-direction: column; /* Aligner les éléments en colonne */
+        flex-direction: row; /* Aligner les éléments en colonne */
         text-align: center; /* Centrer le texte */
         padding: 0;
         margin: 0;
     }
 
     nav ul li {
-        margin: 5px 0; /* Ajoutez un petit espace entre les liens */
+        margin: 5px 10px; /* Ajoutez un petit espace entre les liens */
     }
 
     .footer-content {
         display: flex;
-        flex-direction: column; /* Ajustez le footer pour qu'il soit vertical */
+        flex-direction: row; /* Ajustez le footer pour qu'il soit vertical */
         align-items: center;
+        justify-content: center; /* Centrer les éléments horizontalement */
         text-align: center;
     }
 
     .footer-left nav ul {
-        display: flex;
+display: flex;
+        flex-direction: row; /* Afficher les éléments du footer horizontalement */
         list-style: none;
         margin: 0;
         padding: 0;
-        flex-wrap: wrap; /* Permet aux éléments de la navigation de se réorganiser */
+        flex-wrap: wrap;  /* Permet aux éléments de se réorganiser */
         margin-left: 0.5rem; /* Espacement réduit entre les éléments */
     }
 
