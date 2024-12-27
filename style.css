@@ -7,7 +7,9 @@
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #ffffff; /* ou une autre couleur si vous en avez besoin */
-    height: 100%; /* Ajoutez cette règle pour éviter tout fond manquant */
+      min-height: 100vh;
+  font-size: 16px;
+  line-height: 1.5;
 }
 /* Style spécifique pour le header de la page de contact */
 .demander-devis header {
@@ -18,7 +20,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 1.25rem;
     z-index: 10;
     width: 100%;
     color: white;
@@ -61,7 +63,7 @@ body {
     background-color: rgba(0, 0, 0, 0.7);
 }
 .logo-container img {
-    max-height: 60px;
+    max-height: 3.75rem;
      transition: opacity 0.3s ease;
 }
 .logo-container img:hover {
@@ -75,7 +77,7 @@ body {
 nav ul {
     list-style-type: none;
     display: flex;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 nav ul li a {
@@ -157,21 +159,21 @@ nav ul li a:hover {
     z-index: 2; /* Le contenu du texte est au-dessus de l'image */
     max-width: 800px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 1.25rem;
     position: relative;
     
 }
 .hero-section h1 {
-    font-size: 4rem;
-    margin-bottom: 20px;
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin-bottom: 1.25rem;
     font-weight: bold; /* ou 700 pour un gras plus prononcé */
 }
 
 .hero-section p {
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
      background: rgba(0, 0, 0, 0.5); /* fond noir semi-transparent */
     line-height: 1.6;
-    margin-top: 20px;
+    margin-top: 1.25rem;
     font-weight: normal; /* ou 700 pour un gras plus prononcé */
 }
 .twbb-headline {
@@ -226,10 +228,10 @@ nav ul li a:hover {
 
 /* Container pour les boutons */
 .button-container {
-  margin-top: 30px; /* Espace au-dessus des boutons */
+  margin-top: 1.875rem; /* Espace au-dessus des boutons */
   display: flex; /* Utilisation de flexbox pour l'alignement horizontal */
   justify-content: center; /* Centrer les boutons horizontalement */
-  gap: 20px; /* Espacement entre les boutons */
+  gap: 1.25rem /* Espacement entre les boutons */
 flex-direction: column; /* Aligner les boutons en colonne */
       align-items: center; /* Centrer les boutons verticalement */
     
@@ -239,8 +241,8 @@ flex-direction: column; /* Aligner les boutons en colonne */
 .phone-button {
     background-color: #28a745; /* Couleur verte */
     color: white;
-    padding: 8px 20px;
-    font-size: 16px;
+    padding: 0.5rem 1.25rem;
+    font-size: 1rem;
     border-radius: 5px;
     text-decoration: none;
     display: flex;
@@ -285,24 +287,24 @@ flex-direction: column; /* Aligner les boutons en colonne */
     flex-direction: row;
     justify-content: space-between;
     align-items: center; /* Aligne les éléments verticalement */
-    padding: 40px;
+    padding: 2.5rem;
     background-color: #f4f4f4;
-    border-radius: 15px; /* Bords arrondis */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Ombre subtile */
-    margin: 0 20px; /* Marges automatiques */
+    border-radius: 0.9375rem; /* Bords arrondis */
+    box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.1);
+    margin: 0 1.25rem;
     flex-wrap: wrap; /* Permet de passer les éléments en dessous sur petits écrans */
 
 }
 
 .about-content {
     flex: 1;
-    padding-right: 50px;
+    padding-right: 1.25rem;
     text-align: left; /* Texte aligné à gauche */
     display: flex;
     align-items: center; /* Aligne verticalement */
     justify-content: space-between; /* Espace entre les colonnes */
-    gap: 20px; /* Espace entre les deux colonnes */
-    padding: 20px;
+    gap: 1.25rem;
+    padding: 1.25rem;
 }
 .text-and-stats {
     flex: 1; /* Prend tout l'espace disponible à gauche */
@@ -311,39 +313,39 @@ flex-direction: column; /* Aligner les boutons en colonne */
     font-size: 2.5rem;
     color:#1a1a1a;
     font-weight: 700; /* Font plus gras */
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 .about-content p {
     font-size: 1.2rem;
     color: #666;
     line-height: 1.5;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
     
 }
 
 .stats-container {
     display: flex;
-    gap: 20px;
+    gap: 1.25rem;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 
 .stat-item {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    width: 200px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-     transition: transform 0.3s, box-shadow 0.3s ease; /* Ajout d'une transition */
-    margin-top: 20px; /* Espacement entre les éléments */
+  background-color: #fff;
+  border-radius: 0.625rem;
+  padding: 1.25rem;
+  width: 12.5rem;
+  text-align: center;
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s ease;
+  margin-top: 1.25rem;
 }
 
 .stat-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .stat-number {
@@ -361,9 +363,9 @@ flex-direction: column; /* Aligner les boutons en colonne */
 .about-image img {
 max-width: 90%; /* S'adapte à la largeur disponible */
     height: auto; /* Conserve les proportions de l'image */
-    border-radius: 10px; /* Coins arrondis (optionnel) */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère (optionnel) */
-    margin: auto;
+   border-radius: 0.625rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+  margin: auto;
 }
 .about-content, .stat-item, .about-image img {
     transition: all 0.3s ease; /* Transition fluide sur tous les changements */
@@ -382,7 +384,7 @@ max-width: 90%; /* S'adapte à la largeur disponible */
 @media (max-width: 768px) {
     .about-us {
         flex-direction: column; /* Sur petit écran, les éléments passent en colonne */
-        padding: 20px;
+          padding: 1.25rem;
     }
 
     .about-content {
@@ -394,7 +396,7 @@ max-width: 90%; /* S'adapte à la largeur disponible */
     }
 
     .stat-item {
-        width: 150px; /* Taille plus petite pour les statistiques sur petit écran */
+        width: 9.375rem; /* Taille plus petite pour les statistiques sur petit écran */
     }
 }
 
@@ -606,7 +608,7 @@ max-width: 90%; /* S'adapte à la largeur disponible */
 footer {
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
-  padding: 20px 0;
+  padding: 1.25rem 0;
   font-family: Arial, sans-serif;
 }
 
@@ -615,9 +617,9 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+ max-width: 75rem;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1.25rem;
 }
 
 /* Partie gauche : Logo et liens */
@@ -651,7 +653,7 @@ footer {
 }
 
 .footer-left nav ul li {
-  margin-left: 15px; /* Espace entre les liens */
+    margin-left: 0.9375rem;
 }
 
 .footer-left nav ul li a {
@@ -672,7 +674,7 @@ footer {
 
 .footer-right a {
   color: white;
-  font-size: 30px; /* Taille agrandie pour Facebook */
+font-size: 1.875rem;
   text-decoration: none;
 }
 
@@ -683,7 +685,7 @@ footer {
 /* Ligne de séparation */
 hr {
   border: 1px solid #444;
-  margin: 20px 0;
+    margin: 1.25rem 0;
 }
 
 /* Bas de page */
@@ -691,9 +693,9 @@ hr {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+ max-width: 75rem;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1.25rem;
   font-size: 0.9rem;
 }
 
@@ -705,7 +707,7 @@ hr {
 }
 
 .footer-bottom nav ul li {
-  margin-left: 15px;
+   margin-left: 0.9375rem;
 }
 
 .footer-bottom nav ul li a {
@@ -714,7 +716,9 @@ hr {
 }
 
 .footer-bottom nav ul li a:hover {
-  text-decoration: underline;
+    color: white;
+  text-decoration: none;
+  font-size: 1rem;
 }
 
 /* Section Formulaire */
