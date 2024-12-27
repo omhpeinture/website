@@ -5,13 +5,15 @@
 }
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #ffffff; /* ou une autre couleur si vous en avez besoin */
-      min-height: 100vh;
-  font-size: 16px;
-  line-height: 1.5;
+    background-color: #ffffff;
+    min-height: 100vh;
+    font-size: 16px;
+    line-height: 1.5;
 }
 /* Style spécifique pour le header de la page de contact */
-.demander-devis header {
+.demander-devis header,
+.home-page header,
+.services header {
     position: fixed;
     top: 0;
     left: 0;
@@ -23,38 +25,8 @@ body {
     z-index: 10;
     width: 100%;
     color: white;
-    transition: background-color 0.3s ease; /* Transition pour le changement de fond */
-    background-color: rgba(0, 0, 0, 0.7) ;
-}
-.home-page header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    z-index: 10;
-    width: 100%;
-    color: white;
-    transition: background-color 0.3s ease; /* Transition pour le changement de fond */
-    background-color: transparent ; /* Initialement transparent */
-}
-.services header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    z-index: 10;
-    width: 100%;
-    color: white;
-    transition: background-color 0.3s ease; /* Transition pour le changement de fond */
-    background-color: transparent ; /* Initialement transparent */
+    transition: background-color 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.7); /* Ou transparent, selon la page */
 }
 /* Lorsque l'utilisateur défile légèrement */
 .header.scrolled {
@@ -72,12 +44,19 @@ body {
     display: inline-block;
     cursor: pointer;
 }
+nav {
+    display: flex; /* Assure que la navigation utilise flexbox */
+    justify-content: flex-start; /* Pour que les éléments soient alignés à gauche */
+    align-items: center; /* Centre verticalement les éléments de la navigation */
+}
 nav ul {
     list-style-type: none;
     display: flex;
     gap: 1.25rem;
 }
-
+nav ul li {
+    display: inline-block; /* Peut être utilisé si tu veux chaque lien en ligne */
+}
 nav ul li a {
     text-decoration: none;
     color: white;
@@ -88,8 +67,6 @@ nav ul li a {
 nav ul li a:hover {
     color: #007bff;
 }
-
-
 .home-page .hero-section {
     height: 100vh; /* Prend toute la hauteur de la fenêtre */
     background-image: url('pexels-heyho-6969824.jpg');
@@ -127,7 +104,6 @@ nav ul li a:hover {
         flex-direction: column; /* Aligner les éléments de la section en colonne */
     text-align: center; /* Centrer le texte dans la section */
 }
-
 /* Conteneur de l'image avec zoom */
 .services .hero-image {
     position: relative;
@@ -158,8 +134,7 @@ nav ul li a:hover {
     max-width: 800px;
     margin: 0 auto;
     padding: 0 1.25rem;
-    position: relative;
-    
+    position: relative;  
 }
 .hero-section h1 {
     font-size: clamp(2rem, 5vw, 4rem);
@@ -368,105 +343,35 @@ max-width: 90%; /* S'adapte à la largeur disponible */
 }
 /* Media query pour les écrans jusqu'à 768px */
 @media (max-width: 768px) {
-      /* Section About Us */
-    .about-us {
-        flex-direction: column; /* Sur petit écran, les éléments passent en colonne */
-          padding: 1.25rem;
+    body {
+        font-size: 14px; /* Réduire la taille de base des textes */
     }
-    .about-content {
-        padding-right: 0;
-        flex-direction: column; /* Les sections passent en colonne */
-        padding: 1rem;
-    }
-    .stats-container {
-        justify-content: center; /* Centrer les statistiques sur les petits écrans */
-    }
-    .stat-item {
-        width: 9.375rem; /* Taille plus petite pour les statistiques sur petit écran */
-    }
-    /* Hero Section */
-    .hero-section h1 {
-        font-size: 2rem; /* Réduire la taille des titres */
-        padding-top: 20px; /* Ajoutez de l'espace au-dessus du titre */
-    }
-    .button-container {
-        flex-direction: column; /* Aligner les boutons verticalement */
-        gap: 0.5rem;
-    }
-    header, footer {
-        width: 100%; /* Assurez-vous que la largeur ne dépasse pas l'écran */
-        padding: 10px; /* Ajustez les paddings pour s'adapter aux petits écrans */
-        box-sizing: border-box; /* Inclure padding dans la largeur totale */
-        overflow: hidden; /* Évitez tout débordement */
-        margin-bottom: 20px; /* Ajoutez de l'espace sous le header */
-         height: auto; /* Assurez-vous que le header s'adapte à son contenu */
-        min-height: 60px; /* Définissez une hauteur minimale si nécessaire */
-    }
-    nav ul {
-        display: flex;
-        flex-direction: row; /* Alignez les éléments en colonne */
-        justify-content: center; /* Centrer les éléments */
-        text-align: center; /* Centrez le texte */
-        padding: 0;
-        margin: 0;
-    }
-    nav ul li {
-        margin: 5px 15px; /* Ajoutez un petit espace entre les liens */
-    }
+
+    /* Logo */
     .logo-container img {
-        max-width: 100%; /* Empêchez l'image du logo de dépasser l'écran */
+        max-height: 2.5rem; /* Réduire la taille du logo */
+        max-width: 100%; /* Empêche l'image du logo de dépasser l'écran */
         height: auto;
     }
 
-    .footer-content {
-        display: flex;
-        flex-direction: column; /* Ajustez le footer pour qu'il soit vertical */
-        align-items: center;
-        text-align: center;
-    }
-    .footer-left nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    flex-wrap: wrap;  /* Permet aux éléments de la navigation de se réorganiser */
-    margin-left: 0.5rem;  /* Espacement réduit entre les éléments */
-}
-
-    .social-icons a {
-        margin: 5px;
-    }
-    main {
-        padding-top: 80px; /* Ajustez cette valeur selon la hauteur de votre header */
-    }
-}
-
-/* Media query pour les écrans jusqu'à 768px */
-@media (max-width: 768px) {
- body {
-        font-size: 14px; /* Réduire la taille de base des textes */
-    }
-      /* Logo */
-    .logo-container img {
-        max-height: 2.5rem; /* Réduire la taille du logo */
-    }
     /* Section About Us */
     .about-us {
         flex-direction: column; /* Sur petit écran, les éléments passent en colonne */
         padding: 1.25rem;
     }
+
+    .about-content {
+        padding-right: 0;
+        flex-direction: column; /* Les sections passent en colonne */
+        padding: 1rem;
+    }
+
     .about-content h2 {
         font-size: 2rem; /* Taille de texte plus petite pour mobile */
     }
 
     .about-content p {
         font-size: 1rem; /* Taille de texte plus petite pour mobile */
-    }
-}
-    .about-content {
-        padding-right: 0;
-        flex-direction: column; /* Les sections passent en colonne */
-        padding: 1rem;
     }
 
     /* Stats */
@@ -481,7 +386,7 @@ max-width: 90%; /* S'adapte à la largeur disponible */
     /* Hero Section */
     .hero-section h1 {
         font-size: 2rem; /* Réduire la taille des titres */
-        padding-top: 20px; /* Ajoutez de l'espace au-dessus du titre */
+        padding-top: 20px; /* Ajouter de l'espace au-dessus du titre */
     }
 
     .button-container {
@@ -497,24 +402,19 @@ max-width: 90%; /* S'adapte à la largeur disponible */
         overflow: hidden; /* Évitez tout débordement */
         margin-bottom: 20px; /* Ajoutez de l'espace sous le header */
         height: auto; /* Assurez-vous que le header s'adapte à son contenu */
-        min-height: 60px; /* Définissez une hauteur minimale si nécessaire */
+        min-height: 60px; /* Définir une hauteur minimale si nécessaire */
     }
 
     nav ul {
         display: flex;
-        flex-direction: column; /* Alignez les éléments en colonne */
-        text-align: center; /* Centrez le texte */
+        flex-direction: column; /* Aligner les éléments en colonne */
+        text-align: center; /* Centrer le texte */
         padding: 0;
         margin: 0;
     }
 
     nav ul li {
         margin: 5px 0; /* Ajoutez un petit espace entre les liens */
-    }
-
-    .logo-container img {
-        max-width: 100%; /* Empêchez l'image du logo de dépasser l'écran */
-        height: auto;
     }
 
     .footer-content {
@@ -529,8 +429,8 @@ max-width: 90%; /* S'adapte à la largeur disponible */
         list-style: none;
         margin: 0;
         padding: 0;
-        flex-wrap: wrap;  /* Permet aux éléments de la navigation de se réorganiser */
-        margin-left: 0.5rem;  /* Espacement réduit entre les éléments */
+        flex-wrap: wrap; /* Permet aux éléments de la navigation de se réorganiser */
+        margin-left: 0.5rem; /* Espacement réduit entre les éléments */
     }
 
     .social-icons a {
@@ -545,7 +445,6 @@ max-width: 90%; /* S'adapte à la largeur disponible */
 
 /* Media query pour les écrans jusqu'à 480px */
 @media (max-width: 480px) {
-
     /* Réduction de la taille des polices */
     body {
         font-size: 14px; /* Réduire la taille de base des textes */
