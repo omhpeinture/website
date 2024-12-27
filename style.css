@@ -11,9 +11,7 @@ body {
     line-height: 1.5;
 }
 /* Style spécifique pour le header de la page de contact */
-.demander-devis header,
-.home-page header,
-.services header {
+.demander-devis header {
     position: fixed;
     top: 0;
     left: 0;
@@ -25,8 +23,38 @@ body {
     z-index: 10;
     width: 100%;
     color: white;
-    transition: background-color 0.3s ease;
-    background-color: rgba(0, 0, 0, 0.7); /* Ou transparent, selon la page */
+    transition: background-color 0.3s ease; /* Transition pour le changement de fond */
+    background-color: rgba(0, 0, 0, 0.7) ;
+}
+.home-page header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    z-index: 10;
+    width: 100%;
+    color: white;
+    transition: background-color 0.3s ease; /* Transition pour le changement de fond */
+    background-color: transparent ; /* Initialement transparent */
+}
+.services header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    z-index: 10;
+    width: 100%;
+    color: white;
+    transition: background-color 0.3s ease; /* Transition pour le changement de fond */
+    background-color: transparent ; /* Initialement transparent */
 }
 /* Lorsque l'utilisateur défile légèrement */
 .header.scrolled {
