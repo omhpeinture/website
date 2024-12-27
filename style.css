@@ -450,11 +450,12 @@ max-width: 90%; /* S'adapte à la largeur disponible */
         display: flex;
         flex-direction: row; /* Ajustez le footer pour qu'il soit vertical */
         align-items: center;
-        justify-content: center; /* Centrer les éléments horizontalement */
+        justify-content: space-around; /* Centrer les éléments horizontalement */
         text-align: center;
     }
         .footer-left, .footer-right {
         display: flex;
+            flex-direction: row; /* Garder les éléments du footer en ligne */
         align-items: center; /* Centrer les éléments verticalement */
     }
 
@@ -467,7 +468,11 @@ display: flex;
         flex-wrap: wrap;  /* Permet aux éléments de se réorganiser */
         margin-left: 0.5rem; /* Espacement réduit entre les éléments */
     }
-
+   .social-icons {
+        display: flex;
+        flex-direction: row; /* Aligner les icônes de réseaux sociaux horizontalement */
+        align-items: center;
+    }
     .social-icons a {
         margin: 5px 10pc;
     }
@@ -479,6 +484,9 @@ display: flex;
     /* Réduction de la taille des polices */
     body {
         font-size: 14px; /* Réduire la taille de base des textes */
+    }
+        footer {
+        padding: 10px;
     }
 
     /* Logo */
@@ -499,6 +507,21 @@ display: flex;
         max-height: 3.5rem; /* Réduire la taille du logo */
         max-width: 100%; /* Empêche l'image du logo de dépasser l'écran */
         height: auto;
+    }
+     .footer-content {
+        flex-direction: row; /* Rester horizontal sur petits écrans */
+        justify-content: center; /* Centrer les éléments */
+    }
+      .footer-left, .footer-right {
+        display: flex;
+        flex-direction: row; /* Garder les éléments en ligne */
+        align-items: center;
+    }
+
+    .footer-left nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
     }
 }
 
