@@ -377,7 +377,7 @@ max-width: 90%; /* S'adapte à la largeur disponible */
 
     /* Logo */
     .logo-container img {
-        max-height: 2.5rem; /* Réduire la taille du logo */
+        max-height: 3rem; /* Réduire la taille du logo */
         max-width: 100%; /* Empêche l'image du logo de dépasser l'écran */
         height: auto;
     }
@@ -442,6 +442,7 @@ max-width: 90%; /* S'adapte à la largeur disponible */
     }
 
     nav ul li {
+        font-size: 0.9rem; /* Réduire la taille de la police des éléments de la navigation */
         margin: 5px 10px; /* Ajoutez un petit espace entre les liens */
     }
 
@@ -452,19 +453,23 @@ max-width: 90%; /* S'adapte à la largeur disponible */
         justify-content: center; /* Centrer les éléments horizontalement */
         text-align: center;
     }
+        .footer-left, .footer-right {
+        display: flex;
+        align-items: center; /* Centrer les éléments verticalement */
+    }
 
     .footer-left nav ul {
 display: flex;
-        flex-direction: row; /* Afficher les éléments du footer horizontalement */
         list-style: none;
         margin: 0;
-        padding: 0;
+          flex-direction: row; /* Aligner les éléments de la navigation en ligne */
+        gap: 15px; /* Espacement entre les éléments */
         flex-wrap: wrap;  /* Permet aux éléments de se réorganiser */
         margin-left: 0.5rem; /* Espacement réduit entre les éléments */
     }
 
     .social-icons a {
-        margin: 5px;
+        margin: 5px 10pc;
     }
 
     /* Main Padding */
@@ -615,7 +620,6 @@ display: flex;
         font-size: 1.5rem; /* Réduire la taille des flèches */
     }
 }
-
 
 .testimonials {
     padding: 50px 20px;
