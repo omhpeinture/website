@@ -1,18 +1,23 @@
+/* Réinitialisation des marges et paddings pour tous les éléments */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Corps de la page */
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #ffffff; /* ou une autre couleur si vous en avez besoin */
-      min-height: 100vh;
-  font-size: 16px;
-  line-height: 1.5;
+    background-color: #ffffff; /* Couleur de fond par défaut */
+    min-height: 100vh; /* Assure que le corps couvre toujours toute la hauteur */
+    font-size: 16px;
+    line-height: 1.5; /* Facilite la lisibilité */
 }
-/* Style spécifique pour le header de la page de contact */
-.demander-devis header {
+
+/* HEADER SECTION */
+
+/* Styles généraux pour les headers */
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -24,56 +29,35 @@ body {
     z-index: 10;
     width: 100%;
     color: white;
-    transition: background-color 0.3s ease; /* Transition pour le changement de fond */
-    background-color: rgba(0, 0, 0, 0.7) ;
+    transition: background-color 0.3s ease; /* Douce transition pour l'arrière-plan */
 }
-.home-page header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    z-index: 10;
-    width: 100%;
-    color: white;
-    transition: background-color 0.3s ease; /* Transition pour le changement de fond */
-    background-color: transparent ; /* Initialement transparent */
+
+.demander-devis header {
+    background-color: rgba(0, 0, 0, 0.7); /* Arrière-plan spécifique */
 }
+
+.home-page header,
 .services header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    z-index: 10;
-    width: 100%;
-    color: white;
-    transition: background-color 0.3s ease; /* Transition pour le changement de fond */
-    background-color: transparent ; /* Initialement transparent */
+    background-color: transparent; /* Initialement transparent */
 }
 
 /* Lorsque l'utilisateur défile légèrement */
-.header.scrolled {
+header.scrolled {
     background-color: rgba(0, 0, 0, 0.7);
 }
+
+/* Logo */
 .logo-container img {
     max-height: 3.75rem;
-     transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transition combinée */
 }
+
 .logo-container img:hover {
     opacity: 0.8;
     transform: scale(1.05); /* Léger zoom au survol */
 }
-.logo-container a {
-    display: inline-block;
-    cursor: pointer;
-}
+
+/* Navigation */
 nav ul {
     list-style-type: none;
     display: flex;
@@ -91,155 +75,67 @@ nav ul li a:hover {
     color: #007bff;
 }
 
+/* HERO SECTION */
 
-.home-page .hero-section {
-    height: 100vh; /* Prend toute la hauteur de la fenêtre */
-    background-image: url('pexels-heyho-6969824.jpg');
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    position: relative;
-     z-index: 0; /* Permet à l'image de se situer derrière le header */
-        flex-direction: column; /* Aligner les éléments de la section en colonne */
-    text-align: center; /* Centrer le texte dans la section */
-}
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* fond semi-transparent */
-    z-index: 1;  /* La couche doit être derrière le contenu mais devant l'image */
-}
-.services .hero-section {
-    height: 100vh; /* Prend toute la hauteur de la fenêtre */
-    background-image: url('pexels-heyho-6538903.jpg');
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    position: relative;
-     z-index: 0; /* Permet à l'image de se situer derrière le header */
-        flex-direction: column; /* Aligner les éléments de la section en colonne */
-    text-align: center; /* Centrer le texte dans la section */
-}
-
-/* Conteneur de l'image avec zoom */
-.services .hero-image {
-    position: relative;
+/* Styles généraux */
+.hero-section {
     height: 100vh;
-    overflow: hidden; /* Pour éviter que l'image agrandie dépasse */
-    z-index: 0; /* Veillez à ce que l'image soit bien en fond */
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 0; /* Arrière-plan derrière le contenu */
 }
-/* Effet de zoom lorsque l'on survole l'image */
-.services .hero-image::before {
-    content: '';
+
+.hero-section .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('pexels-heyho-6969824.jpg'); /* Image à zoomer */
-    background-size: cover;
-    background-position: center;
-    z-index: -1; /* L'image reste derrière tout le contenu */
-    transition: transform 5s ease; /* Transition fluide */
+    background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    z-index: 1; /* Derrière le contenu */
 }
-.hero-image.zoom-effect::before {
-    transform: scale(1.1);
+
+/* Services Section */
+.services .hero-section {
+    background-image: url('pexels-heyho-6538903.jpg'); /* Image spécifique */
 }
-.hero-content {
-    text-align: center;
-    z-index: 2; /* Le contenu du texte est au-dessus de l'image */
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 1.25rem;
-    position: relative;
-    
-}
+
+/* Texte et titres */
 .hero-section h1 {
     font-size: clamp(2rem, 5vw, 4rem);
     margin-bottom: 1.25rem;
-    font-weight: bold; /* ou 700 pour un gras plus prononcé */
+    font-weight: bold;
 }
 
 .hero-section p {
     font-size: clamp(1rem, 2.5vw, 1.25rem);
-     background: rgba(0, 0, 0, 0.5); /* fond noir semi-transparent */
+    background: rgba(0, 0, 0, 0.5); /* Fond noir semi-transparent */
     line-height: 1.6;
     margin-top: 1.25rem;
-    font-weight: normal; /* ou 700 pour un gras plus prononcé */
+    padding: 0.5rem 1rem;
 }
-.twbb-headline {
-    display: inline-block;
-    position: relative;
-    font-weight: 700;
-    text-align: center;
-    line-height: 0.7; /* Ajuste l'espacement entre les lignes */
-    font-size: 4.5rem; /* Taille globale de la police */
-    color: #fff; /* Assurez-vous que la couleur est bien visible sur l'image de fond */
-}
-.twbb-headline-plain-text {
-    display: block;
-     font-size: 3rem; /* Ajuste selon le design */
-        font-weight: normal; 
-    margin-bottom: 10px; /* Espacement si nécessaire */
-}
-.twbb-headline-highlight {
-    display: inline-block;
-    position: relative;
-    font-weight: 700;
-}
-.twbb-headline-highlight::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background: url('zigzag.png') repeat-x; /* Image ou motif pour le zigzag */
-    background-size: contain;
-}
-.twbb-headline-dynamic-wrapper {
-    display: block;
-    position: relative;
-    margin-top: 10px; /* Espacement entre les parties statiques et dynamiques */
-}
-.twbb-headline-dynamic-wrapper p {
-    max-width: 600px; /* Ajustez selon vos préférences */
-    margin: 20px auto;
-    text-align: center;
-    font-size: 1rem;
 
-}
-.twbb-headline-dynamic-text {
-    display: inline-block;
-    font-size: 3.5rem; /* Ajuste selon le design */
-  margin-bottom: 20px;
-    font-weight: 700;
-    text-transform: uppercase;
-}
+/* BOUTONS */
 
 /* Container pour les boutons */
 .button-container {
-  margin-top: 1.875rem; /* Espace au-dessus des boutons */
-  display: flex; /* Utilisation de flexbox pour l'alignement horizontal */
-  justify-content: center; /* Centrer les boutons horizontalement */
-  gap: 1.25rem; /* Espacement entre les boutons */
-flex-direction: column; /* Aligner les boutons en colonne */
-      align-items: center; /* Centrer les boutons verticalement */    
+    margin-top: 1.875rem;
+    display: flex;
+    flex-direction: column; /* Aligner en colonne */
+    align-items: center;
+    gap: 1.25rem;
 }
 
-/* Style pour le bouton d'appel / rappel */
-.phone-button {
-    background-color: #28a745; /* Couleur verte */
-    color: white;
+/* Bouton d'appel */
+.phone-button,
+.facebook-button {
     padding: 0.5rem 1.25rem;
     font-size: 1rem;
     border-radius: 5px;
@@ -248,710 +144,54 @@ flex-direction: column; /* Aligner les boutons en colonne */
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s ease;
-    z-index: 1; /* Le contenu du texte est au-dessus de l'image */
 }
 
-.phone-button i {
-    margin-right: 8px;
+.phone-button {
+    background-color: #28a745; /* Couleur verte */
+    color: white;
 }
 
 .phone-button:hover {
-    background-color: #218838; /* Couleur du bouton au survol */
-}
-/* Style pour le bouton Facebook */
-.facebook-button {
-    background-color: #3b5998; /* Couleur de fond de Facebook */
-    color: white;
-    padding: 8px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease;
-    z-index: 1; /* Le contenu du texte est au-dessus de l'image */
+    background-color: #218838; /* Couleur au survol */
 }
 
-.facebook-button i {
-    margin-right: 8px;
+.facebook-button {
+    background-color: #3b5998; /* Couleur Facebook */
+    color: white;
 }
 
 .facebook-button:hover {
-    background-color: #2d4373; /* Couleur du bouton Facebook au survol */
+    background-color: #2d4373; /* Couleur au survol */
 }
+
+/* ABOUT US SECTION */
 
 .about-us {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap; /* Réactif sur petits écrans */
     justify-content: space-between;
-    align-items: center; /* Aligne les éléments verticalement */
+    align-items: center;
     padding: 2.5rem;
     background-color: #f4f4f4;
-    border-radius: 0.9375rem; /* Bords arrondis */
+    border-radius: 0.9375rem; /* Coins arrondis */
     box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.1);
-    margin: 0 1.25rem;
-    flex-wrap: wrap; /* Permet de passer les éléments en dessous sur petits écrans */
-
+    gap: 1.25rem;
 }
 
 .about-content {
     flex: 1;
-    padding-right: 1.25rem;
-    text-align: left; /* Texte aligné à gauche */
-    display: flex;
-    align-items: center; /* Aligne verticalement */
-    justify-content: space-between; /* Espace entre les colonnes */
-    gap: 1.25rem;
-    padding: 1.25rem;
+    text-align: left;
 }
-.text-and-stats {
-    flex: 1; /* Prend tout l'espace disponible à gauche */
-}
+
 .about-content h2 {
     font-size: 2.5rem;
-    color:#1a1a1a;
-    font-weight: 700; /* Font plus gras */
+    color: #1a1a1a;
+    font-weight: 700;
     margin-bottom: 1.25rem;
 }
 
 .about-content p {
     font-size: 1.2rem;
-    color: #666;
-    line-height: 1.5;
-    margin-bottom: 1.875rem;
-    
-}
-
-.stats-container {
-    display: flex;
-    gap: 1.25rem;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 1.25rem;
-}
-
-.stat-item {
-  background-color: #fff;
-  border-radius: 0.625rem;
-  padding: 1.25rem;
-  width: 12.5rem;
-  text-align: center;
-  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s ease;
-  margin-top: 1.25rem;
-}
-
-.stat-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-}
-
-.stat-number {
-    font-size: 2.5rem;
     color: #333;
-    font-weight: bold;
-}
-
-.about-image {
-    flex: 1;
-    height: 100%; /* L'image prendra toute la hauteur du parent */
-     text-align: center; /* Centre l'image horizontalement */
-}
-
-.about-image img {
-max-width: 90%; /* S'adapte à la largeur disponible */
-    height: auto; /* Conserve les proportions de l'image */
-   border-radius: 0.625rem;
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
-  margin: auto;
-}
-.about-content, .stat-item, .about-image img {
-    transition: all 0.3s ease; /* Transition fluide sur tous les changements */
-}
-
-.counter {
-    display: inline-block;
-    font-size: 3rem;
-    font-weight: bold;
-    color: #007bff; /* Couleur du compteur */
-}
-
-
-
-/* Media Queries pour Responsivité */
-@media (max-width: 768px) {
-    .about-us {
-        flex-direction: column; /* Sur petit écran, les éléments passent en colonne */
-          padding: 1.25rem;
-    }
-
-    .about-content {
-        padding-right: 0;
-    }
-
-    .stats-container {
-        justify-content: center; /* Centrer les statistiques sur les petits écrans */
-    }
-
-    .stat-item {
-        width: 9.375rem; /* Taille plus petite pour les statistiques sur petit écran */
-    }
-}
-
-@media (max-width: 480px) {
-    .about-content h2 {
-        font-size: 2rem; /* Taille de texte plus petite pour mobile */
-    }
-
-    .about-content p {
-        font-size: 1rem; /* Taille de texte plus petite pour mobile */
-    }
-}
-.realisations h2 {
-    font-size: 2.8rem;
-    color:#1a1a1a;
-    font-weight: 700; /* Font plus gras */
-    margin-bottom: 20px;
-    text-align: center;
-    xt-transform: uppercase; /* Mettre en majuscules pour donner un style plus professionnel */
-    letter-spacing: 2px; /* Espacement des lettres pour plus de lisibilité */
-    }
-    
-    
-/* Styles pour la section Réalisations */
-        .carousel {
-            position: relative;
-            width: 100%;
-            max-width: 1000px;
-            margin: 0 auto;
-            overflow: hidden; /* Cache les éléments hors de la vue */
-             border-radius: 10px; /* Ajoute un léger arrondi pour une finition plus soignée */
-        }
-.carousel-section {
-    background-color: #f4f4f4; /* Fond léger pour la section */
-    padding: 50px 0; /* Espace autour du carrousel */
-        display: flex;
-    justify-content: center;
-}
-
-
-        .carousel-items {
-            display: flex;
-            transition: transform 1s ease; /* Transition fluide pour le défilement */
-            margin: 0 20px; /* Ajoute une marge sur les côtés du carrousel */
-        }
-
-        .carousel-item {
-            flex: 0 0 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        .carousel-item img {
-            width: 80%;
-            height: auto;
-            object-fit: cover;
-            border-radius: 8px; /* Arrondi léger sur les bords des images */
-        }
-
-         .details {
-            text-align: center;
-            padding: 10px;
-        }
-
-        .carousel-item h3 {
-            margin-top: 10px;
-        }
-
-        /* Flèches de navigation */
-        .prev, .next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.3);
-            color: white;
-            font-size: 2rem;
-            border: none;
-            padding: 10px;
-            z-index: 10;
-            width: 50px;  /* Largeur fixe */
-    height: 50px; /* Hauteur fixe */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-        }
-
-        .prev {
-            left: 20px;
-        }
-
-        .next {
-            right: 20px;
-        }
-
-        /* Effet au survol des flèches */
-        .prev:hover, .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-/* Responsive Design */
-@media (max-width: 768px) {
-    /* Rendre les images plus petites sur mobile */
-    .carousel-item img {
-        width: 90%;
-    }
-
-    .carousel-item h3 {
-        font-size: 1.2rem; /* Réduire la taille des titres pour les petits écrans */
-    }
-
-    .details {
-        width: 90%; /* Adapter la largeur des détails */
-    }
-}
-
-@media (max-width: 480px) {
-    .realisations h2 {
-        font-size: 2rem; /* Réduire la taille du titre sur les très petits écrans */
-    }
-
-    .carousel {
-        max-width: 100%; /* Utiliser toute la largeur de l'écran sur mobile */
-    }
-
-    .prev, .next {
-        font-size: 1.5rem; /* Réduire la taille des flèches */
-    }
-}
-
-
-.testimonials {
-    padding: 50px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-}
-
-.testimonials h2 {
-    font-size: 2.8rem;
-    color:#1a1a1a;
-    font-weight: 700; /* Font plus gras */
-    margin-bottom: 20px;
-}
-
-.testimonials p {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 40px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.testimonial-carousel {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-     max-width: 1200px; /* Limite la largeur sur les grands écrans */
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.testimonial-item {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.testimonial-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.rating {
-    color: #FFC107; /* Couleur des étoiles */
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-}
-
-.testimonial-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.testimonial-footer img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 15px;
-    border: 2px solid #ddd;
-}
-
-.testimonial-footer cite {
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: #555;
-}
-
-/* Footer principal */
-footer {
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 1.25rem 0;
-  font-family: Arial, sans-serif;
-}
-
-/* Contenu principal du footer */
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
- max-width: 75rem;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-}
-
-/* Partie gauche : Logo et liens */
-.footer-left {
-  display: flex;
-  align-items: center;
-}
-
-.logo-containerfooter img {
-    max-height: 60px;
-     transition: opacity 0.3s ease;
-}
-.logo-containerfooter img:hover {
-    opacity: 0.8;
-}
-.logo-container a {
-    display: inline-block;
-    cursor: pointer;
-}
-
-.footer-left a {
-    display: inline-block;
-    cursor: pointer;
-}
-
-.footer-left nav ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.footer-left nav ul li {
-    margin-left: 0.9375rem;
-}
-
-.footer-left nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-.footer-left nav ul li a:hover {
-  text-decoration: underline;
-}
-
-/* Partie droite : Icône Facebook */
-.footer-right {
-  display: flex;
-  align-items: center;
-}
-
-.footer-right a {
-  color: white;
-font-size: 1.875rem;
-  text-decoration: none;
-}
-
-.footer-right a:hover {
-  color: #4267B2; /* Couleur bleue de Facebook au survol */
-}
-
-/* Ligne de séparation */
-hr {
-  border: 1px solid #444;
-    margin: 1.25rem 0;
-}
-
-/* Bas de page */
-.footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
- max-width: 75rem;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  font-size: 0.9rem;
-}
-
-.footer-bottom nav ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.footer-bottom nav ul li {
-   margin-left: 0.9375rem;
-}
-
-.footer-bottom nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-.footer-bottom nav ul li a:hover {
-    color: white;
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-/* Section Formulaire */
-section {
-    padding: 50px 20px;  /* Ajoutez un padding pour l'espacement */
-    background-color: #f9f9f9; /* Couleur de fond légère pour différencier la section */
-}
-
-form {
-    width: 50%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 100px;
-}
-
-label {
-    display: block;
-    margin: 10px 0 5px;
-}
-
-input, textarea, select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-/* Section du formulaire de devis */
-.devis-form-container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    margin-top: 200px;
-}
-
-.devis-form-container h1 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.devis-form-container p {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 30px;
-}
-
-.devis-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.form-group {
-    text-align: left;
-}
-
-.form-group label {
-    font-weight: 700;
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #fff;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    border-color: #333;
-    outline: none;
-}
-
-.submit-btn {
-    padding: 12px 20px;
-    font-size: 1rem;
-    font-weight: 700;
-    color: #fff;
-    background-color: #333;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.submit-btn:hover {
-    background-color: #555;
-}
-.services-intro {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  padding: 50px 20px;
-  background-color: #f8f8f8;
-}
-
-.service-type {
-  flex: 1;
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.service-type h2 {
-  color: #333;
-  margin-bottom: 15px;
-  font-size: 1.8rem;
-}
-
-.service-type p {
-  color: #666;
-  margin-bottom: 20px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #0056b3;
-}
-
-.service-details {
-  padding: 50px 20px;
-  background-color: linear-gradient(to bottom right, #f9f9f9, #eaeaea); /* Dégradé léger */
-        border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    max-width: 800px;
-    text-align: center;
-    opacity: 0; /* Initialement invisible */
-    transform: translateY(20px); /* Déplacement vers le bas */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Transition fluide */
-}
-.service-details.visible {
-    opacity: 1; /* Rendre visible */
-    transform: translateY(0); /* Remettre à sa position d'origine */
-}
-
-.service-details h2 {
-  color: #333;
-  margin-bottom: 20px;
-  font-size: 2rem;
-}
-
-.service-details p {
-  color: #666;
-  margin-bottom: 20px;
-  max-width: 800px;
-}
-
-.service-details ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.service-details li {
-  margin-bottom: 10px;
-  padding-left: 20px;
-  position: relative;
-}
-
-.service-details li::before {
-  content: '•';
-  position: absolute;
-  left: 0;
-  color: #007bff;
-}
-
-.service-details strong {
-  color: #333;
-}
-
-@media (max-width: 768px) {
-  .services-intro {
-    flex-direction: column;
-  }
-}
-.service-type {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.service-image {
-  max-width: 100%;
-  height: auto;
-max-height: 300px; /* Limite la hauteur à 300px */
-  margin-bottom: 15px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-     object-fit: cover; /* Remplit le conteneur sans déformer l'image */
-}
-
-.btn {
-  margin-top: 10px;
+    line-height: 1.8;
 }
