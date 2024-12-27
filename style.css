@@ -377,7 +377,7 @@ max-width: 90%; /* S'adapte à la largeur disponible */
 
     /* Logo */
     .logo-container img {
-        max-height: 3rem; /* Réduire la taille du logo */
+        max-height: 3.5rem; /* Réduire la taille du logo */
         max-width: 100%; /* Empêche l'image du logo de dépasser l'écran */
         height: auto;
     }
@@ -472,10 +472,6 @@ display: flex;
         margin: 5px 10pc;
     }
 
-    /* Main Padding */
-    main {
-        padding-top: 70px; /* Ajustez cette valeur selon la hauteur de votre header */
-    }
 }
 
 /* Media query pour les écrans jusqu'à 480px */
@@ -497,6 +493,12 @@ display: flex;
 
     .about-content p {
         font-size: 1rem; /* Taille de texte plus petite pour mobile */
+    }
+        /* Logo */
+    .logo-container img {
+        max-height: 3.5rem; /* Réduire la taille du logo */
+        max-width: 100%; /* Empêche l'image du logo de dépasser l'écran */
+        height: auto;
     }
 }
 
