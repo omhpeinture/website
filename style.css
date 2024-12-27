@@ -433,6 +433,44 @@ max-width: 90%; /* S'adapte à la largeur disponible */
         font-size: 1rem; /* Taille de texte plus petite pour mobile */
     }
 }
+/* CSS pour écrans mobiles */
+@media screen and (max-width: 768px) {
+    header, footer {
+        width: 100%; /* Assurez-vous que la largeur ne dépasse pas l'écran */
+        padding: 10px; /* Ajustez les paddings pour s'adapter aux petits écrans */
+        box-sizing: border-box; /* Inclure padding dans la largeur totale */
+        overflow: hidden; /* Évitez tout débordement */
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column; /* Alignez les éléments en colonne */
+        text-align: center; /* Centrez le texte */
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Ajoutez un petit espace entre les liens */
+    }
+
+    .logo-container img {
+        max-width: 100%; /* Empêchez l'image du logo de dépasser l'écran */
+        height: auto;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: column; /* Ajustez le footer pour qu'il soit vertical */
+        align-items: center;
+        text-align: center;
+    }
+
+    .social-icons a {
+        margin: 5px;
+    }
+}
+
 .realisations h2 {
     font-size: 2.8rem;
     color:#1a1a1a;
