@@ -374,10 +374,9 @@ max-width: 90%; /* S'adapte à la largeur disponible */
     body {
         font-size: 14px; /* Réduire la taille de base des textes */
     }
-
     /* Logo */
     .logo-container img {
-        max-height: 6rem; /* Réduire la taille du logo */
+        max-height: 4rem; /* Réduire la taille du logo */
         max-width: 100%; /* Empêche l'image du logo de dépasser l'écran */
         height: auto;
     }
@@ -430,28 +429,28 @@ max-width: 90%; /* S'adapte à la largeur disponible */
         overflow: hidden; /* Évitez tout débordement */
         margin-bottom: 20px; /* Ajoutez de l'espace sous le header */
         height: auto; /* Assurez-vous que le header s'adapte à son contenu */
-        min-height: 60px; /* Définir une hauteur minimale si nécessaire */
+        min-height: 50px; /* Définir une hauteur minimale si nécessaire */
     }
 
     nav ul {
         display: flex;
         flex-direction: row; /* Aligner les éléments en colonne */
-        text-align: center; /* Centrer le texte */
+        justify-content: space-around; /* Répartit les éléments uniformément*/
+         align-items: center;
         padding: 0;
         margin: 0;
     }
 
     nav ul li {
-        font-size: 0.5rem; /* Réduire la taille de la police des éléments de la navigation */
-        margin: 0px 10px; /* Ajoutez un petit espace entre les liens */
-        padding: 5px 0; /* Ajuster l'espacement autour des éléments */
+        font-size: 0.8rem; /* Réduire la taille de la police des éléments de la navigation */
+        margin: 0px 5px; /* Ajoutez un petit espace entre les liens */
     }
 
     .footer-content {
         display: flex;
         flex-direction: row; /* Ajustez le footer pour qu'il soit vertical */
         align-items: center;
-        justify-content: space-around; /* Centrer les éléments horizontalement */
+        justify-content: space-between; /* Centrer les éléments horizontalement */
         text-align: center;
     }
         .footer-left, .footer-right {
@@ -459,15 +458,9 @@ max-width: 90%; /* S'adapte à la largeur disponible */
             flex-direction: row; /* Garder les éléments du footer en ligne */
         align-items: center; /* Centrer les éléments verticalement */
     }
-
-    .footer-left nav ul {
-display: flex;
-        list-style: none;
-        margin: 0;
-          flex-direction: row; /* Aligner les éléments de la navigation en ligne */
-        gap: 15px; /* Espacement entre les éléments */
-        flex-wrap: wrap;  /* Permet aux éléments de se réorganiser */
-        margin-left: 0.5rem; /* Espacement réduit entre les éléments */
+        .footer-left nav ul, .footer-right nav ul {
+        flex-direction: row;
+        gap: 10px;
     }
    .social-icons {
         display: flex;
@@ -475,22 +468,35 @@ display: flex;
         align-items: center;
     }
     .social-icons a {
-        margin: 5px 10pc;
+        margin: 0px 5pc;
     }
 
 }
-
-/* Media query pour les écrans jusqu'à 480px */
-@media (max-width: 480px) {
-    /* Réduction de la taille des polices */
+/* Media query pour les écrans jusqu'à 768px */
+@media (max-width: 768px) {
     body {
         font-size: 14px; /* Réduire la taille de base des textes */
     }
-        footer {
-        padding: 10px;
+
+    /* Logo */
+    .logo-container img {
+        max-height: 4rem; /* Réduire la taille du logo */
+        max-width: 100%; /* Empêche l'image du logo de dépasser l'écran */
+        height: auto;
     }
 
-    /* About Section */
+    /* Section About Us */
+    .about-us {
+        flex-direction: column; /* Sur petit écran, les éléments passent en colonne */
+        padding: 1.25rem;
+    }
+
+    .about-content {
+        padding-right: 0;
+        flex-direction: column; /* Les sections passent en colonne */
+        padding: 1rem;
+    }
+
     .about-content h2 {
         font-size: 2rem; /* Taille de texte plus petite pour mobile */
     }
@@ -498,70 +504,104 @@ display: flex;
     .about-content p {
         font-size: 1rem; /* Taille de texte plus petite pour mobile */
     }
-        /* Logo */
-    .logo-container img {
-        max-height: 6rem; /* Réduire la taille du logo */
-        max-width: 100%; /* Empêche l'image du logo de dépasser l'écran */
-        height: auto;
-    }
-     .footer-content {
-        flex-direction: row; /* Rester horizontal sur petits écrans */
-        justify-content: center; /* Centrer les éléments */
-    }
-      .footer-left, .footer-right {
-        display: flex;
-        flex-direction: row; /* Garder les éléments en ligne */
-        align-items: center;
-          justify-content: center; /* Centrer horizontalement les éléments */
+
+    /* Stats */
+    .stats-container {
+        justify-content: center; /* Centrer les statistiques sur les petits écrans */
     }
 
-    .footer-left nav ul {
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
+    .stat-item {
+        width: 9.375rem; /* Taille plus petite pour les statistiques sur petit écran */
     }
-    .footer-right nav ul {
-    display: flex; /* Assurer que la liste utilise flexbox */
-    flex-direction: row; /* Aligner les éléments horizontalement */
-    gap: 10px; /* Espacement entre les éléments */
-    margin: 0; /* Supprimer toute marge */
-    padding: 0; /* Supprimer tout padding */
-}
-    .social-icons {
-    display: flex; /* Flexbox pour les icônes sociales */
-    flex-direction: row; /* Aligner horizontalement */
-    align-items: center; /* Centrer les icônes verticalement */
-    justify-content: center; /* Centrer les icônes horizontalement */
-}
 
-.social-icons a {
-    margin: 0 10px; /* Espacement entre les icônes */
-}
-      header, footer {
+    /* Hero Section */
+    .hero-section h1 {
+        font-size: 2rem; /* Réduire la taille des titres */
+        padding-top: 20px; /* Ajouter de l'espace au-dessus du titre */
+    }
+
+    .button-container {
+        flex-direction: column; /* Aligner les boutons verticalement */
+        gap: 0.5rem;
+    }
+
+    /* Header et Footer */
+    header, footer {
         width: 100%; /* Assurez-vous que la largeur ne dépasse pas l'écran */
         padding: 10px; /* Ajustez les paddings pour s'adapter aux petits écrans */
         box-sizing: border-box; /* Inclure padding dans la largeur totale */
         overflow: hidden; /* Évitez tout débordement */
         margin-bottom: 20px; /* Ajoutez de l'espace sous le header */
         height: auto; /* Assurez-vous que le header s'adapte à son contenu */
-        min-height: 60px; /* Définir une hauteur minimale si nécessaire */
+        min-height: 50px; /* Définir une hauteur minimale si nécessaire */
     }
 
     nav ul {
         display: flex;
-        flex-direction: row; /* Aligner les éléments en colonne */
-        text-align: center; /* Centrer le texte */
+        flex-direction: row; /* Aligner horizontalement */
+        justify-content: space-around; /* Répartit les éléments uniformément*/
+         align-items: center;
         padding: 0;
         margin: 0;
     }
 
     nav ul li {
-        font-size: 1rem; /* Réduire la taille de la police des éléments de la navigation */
-        margin: 0px 10px; /* Ajoutez un petit espace entre les liens */
-         padding: 5px 0; /* Ajuster l'espacement autour des éléments */
+        font-size: 0.8rem; /* Réduire la taille de la police des éléments de la navigation */
+        margin: 0px 5px; /* Ajoutez un petit espace entre les liens */
     }
 
+    .footer-content {
+        display: flex;
+        flex-direction: row; /* Garder le footer en ligne */
+        align-items: center;
+        justify-content: space-between; /* Centrer les éléments horizontalement */
+        text-align: center;
+    }
+    
+    .footer-left, .footer-right {
+        display: flex;
+            flex-direction: row; /* Garder les éléments du footer en ligne */
+            align-items: center; /* Centrer les éléments verticalement */
+            justify-content: center; /* Centrer horizontalement les éléments si nécessaire */
+    }
+    
+   .social-icons {
+       display: flex;
+       flex-direction: row; /* Aligner les icônes de réseaux sociaux horizontalement */
+       align-items: center;
+   }
+   
+   .social-icons a {
+       margin: 0px 5px; /* Espacement entre les icônes sociales */
+   }
 }
+
+/* Media query pour les écrans jusqu'à 480px */
+@media (max-width: 480px) {
+   body {
+       font-size: 14px; /* Réduire la taille de base des textes */
+   }
+
+   footer {
+       padding: 10px;
+   }
+
+   /* About Section */
+   .about-content h2 {
+       font-size: 2rem; /* Taille de texte plus petite pour mobile */
+   }
+
+   .about-content p {
+       font-size: 1rem; /* Taille de texte plus petite pour mobile */
+   }
+
+   nav ul li {
+       font-size: 0.7rem; /* Réduire la taille de la police des éléments de la navigation pour petits écrans */
+       margin: 0px 5px; 
+   }
+}
+
+
 
 
 .realisations h2 {
