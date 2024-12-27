@@ -516,6 +516,7 @@ display: flex;
         display: flex;
         flex-direction: row; /* Garder les éléments en ligne */
         align-items: center;
+          justify-content: center; /* Centrer horizontalement les éléments */
     }
 
     .footer-left nav ul {
@@ -523,6 +524,23 @@ display: flex;
         flex-direction: row;
         gap: 10px;
     }
+    .footer-right nav ul {
+    display: flex; /* Assurer que la liste utilise flexbox */
+    flex-direction: row; /* Aligner les éléments horizontalement */
+    gap: 10px; /* Espacement entre les éléments */
+    margin: 0; /* Supprimer toute marge */
+    padding: 0; /* Supprimer tout padding */
+}
+    .social-icons {
+    display: flex; /* Flexbox pour les icônes sociales */
+    flex-direction: row; /* Aligner horizontalement */
+    align-items: center; /* Centrer les icônes verticalement */
+    justify-content: center; /* Centrer les icônes horizontalement */
+}
+
+.social-icons a {
+    margin: 0 10px; /* Espacement entre les icônes */
+}
 }
 
 
