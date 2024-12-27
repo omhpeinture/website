@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #ffffff; /* ou une autre couleur si vous en avez besoin */
@@ -57,7 +56,6 @@ body {
     transition: background-color 0.3s ease; /* Transition pour le changement de fond */
     background-color: transparent ; /* Initialement transparent */
 }
-
 /* Lorsque l'utilisateur défile légèrement */
 .header.scrolled {
     background-color: rgba(0, 0, 0, 0.7);
@@ -315,15 +313,12 @@ flex-direction: column; /* Aligner les boutons en colonne */
     font-weight: 700; /* Font plus gras */
     margin-bottom: 1.25rem;
 }
-
 .about-content p {
     font-size: 1.2rem;
     color: #666;
     line-height: 1.5;
-    margin-bottom: 1.875rem;
-    
+    margin-bottom: 1.875rem;   
 }
-
 .stats-container {
     display: flex;
     gap: 1.25rem;
@@ -331,7 +326,6 @@ flex-direction: column; /* Aligner les boutons en colonne */
     justify-content: space-between;
     margin-top: 1.25rem;
 }
-
 .stat-item {
   background-color: #fff;
   border-radius: 0.625rem;
@@ -342,24 +336,20 @@ flex-direction: column; /* Aligner les boutons en colonne */
   transition: transform 0.3s, box-shadow 0.3s ease;
   margin-top: 1.25rem;
 }
-
 .stat-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
-
 .stat-number {
     font-size: 2.5rem;
     color: #333;
     font-weight: bold;
 }
-
 .about-image {
     flex: 1;
     height: 100%; /* L'image prendra toute la hauteur du parent */
      text-align: center; /* Centre l'image horizontalement */
 }
-
 .about-image img {
 max-width: 90%; /* S'adapte à la largeur disponible */
     height: auto; /* Conserve les proportions de l'image */
@@ -370,15 +360,12 @@ max-width: 90%; /* S'adapte à la largeur disponible */
 .about-content, .stat-item, .about-image img {
     transition: all 0.3s ease; /* Transition fluide sur tous les changements */
 }
-
 .counter {
     display: inline-block;
     font-size: 3rem;
     font-weight: bold;
     color: #007bff; /* Couleur du compteur */
 }
-
-
 /* Media query pour les écrans jusqu'à 768px */
 @media (max-width: 768px) {
       /* Section About Us */
@@ -386,17 +373,14 @@ max-width: 90%; /* S'adapte à la largeur disponible */
         flex-direction: column; /* Sur petit écran, les éléments passent en colonne */
           padding: 1.25rem;
     }
-
     .about-content {
         padding-right: 0;
         flex-direction: column; /* Les sections passent en colonne */
         padding: 1rem;
     }
-
     .stats-container {
         justify-content: center; /* Centrer les statistiques sur les petits écrans */
     }
-
     .stat-item {
         width: 9.375rem; /* Taille plus petite pour les statistiques sur petit écran */
     }
@@ -418,7 +402,6 @@ max-width: 90%; /* S'adapte à la largeur disponible */
          height: auto; /* Assurez-vous que le header s'adapte à son contenu */
         min-height: 60px; /* Définissez une hauteur minimale si nécessaire */
     }
-
     nav ul {
         display: flex;
         flex-direction: row; /* Alignez les éléments en colonne */
@@ -427,11 +410,9 @@ max-width: 90%; /* S'adapte à la largeur disponible */
         padding: 0;
         margin: 0;
     }
-
     nav ul li {
         margin: 5px 15px; /* Ajoutez un petit espace entre les liens */
     }
-
     .logo-container img {
         max-width: 100%; /* Empêchez l'image du logo de dépasser l'écran */
         height: auto;
