@@ -465,6 +465,14 @@ max-width: 90%; /* S'adapte à la largeur disponible */
         align-items: center;
         text-align: center;
     }
+    .footer-left nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;  /* Permet aux éléments de la navigation de se réorganiser */
+           margin-left: 0.5rem;  /* Espacement réduit entre les éléments */
+}
 
     .social-icons a {
         margin: 5px;
@@ -515,7 +523,7 @@ max-width: 90%; /* S'adapte à la largeur disponible */
         }
 
         .carousel-item img {
-            width: 80%;
+            width: 100%;
             height: auto;
             object-fit: cover;
             border-radius: 8px; /* Arrondi léger sur les bords des images */
@@ -527,7 +535,8 @@ max-width: 90%; /* S'adapte à la largeur disponible */
         }
 
         .carousel-item h3 {
-            margin-top: 10px;
+             font-size: 1rem;  /* Réduire la taille des titres */
+        margin: 10px 0;  /* Ajuster les marges pour plus de clarté */
         }
 
         /* Flèches de navigation */
