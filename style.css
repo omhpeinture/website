@@ -421,14 +421,15 @@ max-width: 90%; /* S'adapte à la largeur disponible */
 
     nav ul {
         display: flex;
-        flex-direction: column; /* Alignez les éléments en colonne */
+        flex-direction: row; /* Alignez les éléments en colonne */
+        justify-content: center; /* Centrer les éléments */
         text-align: center; /* Centrez le texte */
         padding: 0;
         margin: 0;
     }
 
     nav ul li {
-        margin: 5px 0; /* Ajoutez un petit espace entre les liens */
+        margin: 5px 15px; /* Ajoutez un petit espace entre les liens */
     }
 
     .logo-container img {
@@ -455,19 +456,32 @@ max-width: 90%; /* S'adapte à la largeur disponible */
         margin: 5px;
     }
     main {
-        padding-top: 70px; /* Ajustez cette valeur selon la hauteur de votre header */
+        padding-top: 80px; /* Ajustez cette valeur selon la hauteur de votre header */
     }
 }
 
 /* Media query pour les écrans jusqu'à 768px */
 @media (max-width: 768px) {
-
+ body {
+        font-size: 14px; /* Réduire la taille de base des textes */
+    }
+      /* Logo */
+    .logo-container img {
+        max-height: 2.5rem; /* Réduire la taille du logo */
+    }
     /* Section About Us */
     .about-us {
         flex-direction: column; /* Sur petit écran, les éléments passent en colonne */
         padding: 1.25rem;
     }
+    .about-content h2 {
+        font-size: 2rem; /* Taille de texte plus petite pour mobile */
+    }
 
+    .about-content p {
+        font-size: 1rem; /* Taille de texte plus petite pour mobile */
+    }
+}
     .about-content {
         padding-right: 0;
         flex-direction: column; /* Les sections passent en colonne */
