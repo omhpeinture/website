@@ -377,7 +377,7 @@ max-width: 90%; /* S'adapte à la largeur disponible */
 
     /* Logo */
     .logo-container img {
-        max-height: 4rem; /* Réduire la taille du logo */
+        max-height: 6rem; /* Réduire la taille du logo */
         max-width: 100%; /* Empêche l'image du logo de dépasser l'écran */
         height: auto;
     }
@@ -442,9 +442,9 @@ max-width: 90%; /* S'adapte à la largeur disponible */
     }
 
     nav ul li {
-        font-size: 0.7rem; /* Réduire la taille de la police des éléments de la navigation */
+        font-size: 0.5rem; /* Réduire la taille de la police des éléments de la navigation */
         margin: 0px 10px; /* Ajoutez un petit espace entre les liens */
-         padding: 5px 0; /* Ajuster l'espacement autour des éléments */
+        padding: 5px 0; /* Ajuster l'espacement autour des éléments */
     }
 
     .footer-content {
@@ -490,11 +490,6 @@ display: flex;
         padding: 10px;
     }
 
-    /* Logo */
-    .logo-container img {
-        max-height: 2.5rem; /* Réduire la taille du logo */
-    }
-
     /* About Section */
     .about-content h2 {
         font-size: 2rem; /* Taille de texte plus petite pour mobile */
@@ -505,7 +500,7 @@ display: flex;
     }
         /* Logo */
     .logo-container img {
-        max-height: 3.5rem; /* Réduire la taille du logo */
+        max-height: 6rem; /* Réduire la taille du logo */
         max-width: 100%; /* Empêche l'image du logo de dépasser l'écran */
         height: auto;
     }
@@ -561,7 +556,7 @@ display: flex;
     }
 
     nav ul li {
-        font-size: 0.7rem; /* Réduire la taille de la police des éléments de la navigation */
+        font-size: 1rem; /* Réduire la taille de la police des éléments de la navigation */
         margin: 0px 10px; /* Ajoutez un petit espace entre les liens */
          padding: 5px 0; /* Ajuster l'espacement autour des éléments */
     }
