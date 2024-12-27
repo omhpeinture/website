@@ -376,7 +376,7 @@ max-width: 90%; /* S'adapte à la largeur disponible */
     }
     /* Logo */
     .logo-container img {
-        max-height: 4rem; /* Réduire la taille du logo */
+        max-height: 6rem; /* Réduire la taille du logo */
         max-width: 100%; /* Empêche l'image du logo de dépasser l'écran */
         height: auto;
     }
@@ -442,7 +442,7 @@ max-width: 90%; /* S'adapte à la largeur disponible */
     }
 
     nav ul li {
-        font-size: 0.8rem; /* Réduire la taille de la police des éléments de la navigation */
+        font-size: 0.7rem; /* Réduire la taille de la police des éléments de la navigation */
         margin: 0px 5px; /* Ajoutez un petit espace entre les liens */
     }
 
@@ -452,6 +452,7 @@ max-width: 90%; /* S'adapte à la largeur disponible */
         align-items: center;
         justify-content: space-between; /* Centrer les éléments horizontalement */
         text-align: center;
+            flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
     }
         .footer-left, .footer-right {
         display: flex;
@@ -462,6 +463,13 @@ max-width: 90%; /* S'adapte à la largeur disponible */
         flex-direction: row;
         gap: 10px;
     }
+
+    .footer-left nav ul li {
+    font-size: 0.7rem; /* Réduisez la taille de la police si nécessaire */
+        padding: 0; /* Supprimez tout padding */
+    margin: 0; /* Supprimez toute marge */
+}
+
    .social-icons {
         display: flex;
         flex-direction: row; /* Aligner les icônes de réseaux sociaux horizontalement */
