@@ -422,7 +422,31 @@ max-width: 90%; /* S'adapte à la largeur disponible */
     }
 
     /* Header et Footer */
-    header, footer {
+   .home-page header,
+    .services header,
+    .demander-devis header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px; /* Réduisez le padding pour les petits écrans */
+        z-index: 10;
+        width: 100%;
+        color: white;
+        transition: background-color 0.3s ease;
+    } 
+    .home-page header,
+    .services header {
+        background-color: transparent;
+    }
+
+    .demander-devis header {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    footer {
         width: 100%; /* Assurez-vous que la largeur ne dépasse pas l'écran */
         padding: 10px; /* Ajustez les paddings pour s'adapter aux petits écrans */
         box-sizing: border-box; /* Inclure padding dans la largeur totale */
@@ -432,6 +456,14 @@ max-width: 90%; /* S'adapte à la largeur disponible */
         min-height: 50px; /* Définir une hauteur minimale si nécessaire */
     }
 
+      .header.scrolled {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+ .home-page header .logo-container img,
+    .services header .logo-container img,
+    .demander-devis header .logo-container img {
+        max-height: 2.5rem;
+    }
     nav ul {
         display: flex;
         flex-direction: row; /* Aligner les éléments en colonne */
@@ -445,6 +477,24 @@ max-width: 90%; /* S'adapte à la largeur disponible */
         font-size: 0.7rem; /* Réduire la taille de la police des éléments de la navigation */
         margin: 0px 5px; /* Ajoutez un petit espace entre les liens */
     }
+    .home-page header nav ul,
+    .services header nav ul,
+    .demander-devis header nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        gap: 0.625rem;
+    }
+
+    .home-page header nav ul li a,
+    .services header nav ul li a,
+    .demander-devis header nav ul li a {
+        font-size: 0.8rem;
+    }
+
 
     .footer-content {
         display: flex;
