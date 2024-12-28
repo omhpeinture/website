@@ -450,14 +450,17 @@ max-width: 90%; /* S'adapte à la largeur disponible */
         display: flex;
         flex-direction: row; /* Ajustez le footer pour qu'il soit vertical */
         align-items: center;
-        justify-content: space-between; /* Centrer les éléments horizontalement */
+        justify-content: center; /* Centrer les éléments horizontalement */
+        gap: 10px;
         text-align: center;
-            flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+        flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
     }
         .footer-left, .footer-right {
         display: flex;
             flex-direction: row; /* Garder les éléments du footer en ligne */
         align-items: center; /* Centrer les éléments verticalement */
+            justify-content: center; /* Centrez-les horizontalement */
+        flex-wrap: wrap; /* Permet aux enfants de passer à la ligne si nécessaire */
     }
         .footer-left nav ul, .footer-right nav ul {
         flex-direction: row;
@@ -469,7 +472,13 @@ max-width: 90%; /* S'adapte à la largeur disponible */
         padding: 0; /* Supprimez tout padding */
     margin: 0; /* Supprimez toute marge */
 }
-
+  .footer-left nav ul li, .footer-right a {
+        margin-left: 5px; /* Réduisez l'espacement entre les éléments */
+    }
+        .logo-containerfooter img {
+        max-height: 40px; /* Réduisez encore la taille du logo sur mobile */
+    }
+}
    .social-icons {
         display: flex;
         flex-direction: row; /* Aligner les icônes de réseaux sociaux horizontalement */
@@ -478,140 +487,6 @@ max-width: 90%; /* S'adapte à la largeur disponible */
     .social-icons a {
         margin: 0px 5pc;
     }
-
-}
-/* Media query pour les écrans jusqu'à 768px */
-@media (max-width: 768px) {
-    body {
-        font-size: 14px; /* Réduire la taille de base des textes */
-    }
-
-    /* Logo */
-    .logo-container img {
-        max-height: 5rem; /* Réduire la taille du logo */
-        max-width: 100%; /* Empêche l'image du logo de dépasser l'écran */
-        height: auto;
-    }
-
-    /* Section About Us */
-    .about-us {
-        flex-direction: column; /* Sur petit écran, les éléments passent en colonne */
-        padding: 1.25rem;
-    }
-
-    .about-content {
-        padding-right: 0;
-        flex-direction: column; /* Les sections passent en colonne */
-        padding: 1rem;
-    }
-
-    .about-content h2 {
-        font-size: 2rem; /* Taille de texte plus petite pour mobile */
-    }
-
-    .about-content p {
-        font-size: 1rem; /* Taille de texte plus petite pour mobile */
-    }
-
-    /* Stats */
-    .stats-container {
-        justify-content: center; /* Centrer les statistiques sur les petits écrans */
-    }
-
-    .stat-item {
-        width: 9.375rem; /* Taille plus petite pour les statistiques sur petit écran */
-    }
-
-    /* Hero Section */
-    .hero-section h1 {
-        font-size: 2rem; /* Réduire la taille des titres */
-        padding-top: 20px; /* Ajouter de l'espace au-dessus du titre */
-    }
-
-    .button-container {
-        flex-direction: column; /* Aligner les boutons verticalement */
-        gap: 0.5rem;
-    }
-
-    /* Header et Footer */
-    header, footer {
-        width: 100%; /* Assurez-vous que la largeur ne dépasse pas l'écran */
-        padding: 10px; /* Ajustez les paddings pour s'adapter aux petits écrans */
-        box-sizing: border-box; /* Inclure padding dans la largeur totale */
-        overflow: hidden; /* Évitez tout débordement */
-        margin-bottom: 20px; /* Ajoutez de l'espace sous le header */
-        height: auto; /* Assurez-vous que le header s'adapte à son contenu */
-        min-height: 50px; /* Définir une hauteur minimale si nécessaire */
-    }
-
-    nav ul {
-        display: flex;
-        flex-direction: row; /* Aligner horizontalement */
-        justify-content: space-around; /* Répartit les éléments uniformément*/
-         align-items: center;
-        padding: 0;
-        margin: 0;
-    }
-
-    nav ul li {
-        font-size: 0.8rem; /* Réduire la taille de la police des éléments de la navigation */
-        margin: 0px 5px; /* Ajoutez un petit espace entre les liens */
-    }
-
-    .footer-content {
-        display: flex;
-        flex-direction: row; /* Garder le footer en ligne */
-        align-items: center;
-        justify-content: space-between; /* Centrer les éléments horizontalement */
-        text-align: center;
-        flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
-        padding: 20px;
-    }
-    
-    .footer-left, .footer-right {
-        display: flex;
-            flex-direction: row; /* Garder les éléments du footer en ligne */
-            align-items: center; /* Centrer les éléments verticalement */
-            justify-content: center; /* Centrer horizontalement les éléments si nécessaire */
-    }
-  .footer-left nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .footer-left nav ul li {
-        margin-left: 0;
-        margin-bottom: 5px;
-    }
-}  
-   .social-icons {
-       display: flex;
-       flex-direction: row; /* Aligner les icônes de réseaux sociaux horizontalement */
-       align-items: center;
-       justify-content: flex-end; /* Aligne les icônes à droite */
-   }
-   .logo-containerfooter img {
-  max-height: 40px; /* Ajustez selon vos besoins */
-  width: auto;
-}
-    .footer-bottom {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .footer-bottom nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-top: 10px;
-    }
-
-    .footer-bottom nav ul li {
-        margin-left: 0;
-        margin-bottom: 5px;
-    }   
-   .social-icons a {
-       margin: 0px 5px; /* Espacement entre les icônes sociales */
-   }
 }
 
 /* Media query pour les écrans jusqu'à 480px */
@@ -623,6 +498,25 @@ max-width: 90%; /* S'adapte à la largeur disponible */
    footer {
        padding: 10px;
    }
+    .footer-content {
+        flex-direction: column; /* Empilez les sections verticalement si nécessaire */
+        align-items: center;
+        text-align: center;
+        gap: 20px; /* Ajoutez un espacement entre les sections */
+    }
+ .footer-left nav ul {
+        flex-direction: column; /* Empilez les liens verticalement */
+        gap: 10px;
+    }
+
+    .footer-right a {
+        font-size: 1.2rem; /* Réduisez encore la taille de l'icône Facebook */
+    }
+
+    .logo-containerfooter img {
+        max-height: 35px; /* Réduisez encore la taille du logo sur très petits écrans */
+    }
+}
 
    /* About Section */
    .about-content h2 {
