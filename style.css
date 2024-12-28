@@ -446,15 +446,7 @@ max-width: 90%; /* S'adapte à la largeur disponible */
     .demander-devis header {
         background-color: rgba(0, 0, 0, 0.7);
     }
-    footer {
-        width: 100%; /* Assurez-vous que la largeur ne dépasse pas l'écran */
-        padding: 10px; /* Ajustez les paddings pour s'adapter aux petits écrans */
-        box-sizing: border-box; /* Inclure padding dans la largeur totale */
-        overflow: hidden; /* Évitez tout débordement */
-        margin-bottom: 20px; /* Ajoutez de l'espace sous le header */
-        height: auto; /* Assurez-vous que le header s'adapte à son contenu */
-        min-height: 50px; /* Définir une hauteur minimale si nécessaire */
-    }
+
 
       .header.scrolled {
         background-color: rgba(0, 0, 0, 0.7);
@@ -464,19 +456,7 @@ max-width: 90%; /* S'adapte à la largeur disponible */
     .demander-devis header .logo-container img {
         max-height: 2.5rem;
     }
-    nav ul {
-        display: flex;
-        flex-direction: row; /* Aligner les éléments en colonne */
-        justify-content: space-around; /* Répartit les éléments uniformément*/
-         align-items: center;
-        padding: 0;
-        margin: 0;
-    }
 
-    nav ul li {
-        font-size: 0.7rem; /* Réduire la taille de la police des éléments de la navigation */
-        margin: 0px 5px; /* Ajoutez un petit espace entre les liens */
-    }
     .home-page header nav ul,
     .services header nav ul,
     .demander-devis header nav ul {
@@ -495,7 +475,15 @@ max-width: 90%; /* S'adapte à la largeur disponible */
         font-size: 0.8rem;
     }
 
-
+    footer {
+        width: 100%; /* Assurez-vous que la largeur ne dépasse pas l'écran */
+        padding: 10px; /* Ajustez les paddings pour s'adapter aux petits écrans */
+        box-sizing: border-box; /* Inclure padding dans la largeur totale */
+        overflow: hidden; /* Évitez tout débordement */
+        margin-bottom: 20px; /* Ajoutez de l'espace sous le header */
+        height: auto; /* Assurez-vous que le header s'adapte à son contenu */
+        min-height: 50px; /* Définir une hauteur minimale si nécessaire */
+    }
     .footer-content {
         display: flex;
         flex-direction: row; /* Ajustez le footer pour qu'il soit vertical */
@@ -566,7 +554,6 @@ max-width: 90%; /* S'adapte à la largeur disponible */
     .logo-containerfooter img {
         max-height: 35px; /* Réduisez encore la taille du logo sur très petits écrans */
     }
-}
 
    /* About Section */
    .about-content h2 {
