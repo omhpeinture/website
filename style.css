@@ -565,6 +565,7 @@ max-width: 90%; /* S'adapte à la largeur disponible */
         justify-content: space-between; /* Centrer les éléments horizontalement */
         text-align: center;
         flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+        padding: 20px;
     }
     
     .footer-left, .footer-right {
@@ -573,14 +574,41 @@ max-width: 90%; /* S'adapte à la largeur disponible */
             align-items: center; /* Centrer les éléments verticalement */
             justify-content: center; /* Centrer horizontalement les éléments si nécessaire */
     }
-    
+  .footer-left nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-left nav ul li {
+        margin-left: 0;
+        margin-bottom: 5px;
+    }
+}  
    .social-icons {
        display: flex;
        flex-direction: row; /* Aligner les icônes de réseaux sociaux horizontalement */
        align-items: center;
        justify-content: flex-end; /* Aligne les icônes à droite */
    }
-   
+   .logo-containerfooter img {
+  max-height: 40px; /* Ajustez selon vos besoins */
+  width: auto;
+}
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-bottom nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+
+    .footer-bottom nav ul li {
+        margin-left: 0;
+        margin-bottom: 5px;
+    }   
    .social-icons a {
        margin: 0px 5px; /* Espacement entre les icônes sociales */
    }
@@ -610,9 +638,6 @@ max-width: 90%; /* S'adapte à la largeur disponible */
        margin: 0px 5px; 
    }
 }
-
-
-
 
 .realisations h2 {
     font-size: 2.8rem;
