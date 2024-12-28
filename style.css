@@ -411,11 +411,28 @@ max-width: 90%; /* S'adapte à la largeur disponible */
     }
 
     /* Hero Section */
-    .hero-section h1 {
+        .twbb-headline {
+        font-size: 3rem; /* Réduire la taille globale du titre */
+        line-height: 1.2; /* Augmenter l'espacement entre les lignes */
+    }
+      .twbb-headline-plain-text {
+        font-size: 2rem; /* Réduire la taille du texte "Transformez Votre Espace avec" */
+        margin-bottom: 5px; /* Réduire l'espacement */
+    }
+
+
+  .twbb-headline-dynamic-text {
+        font-size: 2.5rem; /* Réduire la taille de "OMH PEINTURE" */
+        margin-bottom: 10px; /* Réduire l'espacement */
+    }
+
+    .hero-content {
+        padding: 0 0.625rem; /* Réduire le padding horizontal */
+    }
+        .hero-section h1 {
         font-size: 2rem; /* Réduire la taille des titres */
         padding-top: 20px; /* Ajouter de l'espace au-dessus du titre */
     }
-
     .button-container {
         flex-direction: column; /* Aligner les boutons verticalement */
         gap: 0.5rem;
