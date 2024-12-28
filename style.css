@@ -11,7 +11,7 @@ body {
     line-height: 1.5;
 }
 /* Style spécifique pour le header de la page de contact */
-.demander-devis header {
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -19,43 +19,23 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.25rem;
     z-index: 10;
     width: 100%;
     color: white;
-    transition: background-color 0.3s ease; /* Transition pour le changement de fond */
-    background-color: rgba(0, 0, 0, 0.7) ;
+    transition: background-color 0.3s ease;
 }
-.home-page header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    z-index: 10;
-    width: 100%;
-    color: white;
-    transition: background-color 0.3s ease; /* Transition pour le changement de fond */
-    background-color: transparent ; /* Initialement transparent */
-}
+
+.home-page header,
 .services header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 20px;
-    z-index: 10;
-    width: 100%;
-    color: white;
-    transition: background-color 0.3s ease; /* Transition pour le changement de fond */
-    background-color: transparent ; /* Initialement transparent */
+    background-color: transparent; /* Initialement transparent */
 }
+
+.demander-devis header {
+    padding: 1.25rem;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
 /* Lorsque l'utilisateur défile légèrement */
 .header.scrolled {
     background-color: rgba(0, 0, 0, 0.7);
@@ -94,10 +74,10 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #007bff;
+    text-decoration: underline; /* Soulignement au survol */
 }
-.home-page .hero-section {
-    height: 100vh; /* Prend toute la hauteur de la fenêtre */
-    background-image: url('pexels-heyho-6969824.jpg');
+.hero-section {
+    height: 100vh;
     background-position: center;
     background-size: cover;
     display: flex;
@@ -105,9 +85,17 @@ nav ul li a:hover {
     align-items: center;
     color: white;
     position: relative;
-     z-index: 0; /* Permet à l'image de se situer derrière le header */
-        flex-direction: column; /* Aligner les éléments de la section en colonne */
-    text-align: center; /* Centrer le texte dans la section */
+    z-index: 0;
+    flex-direction: column;
+    text-align: center;
+}
+
+.home-page .hero-section {
+    background-image: url('pexels-heyho-6969824.jpg');
+}
+
+.services .hero-section {
+    background-image: url('pexels-heyho-6538903.jpg');
 }
 .overlay {
     position: absolute;
@@ -117,20 +105,6 @@ nav ul li a:hover {
     height: 100%;
     background: rgba(0, 0, 0, 0.5); /* fond semi-transparent */
     z-index: 1;  /* La couche doit être derrière le contenu mais devant l'image */
-}
-.services .hero-section {
-    height: 100vh; /* Prend toute la hauteur de la fenêtre */
-    background-image: url('pexels-heyho-6538903.jpg');
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    position: relative;
-     z-index: 0; /* Permet à l'image de se situer derrière le header */
-        flex-direction: column; /* Aligner les éléments de la section en colonne */
-    text-align: center; /* Centrer le texte dans la section */
 }
 /* Conteneur de l'image avec zoom */
 .services .hero-image {
@@ -162,8 +136,14 @@ nav ul li a:hover {
     max-width: 800px;
     margin: 0 auto;
     padding: 0 1.25rem;
-    position: relative;  
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Transition fluide */
 }
+.hero-content.visible {
+    opacity: 1; /* Devenir visible */
+}
+
 .hero-section h1 {
     font-size: clamp(2rem, 5vw, 4rem);
     margin-bottom: 1.25rem;
@@ -558,7 +538,6 @@ max-width: 90%; /* S'adapte à la largeur disponible */
         .logo-containerfooter img {
         max-height: 40px; /* Réduisez encore la taille du logo sur mobile */
     }
-}
    .social-icons {
         display: flex;
         flex-direction: row; /* Aligner les icônes de réseaux sociaux horizontalement */
@@ -618,7 +597,7 @@ max-width: 90%; /* S'adapte à la largeur disponible */
     font-weight: 700; /* Font plus gras */
     margin-bottom: 20px;
     text-align: center;
-    xt-transform: uppercase; /* Mettre en majuscules pour donner un style plus professionnel */
+    text-transform: uppercase; /* Mettre en majuscules pour donner un style plus professionnel */
     letter-spacing: 2px; /* Espacement des lettres pour plus de lisibilité */
     }
     
@@ -639,11 +618,10 @@ max-width: 90%; /* S'adapte à la largeur disponible */
     justify-content: center;
 }
 
-
         .carousel-items {
             display: flex;
             transition: transform 1s ease; /* Transition fluide pour le défilement */
-            margin: 0 20px; /* Ajoute une marge sur les côtés du carrousel */
+            margin: 0 10px; /* Ajoute une marge sur les côtés du carrousel */
         }
 
         .carousel-item {
@@ -688,6 +666,7 @@ max-width: 90%; /* S'adapte à la largeur disponible */
     display: flex;
     align-items: center;
     justify-content: center;
+      transition: background-color 0.3s ease;      
         }
 
         .prev {
@@ -773,6 +752,7 @@ max-width: 90%; /* S'adapte à la largeur disponible */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin: 10px; /* Ajoutez un peu d'espace entre les éléments */
 }
 
 .testimonial-item:hover {
@@ -867,6 +847,8 @@ footer {
 
 .footer-left nav ul li a:hover {
   text-decoration: underline;
+        color: #007bff; /* Changez la couleur au survol */
+    transition: color 0.3s ease; /* Transition douce */
 }
 
 /* Partie droite : Icône Facebook */
