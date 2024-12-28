@@ -137,11 +137,6 @@ nav ul li a:hover {
     margin: 0 auto;
     padding: 0 1.25rem;
     position: relative;
-    opacity: 0;
-    transition: opacity 0.5s ease; /* Transition fluide */
-}
-.hero-content.visible {
-    opacity: 1; /* Devenir visible */
 }
 
 .hero-section h1 {
