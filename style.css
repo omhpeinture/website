@@ -447,6 +447,9 @@ max-width: 90%; /* S'adapte à la largeur disponible */
         font-size: 2.5rem; /* Réduire la taille de "OMH PEINTURE" */
         margin-bottom: 10px; /* Réduire l'espacement */
     }
+        .services-page .twbb-headline-dynamic-wrapper {
+        margin-top: -5px; /* Ajustez cette valeur négative selon vos besoins */
+    }
 
     .hero-content {
         padding: 0 0.625rem; /* Réduire le padding horizontal */
