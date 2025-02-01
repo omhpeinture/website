@@ -154,8 +154,8 @@ window.onload = function() {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "OMH Peinture",
-      "url": "https://www.omh-peinture.fr",
-      "logo": "https://www.omh-peinture.fr/logo.png",
+      "url": "https://omhpeinture.github.io/website/",
+      "logo": "logo VF.PNG",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+33 07 49 18 59 61",
