@@ -149,5 +149,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     serviceSections.forEach(section => observer.observe(section));
 });
+window.onload = function() {
+    const jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "OMH Peinture",
+      "url": "https://www.omh-peinture.fr",
+      "logo": "https://www.omh-peinture.fr/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+33 07 49 18 59 61",
+        "contactType": "customer service",
+        "areaServed": "FR",
+        "availableLanguage": "French"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10 Avenue de la Concorde",
+        "addressLocality": "Caen",
+        "postalCode": "14000",
+        "addressCountry": "FR"
+      }
+    };
+
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.innerHTML = JSON.stringify(jsonLd);
+    document.head.appendChild(script);
+}
 
 
